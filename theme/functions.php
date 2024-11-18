@@ -6,6 +6,8 @@
  *
  * @package wilson_devops
  */
+// Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! defined( 'WILSON_DEVOPS_VERSION' ) ) {
 	/*

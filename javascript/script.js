@@ -24,7 +24,7 @@ Alpine.data('themeToggle', () => ({
 	isDark: false,
 
 	init() {
-		// Check for stored theme
+		// Check for stored theme in localStorage
 		const storedTheme = localStorage.getItem('theme');
 
 		if (storedTheme) {
@@ -53,7 +53,7 @@ Alpine.data('themeToggle', () => ({
 	},
 
 	updateTheme() {
-		// Update classList
+		// Apply the dark class to the html element
 		if (this.isDark) {
 			document.documentElement.classList.add('dark');
 		} else {
@@ -62,14 +62,23 @@ Alpine.data('themeToggle', () => ({
 	},
 
 	toggle() {
+		// Toggle the theme state
 		this.isDark = !this.isDark;
 
-		// Store the explicitly set preference
+		// Store the explicitly set preference in localStorage
 		localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
 
+		// Apply the theme immediately
 		this.updateTheme();
 	},
 }));
 
 window.Alpine = Alpine;
 Alpine.start();
+
+window.addEventListener('load', function () {
+	const spinnerLoader = document.querySelector('#spinner-loader');
+	if (spinnerLoader) {
+		spinnerLoader.classList.add('hidden');
+	}
+});
