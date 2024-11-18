@@ -16,34 +16,6 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_form'])) {
-    // Check for honeypot to avoid spam submissions
-    if (!empty($_POST['honeypot'])) {
-        return;
-    }
-
-    // Sanitize and get form data
-    $name = sanitize_text_field($_POST['name']);
-    $email = sanitize_email($_POST['email']);
-    $subject = sanitize_text_field($_POST['subject']);
-    $message = sanitize_textarea_field($_POST['message']);
-    
-    // Set up email headers
-    $to = 'your-email@example.com';  // Change this to your email
-    $subject = 'New Message from ' . $name;
-    $body = "Name: $name\nPhone: $phone\nEmail: $email\n\nMessage:\n$message";
-    $headers = array('Content-Type: text/plain; charset=UTF-8', 'From: ' . $email);
-
-    // Send the email
-    $sent = wp_mail($to, $subject, $body, $headers);
-    
-    // Check if email was sent and give user feedback
-    if ($sent) {
-        echo '<p class="text-center text-green-500">Thank you for your message! We\'ll get back to you soon.</p>';
-    } else {
-        echo '<p class="text-center text-red-500">Sorry, there was an error sending your message. Please try again later.</p>';
-    }
-}
 ?>
 
 <main class="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-400 ease-in-out">
@@ -556,7 +528,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_form'])) {
                             <?php esc_html_e('Send Me A Message', 'wilson-devops'); ?>
                         </h2>
                         <form class="grid gap-5">
-                            <?php wp_nonce_field( 'update_user_data', '_wpnonce_update_user_data' ); ?>
+                            <?php wp_nonce_field( 'send_form_data', '_wpnonce_send_form_data' ); ?>
                             <input type="text" name="honeypot" class="hidden">
                             <!-- Input Group -->
                             <div class="relative w-full h-14 group">

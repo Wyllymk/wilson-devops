@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
 	if ( ! is_admin_bar_showing() ) {
 		echo 'fixed';}
 	?>
-	top-0 left-0 right-0 z-50 shadow-lg">
+	top-0 left-0 right-0 z-50 shadow-lg px-4">
     <div class="bg-gray-100 dark:bg-gray-800 transition-width duration-300 ease-in-out">
         <div class="w-full">
             <nav class="flex items-center justify-between">
