@@ -23,37 +23,37 @@ if ( post_password_required() ) {
 
 <div id="comments">
 
-    <?php
+	<?php
 	if ( have_comments() ) :
 		?>
-    <h2>
-        <?php
+	<h2>
+		<?php
 			$wilson_devops_comment_count = get_comments_number();
-			if ( '1' === $wilson_devops_comment_count ) {
-				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One comment on &ldquo;%1$s&rdquo;', 'wilson-devops' ),
-					get_the_title()
-				);
-				// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
-			} else {
-				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-				printf(
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $wilson_devops_comment_count, 'comments title', 'wilson-devops' ) ),
-					number_format_i18n( $wilson_devops_comment_count ),
-					get_the_title()
-				);
-				// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
-			?>
-    </h2>
+		if ( '1' === $wilson_devops_comment_count ) {
+			// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+			printf(
+				/* translators: 1: title. */
+				esc_html__( 'One comment on &ldquo;%1$s&rdquo;', 'wilson-devops' ),
+				get_the_title()
+			);
+			// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
+		} else {
+			// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+			printf(
+				/* translators: 1: comment count number, 2: title. */
+				esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $wilson_devops_comment_count, 'comments title', 'wilson-devops' ) ),
+				number_format_i18n( $wilson_devops_comment_count ),
+				get_the_title()
+			);
+			// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+		?>
+	</h2>
 
-    <?php the_comments_navigation(); ?>
+		<?php the_comments_navigation(); ?>
 
-    <ol>
-        <?php
+	<ol>
+		<?php
 			wp_list_comments(
 				array(
 					'style'      => 'ol',
@@ -61,18 +61,18 @@ if ( post_password_required() ) {
 					'short_ping' => true,
 				)
 			);
-			?>
-    </ol>
+		?>
+	</ol>
 
-    <?php
+		<?php
 		the_comments_navigation();
 
 		// If there are existing comments, but comments are closed, display a
 		// message.
 		if ( ! comments_open() ) :
 			?>
-    <p><?php esc_html_e( 'Comments are closed.', 'wilson-devops' ); ?></p>
-    <?php
+	<p><?php esc_html_e( 'Comments are closed.', 'wilson-devops' ); ?></p>
+			<?php
 		endif;
 
 	endif;

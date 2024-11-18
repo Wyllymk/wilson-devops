@@ -19,6 +19,7 @@
  * https://esbuild.github.io/
  */
 import Alpine from 'alpinejs';
+import ScrollReveal from 'scrollreveal';
 
 Alpine.data('themeToggle', () => ({
 	isDark: false,
@@ -75,6 +76,133 @@ Alpine.data('themeToggle', () => ({
 
 window.Alpine = Alpine;
 Alpine.start();
+
+document.addEventListener('DOMContentLoaded', function () {
+	const menuButton = document.querySelector('#menuButton');
+	const menuLinks = document.querySelectorAll('.menu-link'); // Select all mobile menu links
+	const navLinks = document.querySelectorAll('.nav-link'); // Select all desktop navigation links
+	const navMenu = document.querySelector('#navMenu');
+	const overlay = document.getElementById('overlay');
+
+	const sections = document.querySelectorAll('section'); // All sections on the page
+	const linkMap = {}; // Object to map section IDs to menu links and nav-links
+
+	// Map each section to the corresponding menu link (mobile and desktop)
+	menuLinks.forEach((link) => {
+		const sectionId = link
+			.querySelector('.menu-item')
+			.textContent.trim()
+			.toLowerCase();
+		linkMap[sectionId] = { mobile: link, desktop: null };
+	});
+
+	navLinks.forEach((link) => {
+		const sectionId = link.textContent.trim().toLowerCase(); // Extract section ID from link text
+		if (!linkMap[sectionId]) {
+			linkMap[sectionId] = { mobile: null, desktop: link };
+		} else {
+			linkMap[sectionId].desktop = link;
+		}
+	});
+
+	// Toggle menu on button click
+	menuButton.addEventListener('click', function () {
+		navMenu.classList.toggle('translate-x-full'); // Slide in/out
+		navMenu.classList.toggle('opacity-0'); // Fade in/out
+		navMenu.classList.toggle('opacity-100');
+		overlay.classList.toggle('hidden');
+	});
+
+	// Close menu and overlay when clicking outside the menu (overlay)
+	overlay.addEventListener('click', function () {
+		closeMenu();
+	});
+
+	// Close menu when clicking any mobile menu link
+	menuLinks.forEach((link) => {
+		link.addEventListener('click', function () {
+			closeMenu();
+		});
+	});
+
+	// Function to close the menu
+	function closeMenu() {
+		navMenu.classList.add('translate-x-full'); // Slide out
+		navMenu.classList.remove('opacity-100');
+		navMenu.classList.add('opacity-0'); // Fade out
+		overlay.classList.add('hidden');
+	}
+
+	const observerOptions = {
+		root: null,
+		rootMargin: '0px 0px -100px 0px', // Adjust margin to better align sections
+		threshold: [0.1, 0.5, 0.9],
+	};
+
+	const observer = new IntersectionObserver(function (entries) {
+		entries.forEach((entry) => {
+			const sectionName = entry.target.id.toLowerCase(); // Section ID matches the section's name
+			const links = linkMap[sectionName]; // Get links for this section
+
+			if (entry.isIntersecting) {
+				// Add active classes to mobile and desktop links
+				if (links) {
+					if (links.mobile) {
+						links.mobile.classList.add(
+							'bg-gray-700',
+							'text-teal-500'
+						);
+					}
+					if (links.desktop) {
+						links.desktop.classList.add('text-teal-500');
+						links.desktop.classList.remove('dark:text-white');
+					}
+				}
+			} else {
+				// Remove active classes from mobile and desktop links
+				if (links) {
+					if (links.mobile) {
+						links.mobile.classList.remove(
+							'bg-gray-700',
+							'text-teal-500'
+						);
+					}
+					if (links.desktop) {
+						links.desktop.classList.remove('text-teal-500');
+						links.desktop.classList.add('dark:text-white');
+					}
+				}
+			}
+		});
+	}, observerOptions);
+
+	// Observe all sections
+	sections.forEach((section) => {
+		observer.observe(section);
+	});
+
+	/*=============== SCROLL REVEAL ANIMATION ===============*/
+	const sr = ScrollReveal({
+		origin: 'top',
+		distance: '60px',
+		duration: 2500,
+		delay: 400,
+		// reset: true
+	});
+
+	// Reveal elements
+
+	sr.reveal(`.home__perfil, .about__image, .contact__mail`, {
+		origin: 'right',
+	});
+
+	sr.reveal(
+		`.home__name, .home__info, .about__container .section__title-1, .about__info, .contact__social, .contact__data`,
+		{ origin: 'left' }
+	);
+
+	sr.reveal(`.services__card, .projects__card`, { interval: 100 });
+});
 
 window.addEventListener('load', function () {
 	const spinnerLoader = document.querySelector('#spinner-loader');

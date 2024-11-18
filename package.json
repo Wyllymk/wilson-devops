@@ -55,6 +55,7 @@
 	},
 	"prettier": "@wordpress/prettier-config",
 	"dependencies": {
-		"alpinejs": "^3.14.3"
+		"alpinejs": "^3.14.3",
+		"scrollreveal": "^4.0.9"
 	}
 }

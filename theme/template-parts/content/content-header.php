@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Easy_Manage
+ * @package wilson_devops
  */
 
 // Exit if accessed directly
@@ -12,23 +12,24 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 
-<header class="text-black dark:text-white 
-	<?php
-	if ( ! is_admin_bar_showing() ) {
-		echo 'fixed';}
-	?>
-	top-0 left-0 right-0 z-50 shadow-lg px-4">
+<header class="text-black dark:text-white fixed 
+<?php
+if ( is_admin_bar_showing() ) {
+	echo ' mt-8 ';}
+?>
+top-0 left-0 right-0 z-50 shadow-lg">
     <div class="bg-gray-100 dark:bg-gray-800 transition-width duration-300 ease-in-out">
         <div class="w-full">
-            <nav class="flex items-center justify-between">
-                <div class="flex items-center justify-center py-4 px-4 md:w-60">
+            <nav class="flex items-center justify-between py-4 px-4">
+                <div class="flex items-center justify-center md:w-60">
                     <a href="<?php echo esc_url( site_url( '/' ) ); ?>"
                         class="flex items-center justify-center text-nowrap">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo"
                             class="h-8 filter invert-0 dark:invert">
                     </a>
                 </div>
-                <div class="flex flex-grow items-center justify-between md:pl-4 md:w-20">
+                <div
+                    class="flex flex-grow flex-row-reverse md:flex-row items-center justify-start md:justify-between md:pl-4 md:w-20">
 
                     <button id="menuButton" class="">
                         <svg class="w-8 h-8 fill-gray-900 dark:fill-white md:hidden" xmlns="http://www.w3.org/2000/svg"
@@ -39,32 +40,32 @@ defined( 'ABSPATH' ) || exit;
                     </button>
 
                     <!-- Navigation Links -->
-                    <div class="hidden md:flex space-x-6 font-manrope">
-                        <a href="#"
+                    <div id="navLinks" class="hidden md:flex space-x-6 font-manrope">
+                        <a href="<?php echo ! is_front_page() ? esc_url( home_url( '#' ) ) : '#'; ?>"
                             class="nav-link text-gray-900 dark:text-white hover:text-teal-500 dark:hover:text-teal-300 transition-all duration-300 relative group">
                             <?php esc_html_e( 'Home', 'wilson-devops' ); ?>
                             <span
                                 class="absolute left-0 right-0 bottom-0 h-0.5 bg-teal-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </a>
-                        <a href="#about"
+                        <a href="<?php echo ! is_front_page() ? esc_url( home_url( '#about' ) ) : '#about'; ?>"
                             class="nav-link text-gray-900 dark:text-white hover:text-teal-500 dark:hover:text-teal-300 transition-all duration-300 relative group">
                             <?php esc_html_e( 'About', 'wilson-devops' ); ?>
                             <span
                                 class="absolute left-0 right-0 bottom-0 h-0.5 bg-teal-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </a>
-                        <a href="#services"
+                        <a href="<?php echo ! is_front_page() ? esc_url( home_url( '#services' ) ) : '#services'; ?>"
                             class="nav-link text-gray-900 dark:text-white hover:text-teal-500 dark:hover:text-teal-300 transition-all duration-300 relative group">
                             <?php esc_html_e( 'Services', 'wilson-devops' ); ?>
                             <span
                                 class="absolute left-0 right-0 bottom-0 h-0.5 bg-teal-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </a>
-                        <a href="#projects"
+                        <a href="<?php echo ! is_front_page() ? esc_url( home_url( '#projects' ) ) : '#projects'; ?>"
                             class="nav-link text-gray-900 dark:text-white hover:text-teal-500 dark:hover:text-teal-300 transition-all duration-300 relative group">
                             <?php esc_html_e( 'Projects', 'wilson-devops' ); ?>
                             <span
                                 class="absolute left-0 right-0 bottom-0 h-0.5 bg-teal-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </a>
-                        <a href="#contact"
+                        <a href="<?php echo ! is_front_page() ? esc_url( home_url( '#contact' ) ) : '#contact'; ?>"
                             class="nav-link text-gray-900 dark:text-white hover:text-teal-500 dark:hover:text-teal-300 transition-all duration-300 relative group">
                             <?php esc_html_e( 'Contact', 'wilson-devops' ); ?>
                             <span

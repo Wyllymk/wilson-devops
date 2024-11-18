@@ -3,6 +3,7 @@ const includePreflight = 'editor' === process.env._TW_TARGET ? false : true;
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+	safelist: ['text-teal-500'],
 	darkMode: 'class',
 	presets: [
 		// Manage Tailwind Typography's configuration in a separate file.
