@@ -152,6 +152,21 @@ function wilson_devops_create_pages() {
 			'slug'     => 'coming-soon',
 			'template' => 'page-templates/page-coming-soon.php',
 		),
+		array(
+			'title'    => 'About Me',
+			'slug'     => 'about-me',
+			'template' => 'page-templates/page-about-me.php',
+		),
+		array(
+			'title'    => 'Services',
+			'slug'     => 'services',
+			'template' => 'page-templates/page-services.php',
+		),
+		array(
+			'title'    => 'Projects',
+			'slug'     => 'projects',
+			'template' => 'page-templates/page-projects.php',
+		),
 
 	);
 
@@ -178,3 +193,17 @@ function wilson_devops_create_pages() {
 }
 
 add_action( 'after_switch_theme', 'wilson_devops_create_pages' );
+
+
+// Automatically set permalinks to 'postname' and timezone to +0300 on theme activation.
+function wilson_devops_setup_settings() {
+    // Set permalinks to 'postname'
+    global $wp_rewrite;
+    $wp_rewrite->set_permalink_structure('/%postname%/');
+    $wp_rewrite->flush_rules(); // Flush the rewrite rules to apply changes
+
+    // Set the timezone to UTC+3
+	update_option('timezone_string', ''); // Clear named timezone
+	update_option('gmt_offset', 3); // Set numeric offset to +3
+}
+add_action('after_switch_theme', 'wilson_devops_setup_settings');

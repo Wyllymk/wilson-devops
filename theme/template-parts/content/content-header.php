@@ -41,31 +41,31 @@ top-0 left-0 right-0 z-50 shadow-lg">
 
                     <!-- Navigation Links -->
                     <div id="navLinks" class="hidden md:flex space-x-6 font-manrope">
-                        <a href="<?php echo ! is_front_page() ? esc_url( home_url( '#' ) ) : '#'; ?>"
+                        <a href="<?php echo esc_url( site_url( '/' ) ); ?>"
                             class="nav-link text-gray-900 dark:text-white hover:text-teal-500 dark:hover:text-teal-300 transition-all duration-300 relative group">
                             <?php esc_html_e( 'Home', 'wilson-devops' ); ?>
                             <span
                                 class="absolute left-0 right-0 bottom-0 h-0.5 bg-teal-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </a>
-                        <a href="<?php echo ! is_front_page() ? esc_url( home_url( '#about' ) ) : '#about'; ?>"
+                        <a href="<?php echo esc_url( site_url( '/about-me/' ) ); ?>"
                             class="nav-link text-gray-900 dark:text-white hover:text-teal-500 dark:hover:text-teal-300 transition-all duration-300 relative group">
-                            <?php esc_html_e( 'About', 'wilson-devops' ); ?>
+                            <?php esc_html_e( 'About Me', 'wilson-devops' ); ?>
                             <span
                                 class="absolute left-0 right-0 bottom-0 h-0.5 bg-teal-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </a>
-                        <a href="<?php echo ! is_front_page() ? esc_url( home_url( '#services' ) ) : '#services'; ?>"
+                        <a href="<?php echo esc_url( site_url( '/services/' ) ); ?>"
                             class="nav-link text-gray-900 dark:text-white hover:text-teal-500 dark:hover:text-teal-300 transition-all duration-300 relative group">
                             <?php esc_html_e( 'Services', 'wilson-devops' ); ?>
                             <span
                                 class="absolute left-0 right-0 bottom-0 h-0.5 bg-teal-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </a>
-                        <a href="<?php echo ! is_front_page() ? esc_url( home_url( '#projects' ) ) : '#projects'; ?>"
+                        <a href="<?php echo esc_url( site_url( '/projects/' ) ); ?>"
                             class="nav-link text-gray-900 dark:text-white hover:text-teal-500 dark:hover:text-teal-300 transition-all duration-300 relative group">
                             <?php esc_html_e( 'Projects', 'wilson-devops' ); ?>
                             <span
                                 class="absolute left-0 right-0 bottom-0 h-0.5 bg-teal-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </a>
-                        <a href="<?php echo ! is_front_page() ? esc_url( home_url( '#contact' ) ) : '#contact'; ?>"
+                        <a href="#contact"
                             class="nav-link text-gray-900 dark:text-white hover:text-teal-500 dark:hover:text-teal-300 transition-all duration-300 relative group">
                             <?php esc_html_e( 'Contact', 'wilson-devops' ); ?>
                             <span
