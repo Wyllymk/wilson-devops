@@ -98,12 +98,12 @@ get_header();
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Experience Section -->
     <section class="py-20 bg-gray-100 dark:bg-gray-800" id="about me">
         <div class="about__container container mx-auto px-4">
             <h2 class="section__title relative text-5xl mx-auto my-6 mb-10 max-w-max">
                 <span class="relative z-10 text-4xl font-bold text-center text-gray-900 dark:text-white">
-                    <?php esc_html_e( 'About Me', 'wilson-devops' ); ?>
+                    <?php esc_html_e( 'Experience', 'wilson-devops' ); ?>
                 </span>
                 <span class="absolute top-2 -right-2 w-12 h-9 bg-teal-400 dark:bg-teal-600 opacity-50"></span>
             </h2>

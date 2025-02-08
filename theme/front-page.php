@@ -128,7 +128,7 @@ get_header();
                     class="absolute top-8 -left-20 md:-left-32 transform rotate-45 skew-y-12 filter invert-0 dark:invert w-16 h-16 object-contain animate-bounce" />
                 <!-- Black stars -->
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Black-Star.png" alt="Decorative Stars"
-                    class="absolute bottom-80 md:bottom-8 left-56 md:-left-40 filter invert-0 dark:invert w-16 h-16 object-contain opacity-40 animate-ping" />
+                    class="absolute bottom-80 md:bottom-8 left-52 md:-left-40 filter invert-0 dark:invert w-16 h-16 object-contain opacity-40 animate-ping" />
                 <!-- Geometric -->
                 <div
                     class="relative bottom-64 -left-10 w-6 h-6 bg-primary rotate-[-30deg] before:content-[''] before:absolute before:w-5 before:h-5 before:border-2 before:border-black dark:before:border-white before:-left-1.5 before:-top-1.5 md:scale-120 animate-pulse">
@@ -191,10 +191,13 @@ get_header();
 								__( 'React', 'wilson-devops' ),
 								__( 'Git & Github', 'wilson-devops' ),
 								__( 'Scss', 'wilson-devops' ),
+                                __( 'Tailwind', 'wilson-devops' ),
 								__( 'Strapi', 'wilson-devops' ),
-								__( 'PHP', 'wilson-devops' ),
+								__( 'MySql', 'wilson-devops' ),
+                                __( 'PHP', 'wilson-devops' ),
 								__( 'WordPress', 'wilson-devops' ),
 								__( 'NodeJs', 'wilson-devops' ),
+                                __( 'AWS', 'wilson-devops' ),
 							);
 
 							foreach ( $skills as $skill ) {
@@ -583,7 +586,7 @@ get_header();
                 </p>
                 <!-- Geometric -->
                 <div
-                    class="relative bottom-64 xl:left-96 left-80 w-6 h-6 bg-primary rotate-[-30deg] before:content-[''] before:absolute before:w-5 before:h-5 before:border-2 before:border-black dark:before:border-white before:-left-1.5 before:-top-1.5 md:scale-120 animate-pulse">
+                    class="relative bottom-64 xl:left-96 left-60 md:left-80 w-6 h-6 bg-primary rotate-[-30deg] before:content-[''] before:absolute before:w-5 before:h-5 before:border-2 before:border-black dark:before:border-white before:-left-1.5 before:-top-1.5 md:scale-120 animate-pulse">
                 </div>
             </div>
 
