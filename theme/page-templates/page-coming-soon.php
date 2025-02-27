@@ -17,7 +17,18 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 
 ?>
-<main class="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-400 ease-in-out">
+<main class="min-h-90 bg-white dark:bg-gray-900 transition-colors duration-400 ease-in-out">
+
+    <!-- Sidebar Navigation -->
+    <div id="navMenu"
+        class="transform translate-x-full opacity-0 w-60 py-4 px-4 z-40 fixed md:hidden top-0 h-full bg-gray-100 dark:bg-gray-800 shadow-lg transition-all duration-400 ease-in-out">
+        <!-- Your navigation items here -->
+        <?php get_template_part( 'template-parts/content/content', 'aside' ); ?>
+
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 top-0 h-screen z-30 bg-black/70 hidden"></div>
 
     <!-- Coming Soon Section -->
     <div class="flex h-screen text-black dark:text-white items-center justify-center">
@@ -25,7 +36,7 @@ get_header();
         <!-- Coming Soon Section -->
         <section id="comingSoonHero" class="w-full flex justify-center items-center">
             <div class="container mx-auto px-6">
-                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
+                <div class="flex pt-40 flex-col lg:flex-row lg:items-center justify-between">
                     <!-- Text Column -->
                     <div class="lg:w-1/2">
                         <h1

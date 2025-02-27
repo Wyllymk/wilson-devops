@@ -23,13 +23,13 @@ defined( 'ABSPATH' ) || exit;
                     <a href="<?php echo esc_url( site_url( '/' ) ); ?>"
                         class="flex items-center justify-center text-nowrap">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo"
-                            class="h-8 filter invert-0 dark:invert">
+                            class="h-8 filter invert-0 dark:invert duration-300 hover:scale-105">
                     </a>
                 </div>
                 <div
                     class="flex flex-grow flex-row-reverse md:flex-row items-center justify-start md:justify-between md:pl-4 md:w-20">
 
-                    <button id="menuButton" class="">
+                    <button id="menuButton" class="ml-5">
                         <svg class="w-8 h-8 fill-gray-950 dark:fill-white md:hidden" xmlns="http://www.w3.org/2000/svg"
                             width="200" height="200" viewBox="0 0 24 24">
                             <path fill="currentColor"
@@ -74,7 +74,8 @@ defined( 'ABSPATH' ) || exit;
                     <!-- Dark Mode Toggle Button -->
                     <div class="flex items-center text-prime-teal dark:text-white">
                         <!-- Button component -->
-                        <button class="pr-4 cursor-pointer" x-data="themeToggle" @click="toggle">
+                        <button class="p-2 cursor-pointer rounded-full bg-cyber-blue/20 dark:bg-cyber-cyan/20 
+						hover:shadow-[var(--drop-shadow-cyber-cyan)] transition-all duration-300" x-data="themeToggle" @click="toggle">
                             <svg x-show="!isDark"
                                 class="w-7 h-7 transform transition-transform duration-300 fill-gray-950"
                                 xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 15 15">
@@ -83,7 +84,7 @@ defined( 'ABSPATH' ) || exit;
                                     clip-rule="evenodd" />
                             </svg>
                             <svg x-show="isDark"
-                                class="w-8 h-8 transform transition-transform duration-300 fill-white hidden dark:block"
+                                class="w-7 h-7 transform transition-transform duration-300 fill-white hidden dark:block"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                 <path fill="currentColor"
                                     d="M15 3v5h2V3zM7.5 6.094L6.094 7.5l3.531 3.563l1.438-1.438zm17 0l-3.563 3.531l1.438 1.438L25.906 7.5zM16 9c-3.855 0-7 3.145-7 7s3.145 7 7 7s7-3.145 7-7s-3.145-7-7-7zm0 2c2.773 0 5 2.227 5 5s-2.227 5-5 5s-5-2.227-5-5s2.227-5 5-5zM3 15v2h5v-2zm21 0v2h5v-2zM9.625 20.938L6.094 24.5L7.5 25.906l3.563-3.531zm12.75 0l-1.438 1.437l3.563 3.531l1.406-1.406zM15 24v5h2v-5z" />

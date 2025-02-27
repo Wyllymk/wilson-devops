@@ -46,7 +46,7 @@ defined( 'ABSPATH' ) || exit;
             <?php get_template_part( 'template-parts/layout/header', 'content' ); ?>
 
             <!-- Loader Spinner HTML -->
-            <!-- <div id="spinner-loader"
+            <div id="spinner-loader"
                 class="fixed inset-0 bg-white dark:bg-gray-950 flex items-center justify-center z-60">
                 <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
-            </div> -->
+            </div>

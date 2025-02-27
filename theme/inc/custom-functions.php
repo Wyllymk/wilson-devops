@@ -169,6 +169,71 @@ function wilson_devops_create_pages() {
 			'slug'     => 'projects',
 			'template' => 'page-templates/page-projects.php',
 		),
+		array(
+			'title'    => 'Nyeri Club',
+			'slug'     => 'nyeri-club',
+			'template' => 'page-templates/page-nyeri-club.php',
+		),
+		array(
+			'title'    => 'Dejavu Technologies',
+			'slug'     => 'dejavu-technologies',
+			'template' => 'page-templates/page-dejavu-technologies.php',
+		),
+		array(
+			'title'    => 'FaceShop 254',
+			'slug'     => 'faceshop-254',
+			'template' => 'page-templates/page-faceshop-254.php',
+		),
+		array(
+			'title'    => 'Gathathi-ini Boys',
+			'slug'     => 'gathathiini-boys',
+			'template' => 'page-templates/page-gathathiini-boys.php',
+		),
+		array(
+			'title'    => 'Aegeus Inspection',
+			'slug'     => 'aegeus-inspection',
+			'template' => 'page-templates/page-aegeus-inspection.php',
+		),
+		array(
+			'title'    => 'Aegeus Group',
+			'slug'     => 'aegeus-group',
+			'template' => 'page-templates/page-aegeus-group.php',
+		),
+		array(
+			'title'    => 'Bet Vault',
+			'slug'     => 'bet-vault',
+			'template' => 'page-templates/page-bet-vault.php',
+		),
+		array(
+			'title'    => 'Match Funded',
+			'slug'     => 'match-funded',
+			'template' => 'page-templates/page-match-funded.php',
+		),
+		array(
+			'title'    => 'My Sport Funded',
+			'slug'     => 'my-sport-funded',
+			'template' => 'page-templates/page-my-sport-funded.php',
+		),
+		array(
+			'title'    => 'My Sport Funded',
+			'slug'     => 'my-sport-funded',
+			'template' => 'page-templates/page-my-sport-funded.php',
+		),
+		array(
+			'title'    => 'MOFX',
+			'slug'     => 'mofx',
+			'template' => 'page-templates/page-mofx.php',
+		),
+		array(
+			'title'    => 'Funding Pips',
+			'slug'     => 'funding-pips',
+			'template' => 'page-templates/page-funding-pips.php',
+		),
+		array(
+			'title'    => 'Pemu Health Supplements',
+			'slug'     => 'pemu-health-supplements',
+			'template' => 'page-templates/page-pemu-health.php',
+		),
 
 	);
 

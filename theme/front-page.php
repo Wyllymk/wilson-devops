@@ -29,7 +29,7 @@ get_header();
     </div>
 
     <!-- Overlay -->
-    <div id="overlay" class="fixed inset-0 top-0 h-screen z-30 bg-black bg-opacity-50 hidden"></div>
+    <div id="overlay" class="fixed inset-0 top-0 h-screen z-30 bg-black/70 hidden"></div>
 
     <!-- Hero Section -->
     <section class="pt-32 pb-20 px-4 relative bg-gray-200 dark:bg-gray-900" id="home">
@@ -113,8 +113,7 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Developer.webp" alt="Wilson Mbuthia"
                     class="relative rounded-2xl shadow-2xl top-0 md:top-12 lg:top-0 w-full max-w-md sm:max-w-xs md:max-w-64 lg:max-w-sm xl:max-w-2xl h-auto max-h-[70vh] object-contain mx-auto z-20" />
                 <!-- Circle -->
-                <div
-                    class="absolute -bottom-6 -right-6 w-24 h-24 bg-teal-900 opacity-20 rounded-full animate-pulse z-30">
+                <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-teal-900/20 rounded-full animate-pulse z-30">
                 </div>
                 <!-- Image border -->
                 <div
@@ -143,7 +142,7 @@ get_header();
                 <span class="relative z-10 text-4xl font-bold text-center text-gray-900 dark:text-white">
                     <?php esc_html_e( 'About Me', 'wilson-devops' ); ?>
                 </span>
-                <span class="absolute top-2 -right-2 w-12 h-9 bg-teal-400 dark:bg-teal-600 opacity-50"></span>
+                <span class="absolute top-2 -right-2 w-12 h-9 bg-teal-400/50 dark:bg-teal-600/50"></span>
             </h2>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -218,7 +217,7 @@ get_header();
                 <span class="relative z-10 text-4xl font-bold text-center text-gray-900 dark:text-white">
                     <?php esc_html_e( 'Services', 'wilson-devops' ); ?>
                 </span>
-                <span class="absolute top-2 -right-2 w-12 h-9 bg-teal-400 dark:bg-teal-600 opacity-50"></span>
+                <span class="absolute top-2 -right-2 w-12 h-9 bg-teal-400/50 dark:bg-teal-600/50"></span>
             </h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Full Stack -->
@@ -354,7 +353,7 @@ get_header();
                 <span class="relative z-10 text-4xl font-bold text-center text-gray-900 dark:text-white">
                     <?php esc_html_e( 'Featured Projects', 'wilson-devops' ); ?>
                 </span>
-                <span class="absolute top-2 -right-2 w-12 h-9 bg-teal-400 dark:bg-teal-600 opacity-50"></span>
+                <span class="absolute top-2 -right-2 w-12 h-9 bg-teal-400/50 dark:bg-teal-600/50"></span>
             </h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Dejavu Technologies -->
@@ -365,7 +364,7 @@ get_header();
                             alt="Dejavu Technologies" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/coming-soon/' ) ); ?>" target="_blank"
+                            <a href="<?php echo esc_url( site_url( '/dejavu-technologies/' ) ); ?>" target="_blank"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -398,7 +397,7 @@ get_header();
                             alt="Nyeri Club" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/coming-soon/' ) ); ?>" target="_blank"
+                            <a href="<?php echo esc_url( site_url( '/nyeri-club/' ) ); ?>" target="_blank"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -431,7 +430,7 @@ get_header();
                             alt="FaceShop 254" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/coming-soon/' ) ); ?>" target="_blank"
+                            <a href="<?php echo esc_url( site_url( '/faceshop-254/' ) ); ?>" target="_blank"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -464,7 +463,7 @@ get_header();
                             alt="Gathathi-ini Boys" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/coming-soon/' ) ); ?>" target="_blank"
+                            <a href="<?php echo esc_url( site_url( '/gathathiini-boys/' ) ); ?>" target="_blank"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -497,7 +496,7 @@ get_header();
                             alt="Aegeus Inspections" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/coming-soon/' ) ); ?>" target="_blank"
+                            <a href="<?php echo esc_url( site_url( '/aegeus-inspections/' ) ); ?>" target="_blank"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -530,7 +529,7 @@ get_header();
                             alt="Aegeus Group" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/coming-soon/' ) ); ?>" target="_blank"
+                            <a href="<?php echo esc_url( site_url( '/aegeus-group/' ) ); ?>" target="_blank"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -590,7 +589,7 @@ get_header();
 
             <!-- Contact Form -->
             <div class="contact__mail max-w-xl mx-auto mt-10 xl:mr-40 2xl:mr-56 lg:mr-1">
-                <div class="bg-gray-950 dark:bg-black rounded-xl shadow-lg p-8">
+                <div class="bg-gray-950 dark:bg-black rounded-xl shadow-lg md:p-8">
                     <div class="py-6 px-4 transition-colors duration-300">
                         <h2 class="text-white text-center font-nico text-4xl mb-8">
                             <?php esc_html_e( 'Send Me A Message', 'wilson-devops' ); ?>

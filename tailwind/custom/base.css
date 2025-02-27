@@ -13,3 +13,10 @@ body {
 html {
 	@apply scroll-smooth;
 }
+
+.glass-effect {
+	@apply bg-[var(--color-cyber-dark)]/10 backdrop-blur-md border border-[var(--color-text-dark-muted)]/20;
+}
+.dark .glass-effect {
+	@apply bg-[var(--color-cyber-light)]/10;
+}
