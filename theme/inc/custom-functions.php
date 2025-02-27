@@ -155,6 +155,11 @@ function wilson_devops_create_pages() {
 			'template' => 'page-templates/page-coming-soon.php',
 		),
 		array(
+			'title'    => 'Contact',
+			'slug'     => 'contact',
+			'template' => 'page-templates/page-contact.php',
+		),
+		array(
 			'title'    => 'About Me',
 			'slug'     => 'about-me',
 			'template' => 'page-templates/page-about-me.php',

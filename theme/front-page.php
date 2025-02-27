@@ -21,11 +21,10 @@ get_header();
 <main class="min-h-screen bg-white dark:bg-gray-950 transition-colors duration-400 ease-in-out">
 
     <!-- Sidebar Navigation -->
-    <div id="navMenu"
-        class="transform translate-x-full opacity-0 w-60 py-4 px-4 z-40 fixed md:hidden top-0 h-full bg-gray-100 dark:bg-gray-800 shadow-lg transition-all duration-400 ease-in-out">
-        <!-- Your navigation items here -->
-        <?php get_template_part( 'template-parts/content/content', 'aside' ); ?>
-
+    <div id="navMenu" class="transform translate-x-full opacity-0 w-64 py-4 px-4 z-40 fixed md:hidden top-0 h-full 
+        bg-cyber-light/90 dark:bg-cyber-dark/90 backdrop-blur-md drop-shadow-cyber-cyan 
+        transition-all duration-400 ease-in-out">
+        <?php get_template_part('template-parts/content/content', 'aside'); ?>
     </div>
 
     <!-- Overlay -->
@@ -364,7 +363,7 @@ get_header();
                             alt="Dejavu Technologies" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/dejavu-technologies/' ) ); ?>" target="_blank"
+                            <a href="<?php echo esc_url( site_url( '/dejavu-technologies/' ) ); ?>"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -397,7 +396,7 @@ get_header();
                             alt="Nyeri Club" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/nyeri-club/' ) ); ?>" target="_blank"
+                            <a href="<?php echo esc_url( site_url( '/nyeri-club/' ) ); ?>"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -430,7 +429,7 @@ get_header();
                             alt="FaceShop 254" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/faceshop-254/' ) ); ?>" target="_blank"
+                            <a href="<?php echo esc_url( site_url( '/faceshop-254/' ) ); ?>"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -463,7 +462,7 @@ get_header();
                             alt="Gathathi-ini Boys" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/gathathiini-boys/' ) ); ?>" target="_blank"
+                            <a href="<?php echo esc_url( site_url( '/gathathiini-boys/' ) ); ?>"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -496,7 +495,7 @@ get_header();
                             alt="Aegeus Inspections" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/aegeus-inspections/' ) ); ?>" target="_blank"
+                            <a href="<?php echo esc_url( site_url( '/aegeus-inspections/' ) ); ?>"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -529,7 +528,7 @@ get_header();
                             alt="Aegeus Group" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/aegeus-group/' ) ); ?>" target="_blank"
+                            <a href="<?php echo esc_url( site_url( '/aegeus-group/' ) ); ?>"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>

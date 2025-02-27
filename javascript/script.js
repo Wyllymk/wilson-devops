@@ -177,46 +177,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	sections.forEach((section) => {
 		observer.observe(section);
 	});
-
-	/*=============== SCROLL REVEAL ANIMATION ===============*/
-	const sr = ScrollReveal({
-		origin: 'top',
-		distance: '60px',
-		duration: 2500,
-		delay: 400,
-		// reset: true
-	});
-
-	// Reveal elements
-	sr.reveal(`.services__card, .projects__card`, { interval: 100 });
-
-	if (window.innerWidth < 730) {
-		// For mobile screens
-		sr.reveal(
-			`.home__name, .home__info, .about__container, .section__title, .about__info, .contact__social, .contact__data`,
-			{
-				origin: 'left',
-				distance: '20px', // Reduced distance for mobile
-			}
-		);
-		sr.reveal(`.home__perfil, .contact__mail`, {
-			origin: 'right',
-			distance: '10px', // Reduced distance for mobile
-		});
-	} else {
-		// For larger screens
-		sr.reveal(
-			`.home__name, .home__info, .about__container, .section__title, .about__info, .contact__social, .contact__data`,
-			{
-				origin: 'left',
-				distance: '60px', // Default distance
-			}
-		);
-		sr.reveal(`.home__perfil, .about__image, .contact__mail`, {
-			origin: 'right',
-			distance: '60px', // Default distance
-		});
-	}
 });
 
 window.addEventListener('load', function () {
@@ -224,4 +184,323 @@ window.addEventListener('load', function () {
 	if (spinnerLoader) {
 		spinnerLoader.classList.add('hidden');
 	}
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	// Register ScrollTrigger with GSAP
+	gsap.registerPlugin(ScrollTrigger);
+
+	// Animate the central line growing from top to bottom
+	gsap.fromTo(
+		'.journey-line',
+		{
+			height: 0,
+		},
+		{
+			height: '100%',
+			duration: 2,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: '.journey-section',
+				start: 'top 80%',
+				toggleActions: 'play none none reset',
+			},
+		}
+	);
+
+	// Animate each journey item on scroll
+	gsap.utils.toArray('.journey-item').forEach((item, index) => {
+		gsap.fromTo(
+			item.querySelectorAll('.flex-1'),
+			{
+				opacity: 0,
+				x: index % 2 === 0 ? 50 : -50,
+			},
+			{
+				opacity: 1,
+				x: 0,
+				duration: 1,
+				ease: 'power3.out',
+				scrollTrigger: {
+					trigger: item,
+					start: 'top 80%',
+					toggleActions: 'play none none reset',
+				},
+			}
+		);
+		gsap.fromTo(
+			item.querySelector('.journey-dot'),
+			{
+				scale: 0,
+			},
+			{
+				scale: 1,
+				duration: 0.8,
+				ease: 'elastic.out(1, 0.5)',
+				scrollTrigger: {
+					trigger: item,
+					start: 'top 80%',
+					toggleActions: 'play none none reset',
+				},
+			}
+		);
+	});
+
+	// Pulse effect for dots
+	gsap.to('.journey-dot', {
+		scale: 1.2,
+		duration: 1,
+		repeat: -1,
+		yoyo: true,
+		ease: 'sine.inOut',
+		stagger: 0.3,
+	});
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	// Intro animation
+	gsap.from('.intro-section h1', {
+		opacity: 0,
+		y: 50,
+		duration: 1,
+		ease: 'power3.out',
+	});
+	gsap.from('.intro-section p', {
+		opacity: 0,
+		y: 30,
+		duration: 1,
+		delay: 0.3,
+	});
+	gsap.from('.intro-section a', {
+		opacity: 0,
+		scale: 0.9,
+		duration: 1,
+		delay: 0.6,
+	});
+	gsap.to('#servicePath', {
+		duration: 4,
+		strokeDasharray: '200',
+		strokeDashoffset: '200',
+		repeat: -1,
+		ease: 'linear',
+	});
+
+	// Service cards animation
+	gsap.utils.toArray('.service-card').forEach((card, i) => {
+		gsap.from(card, {
+			opacity: 0,
+			y: 50,
+			duration: 1,
+			ease: 'power3.out',
+			scrollTrigger: {
+				trigger: card,
+				start: 'top 80%',
+				toggleActions: 'play none none none',
+			},
+			delay: i * 0.2,
+		});
+	});
+
+	// Process steps animation
+	gsap.from('.process-line', {
+		height: 0,
+		duration: 1.5,
+		ease: 'power2.out',
+		scrollTrigger: {
+			trigger: '.process-step',
+			start: 'top 80%',
+		},
+	});
+	gsap.utils.toArray('.process-step').forEach((step, i) => {
+		gsap.from(step, {
+			opacity: 0,
+			x: i % 2 === 0 ? -50 : 50,
+			duration: 1,
+			ease: 'power3.out',
+			scrollTrigger: {
+				trigger: step,
+				start: 'top 80%',
+				toggleActions: 'play none none none',
+			},
+			delay: i * 0.3,
+		});
+	});
+
+	// Tech items animation
+	gsap.utils.toArray('.tech-item').forEach((item, i) => {
+		gsap.from(item, {
+			opacity: 0,
+			scale: 0.8,
+			duration: 0.8,
+			ease: 'elastic.out(1, 0.5)',
+			scrollTrigger: {
+				trigger: item,
+				start: 'top 90%',
+				toggleActions: 'play none none none',
+			},
+			delay: i * 0.1,
+		});
+	});
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	gsap.from('.projects-hero h1', {
+		opacity: 0,
+		y: 50,
+		duration: 1,
+		ease: 'power3.out',
+	});
+	gsap.from('.projects-hero p', {
+		opacity: 0,
+		y: 30,
+		duration: 1,
+		delay: 0.3,
+	});
+	gsap.to('#projectPath', {
+		duration: 4,
+		strokeDasharray: '200',
+		strokeDashoffset: '200',
+		repeat: -1,
+		ease: 'linear',
+	});
+
+	gsap.utils.toArray('.project-card').forEach((card, i) => {
+		gsap.from(card, {
+			opacity: 0,
+			y: 50,
+			duration: 1,
+			ease: 'power3.out',
+			scrollTrigger: {
+				trigger: card,
+				start: 'top 80%',
+				toggleActions: 'play none none none',
+			},
+			delay: i * 0.2,
+		});
+	});
+});
+
+// Project Pages
+document.addEventListener('DOMContentLoaded', () => {
+	// Reusable function for hero animations
+	function animateHeroSection(selector) {
+		gsap.from(`${selector} h1`, {
+			opacity: 0,
+			y: 50,
+			duration: 1,
+			ease: 'power3.out',
+		});
+		gsap.from(`${selector} p`, {
+			opacity: 0,
+			y: 30,
+			duration: 1,
+			delay: 0.3,
+		});
+		gsap.from(`${selector} a`, {
+			opacity: 0,
+			scale: 0.9,
+			duration: 1,
+			delay: 0.6,
+			stagger: 0.2,
+		});
+	}
+
+	// Reusable function for overview animations
+	function animateOverviewSection(selector) {
+		gsap.from(`${selector} img`, {
+			opacity: 0,
+			scale: 0.9,
+			duration: 1,
+			scrollTrigger: {
+				trigger: selector,
+				start: 'top 80%',
+			},
+		});
+		gsap.from(`${selector} p`, {
+			opacity: 0,
+			y: 30,
+			duration: 1,
+			stagger: 0.2,
+			scrollTrigger: {
+				trigger: selector,
+				start: 'top 80%',
+			},
+		});
+	}
+
+	// Reusable function for card animations
+	function animateCards(selector, staggerDelay = 0.2) {
+		gsap.utils.toArray(selector).forEach((card, i) => {
+			gsap.from(card, {
+				opacity: 0,
+				y: 50,
+				duration: 1,
+				delay: i * staggerDelay,
+				ease: 'power3.out',
+				scrollTrigger: {
+					trigger: card,
+					start: 'top 80%',
+				},
+			});
+		});
+	}
+
+	// Reusable function for solution animations
+	function animateSolutions(selector, staggerDelay = 0.3) {
+		gsap.utils.toArray(selector).forEach((step, i) => {
+			gsap.from(step, {
+				opacity: 0,
+				x: i % 2 === 0 ? -50 : 50,
+				duration: 1,
+				delay: i * staggerDelay,
+				ease: 'power3.out',
+				scrollTrigger: {
+					trigger: step,
+					start: 'top 80%',
+				},
+			});
+		});
+	}
+
+	// Reusable function for feature card animations
+	function animateFeatureCards(selector, staggerDelay = 0.2) {
+		gsap.utils.toArray(selector).forEach((card, i) => {
+			gsap.from(card, {
+				opacity: 0,
+				y: 50,
+				duration: 1,
+				ease: 'power3.out',
+				scrollTrigger: {
+					trigger: card,
+					start: 'top 80%',
+					toggleActions: 'play none none none',
+				},
+				delay: i * staggerDelay,
+			});
+		});
+	}
+
+	// Apply animations to specific sections
+	animateHeroSection('.hero-section');
+	animateOverviewSection('.overview-section');
+	animateCards('.challenges-section .rounded-xl');
+	animateSolutions('.solutions-section .solution');
+	animateFeatureCards('.feature-card');
+
+	// SVG Path Animation (unique to this page)
+	gsap.to('#dejavuPath', {
+		duration: 4,
+		strokeDasharray: '200',
+		strokeDashoffset: '200',
+		repeat: -1,
+		ease: 'linear',
+	});
+
+	gsap.to('#nyeriPath', {
+		duration: 4,
+		strokeDasharray: '200',
+		strokeDashoffset: '200',
+		repeat: -1,
+		ease: 'linear',
+	});
 });

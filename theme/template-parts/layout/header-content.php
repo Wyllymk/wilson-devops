@@ -63,7 +63,7 @@ defined( 'ABSPATH' ) || exit;
                             <span
                                 class="absolute left-0 right-0 bottom-0 h-0.5 bg-teal-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </a>
-                        <a href="#contact"
+                        <a href="<?php echo esc_url( site_url( '/contact/' ) ); ?>"
                             class="nav-link font-semibold text-gray-950 dark:text-white hover:text-teal-500 dark:hover:text-teal-300 transition-all duration-300 relative group">
                             <?php esc_html_e( 'Contact', 'wilson-devops' ); ?>
                             <span

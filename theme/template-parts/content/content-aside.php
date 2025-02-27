@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
             <ul class="space-y-4 p-4 mt-10 text-gray-950 dark:text-gray-300 text-lg font-semibold">
                 <li class="mt-5">
                     <h5 class="uppercase font-normal text-xs font-manrope text-gray-500 dark:text-gray-500">
-                        Menu
+                        <?php esc_html_e( 'Menu', 'wilson-devops' ); ?>
                     </h5>
                 </li>
                 <!-- Dashboard Link -->
@@ -49,7 +49,7 @@ defined( 'ABSPATH' ) || exit;
                     </a>
                 </li>
                 <li class="menu-link rounded-lg">
-                    <a href="#contact"
+                    <a href="<?php echo esc_url( site_url( '/contact/' ) ); ?>"
                         class="flex items-center p-2 rounded-lg hover:bg-gray-600 dark:hover:bg-gray-500">
                         <span class="menu-item ml-4"><?php esc_html_e( 'Contact', 'wilson-devops' ); ?></span>
                     </a>

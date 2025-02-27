@@ -6,3 +6,21 @@
  *
  * https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities
  */
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-20px);
+	}
+}
+
+.animate-float {
+	animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+	animation: float 4s ease-in-out infinite 2s;
+}
