@@ -187,9 +187,87 @@ window.addEventListener('load', function () {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-	// Register ScrollTrigger with GSAP
-	gsap.registerPlugin(ScrollTrigger);
+	// Common animation for services and projects cards
+	gsap.utils
+		.toArray('.services__card, .projects__card')
+		.forEach((card, index) => {
+			gsap.from(card, {
+				opacity: 0,
+				y: 60,
+				duration: 1,
+				delay: index * 0.1, // Staggered delay
+				scrollTrigger: {
+					trigger: card,
+					start: 'top 80%',
+				},
+			});
+		});
 
+	// Responsive animations for mobile and larger screens
+	if (window.innerWidth < 730) {
+		// Mobile animations
+		gsap.utils
+			.toArray(
+				'.home__name, .home__info, .about__container, .section__title, .about__info, .contact__social, .contact__data'
+			)
+			.forEach((el) => {
+				gsap.from(el, {
+					opacity: 0,
+					x: -15, // Move from left
+					duration: 1,
+					scrollTrigger: {
+						trigger: el,
+						start: 'top 80%',
+					},
+				});
+			});
+
+		gsap.utils.toArray('.home__perfil, .contact__mail').forEach((el) => {
+			gsap.from(el, {
+				opacity: 0,
+				x: 15, // Move from right
+				duration: 1,
+				scrollTrigger: {
+					trigger: el,
+					start: 'top 80%',
+				},
+			});
+		});
+	} else {
+		// Larger screen animations
+		gsap.utils
+			.toArray(
+				'.home__name, .home__info, .about__container, .section__title, .about__info, .contact__social, .contact__data'
+			)
+			.forEach((el) => {
+				gsap.from(el, {
+					opacity: 0,
+					x: -60, // Move from left
+					duration: 1,
+					scrollTrigger: {
+						trigger: el,
+						start: 'top 80%',
+					},
+				});
+			});
+
+		gsap.utils
+			.toArray('.home__perfil, .about__image, .contact__mail')
+			.forEach((el) => {
+				gsap.from(el, {
+					opacity: 0,
+					x: 60, // Move from right
+					duration: 1,
+					scrollTrigger: {
+						trigger: el,
+						start: 'top 80%',
+					},
+				});
+			});
+	}
+});
+
+document.addEventListener('DOMContentLoaded', () => {
 	// Animate the central line growing from top to bottom
 	gsap.fromTo(
 		'.journey-line',
