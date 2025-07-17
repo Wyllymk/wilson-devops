@@ -45,8 +45,9 @@ get_header();
     </section>
 
     <!-- Projects Filter Section -->
-    <section class="py-12 sticky top-0 z-20 bg-cyber-light dark:bg-cyber-dark drop-shadow-custom">
-        <div class="container mx-auto px-4" x-data="projectFilter()">
+    <section class="py-12  sticky top-0 z-20 bg-cyber-light dark:bg-cyber-dark drop-shadow-custom"
+        x-data="projectFilter()">
+        <div class="container mx-auto px-4">
             <!-- Search Bar -->
             <div class="relative max-w-md mx-auto mb-6">
                 <input type="text" x-model="search" @input="filterProjects" placeholder="Search projects..." class="w-full p-3 rounded-full bg-cyber-light/80 dark:bg-cyber-dark/80 
@@ -84,11 +85,9 @@ get_header();
                 </button>
             </div>
         </div>
-    </section>
 
-    <!-- Projects Grid Section -->
-    <section class="py-20">
-        <div class="container mx-auto px-4" x-data="projectFilter()">
+        <!-- Projects Grid Section -->
+        <div class="container mx-auto px-4 py-12">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Dejavu Technologies -->
                 <article class="project-card bg-cyber-light/50 dark:bg-cyber-dark/50 
