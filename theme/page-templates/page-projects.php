@@ -63,23 +63,23 @@ get_header();
             <!-- Categories -->
             <div class="flex flex-wrap justify-center gap-4">
                 <button @click="setCategory('all')"
-                    :class="{ 'bg-cyber-cyan text-white': activeCategory === 'all', 'bg-cyber-light/20 dark:bg-cyber-dark/20 text-[var(--color-text-light)] dark:text-[var(--color-text-dark)]': activeCategory !== 'all' }"
-                    class="px-4 py-2 rounded-full font-manrope hover:drop-shadow-cyber-cyan transition-all duration-300">
+                    :class="{ 'bg-cyber-cyan text-white': activeCategory === 'all', 'bg-cyber-light/80 dark:bg-cyber-dark/80 text-[var(--color-text-light)] dark:text-[var(--color-text-dark)]': activeCategory !== 'all' }"
+                    class="cursor-pointer px-4 py-2 rounded-full font-manrope hover:drop-shadow-cyber-cyan transition-all duration-300">
                     All
                 </button>
                 <button @click="setCategory('wordpress')"
-                    :class="{ 'bg-cyber-cyan text-white': activeCategory === 'wordpress', 'bg-cyber-light/20 dark:bg-cyber-dark/20 text-[var(--color-text-light)] dark:text-[var(--color-text-dark)]': activeCategory !== 'wordpress' }"
-                    class="px-4 py-2 rounded-full font-manrope hover:drop-shadow-cyber-cyan transition-all duration-300">
+                    :class="{ 'bg-cyber-cyan text-white': activeCategory === 'wordpress', 'bg-cyber-light/80 dark:bg-cyber-dark/80 text-[var(--color-text-light)] dark:text-[var(--color-text-dark)]': activeCategory !== 'wordpress' }"
+                    class="cursor-pointer px-4 py-2 rounded-full font-manrope hover:drop-shadow-cyber-cyan transition-all duration-300">
                     WordPress
                 </button>
                 <button @click="setCategory('woocommerce')"
-                    :class="{ 'bg-cyber-cyan text-white': activeCategory === 'woocommerce', 'bg-cyber-light/20 dark:bg-cyber-dark/20 text-[var(--color-text-light)] dark:text-[var(--color-text-dark)]': activeCategory !== 'woocommerce' }"
-                    class="px-4 py-2 rounded-full font-manrope hover:drop-shadow-cyber-cyan transition-all duration-300">
+                    :class="{ 'bg-cyber-cyan text-white': activeCategory === 'woocommerce', 'bg-cyber-light/80 dark:bg-cyber-dark/80 text-[var(--color-text-light)] dark:text-[var(--color-text-dark)]': activeCategory !== 'woocommerce' }"
+                    class="cursor-pointer px-4 py-2 rounded-full font-manrope hover:drop-shadow-cyber-cyan transition-all duration-300">
                     WooCommerce
                 </button>
                 <button @click="setCategory('elementor')"
-                    :class="{ 'bg-cyber-cyan text-white': activeCategory === 'elementor', 'bg-cyber-light/20 dark:bg-cyber-dark/20 text-[var(--color-text-light)] dark:text-[var(--color-text-dark)]': activeCategory !== 'elementor' }"
-                    class="px-4 py-2 rounded-full font-manrope hover:drop-shadow-cyber-cyan transition-all duration-300">
+                    :class="{ 'bg-cyber-cyan text-white': activeCategory === 'elementor', 'bg-cyber-light/80 dark:bg-cyber-dark/80 text-[var(--color-text-light)] dark:text-[var(--color-text-dark)]': activeCategory !== 'elementor' }"
+                    class="cursor-pointer px-4 py-2 rounded-full font-manrope hover:drop-shadow-cyber-cyan transition-all duration-300">
                     Elementor
                 </button>
             </div>

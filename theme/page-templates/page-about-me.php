@@ -193,7 +193,7 @@ get_header();
                             group-hover:text-gray-950 dark:group-hover:text-teal-300">
                             ' . esc_html__($skill) . '
                         </p>
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+                        <div class="absolute inset-0 group-hover:opacity-100 transition-opacity duration-300 
                             bg-gradient-to-t from-cyber-cyan/30 to-transparent rounded-xl"></div>
                     </div>';
                 }
