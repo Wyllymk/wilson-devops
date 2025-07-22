@@ -24,7 +24,7 @@ get_header();
                         <!-- Text Column -->
                         <div class="lg:w-1/2 mt-20">
                             <h1
-                                class="md:leading-3 text-4xl md:text-5xl lg:text-6xl font-bold font-oswald mb-4 text-regal-blue dark:text-gray-100">
+                                class="text-4xl md:text-5xl lg:text-6xl font-bold font-oswald mb-4 text-regal-blue dark:text-gray-100">
                                 <?php _e( "Oops! We couldn't find that page.", 'wilson-devops' ); ?>
                             </h1>
                             <p class="text-lg md:text-xl mb-8 text-gray-700 dark:text-gray-300">
