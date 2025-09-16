@@ -24,3 +24,137 @@
 .animate-float-delayed {
 	animation: float 4s ease-in-out infinite 2s;
 }
+
+.tab-content {
+	transition: opacity 0.3s ease-in-out;
+}
+
+.tab-content.active {
+	opacity: 1;
+}
+
+.tab-content.hidden {
+	opacity: 0;
+}
+
+.counter {
+	transition: all 0.3s ease;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+
+	50% {
+		transform: translateY(-20px);
+	}
+}
+
+.animate-float {
+	animation: float 6s ease-in-out infinite;
+}
+
+.drop-shadow-cyber-cyan {
+	filter: drop-shadow(0 4px 20px rgba(34, 211, 238, 0.4));
+}
+
+.drop-shadow-cyber-coral {
+	filter: drop-shadow(0 4px 20px rgba(251, 113, 133, 0.4));
+}
+
+.drop-shadow-purple-400 {
+	filter: drop-shadow(0 4px 20px rgba(168, 85, 247, 0.4));
+}
+
+.drop-shadow-cyan-400 {
+	filter: drop-shadow(0 4px 20px rgba(34, 211, 238, 0.4));
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(156, 163, 175, 0.1);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, #06b6d4, #f97316);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(to bottom, #0891b2, #ea580c);
+}
+
+/* Enhance hover effects */
+.feature-card:hover {
+	transform: translateY(-5px);
+}
+
+.solution:hover {
+	background: rgba(34, 211, 238, 0.05);
+	border-radius: 12px;
+	padding: 1rem;
+	margin: -1rem;
+	transition: all 0.3s ease;
+}
+
+/* Loading animation for images */
+img {
+	transition:
+		opacity 0.3s ease,
+		transform 0.3s ease;
+}
+
+img:hover {
+	transform: scale(1.02);
+}
+
+/* Add subtle animations to cards */
+@keyframes cardPulse {
+	0%,
+	100% {
+		box-shadow: 0 4px 20px rgba(34, 211, 238, 0.1);
+	}
+
+	50% {
+		box-shadow: 0 8px 40px rgba(34, 211, 238, 0.2);
+	}
+}
+
+.animate-card-pulse {
+	animation: cardPulse 3s ease-in-out infinite;
+}
+
+/* Gradient text effects */
+.gradient-text {
+	background: linear-gradient(135deg, #06b6d4, #f97316);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+	.hero-section {
+		padding-top: 6rem;
+		padding-bottom: 4rem;
+	}
+
+	.section__title span {
+		font-size: 2rem;
+	}
+
+	.grid {
+		gap: 2rem;
+	}
+
+	.space-y-12 > * + * {
+		margin-top: 2rem;
+	}
+}

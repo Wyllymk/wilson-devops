@@ -355,6 +355,72 @@ get_header();
                 <span class="absolute top-2 -right-2 w-12 h-9 bg-teal-400/50 dark:bg-teal-600/50"></span>
             </h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- VMS -->
+                <div
+                    class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-teal-800 transition-shadow">
+                    <div class="relative">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/vms.png" alt="vms"
+                            class="w-full h-48 object-cover" />
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="<?php echo esc_url( site_url( '/vms' ) ); ?>"
+                                class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
+                                <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                            <?php esc_html_e( 'Visitor Management System', 'wilson-devops' ); ?>
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            <?php esc_html_e("A powerful visitor management system built to streamline check-ins, improve security, automate guest records, and provide organizations with a seamless, efficient platform for managing visitors effectively every day.", 'wilson-devops'); ?>
+                        </p>
+                        <a href="https://vms.nyericlub.co.ke" target="_blank"
+                            class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
+                            <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
+                            <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20">
+                                <path fill="currentColor"
+                                    d="M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nyeri Club -->
+                <div
+                    class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-teal-800 transition-shadow">
+                    <div class="relative">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/nyeri-club-1.png"
+                            alt="Nyeri Club" class="w-full h-48 object-cover" />
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="<?php echo esc_url( site_url( '/nyeri-club/' ) ); ?>"
+                                class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
+                                <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                            <?php esc_html_e( 'Nyeri Club', 'wilson-devops' ); ?>
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            <?php esc_html_e( "Nyeri Club's golf website designed with WordPress and Elementor, featuring elegant layouts, intuitive navigation, and a dynamic platform for members and enthusiasts to engage and explore golfing opportunities.", 'wilson-devops' ); ?>
+                        </p>
+                        <a href="https://nyericlub.co.ke" target="_blank"
+                            class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
+                            <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
+                            <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20">
+                                <path fill="currentColor"
+                                    d="M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
                 <!-- Dejavu Technologies -->
                 <div
                     class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-teal-800 transition-shadow">
@@ -377,39 +443,6 @@ get_header();
                             <?php esc_html_e( 'The company website redesign utilizes WordPress and Elementor, featuring a custom shop page, seamless API integration, and an innovative design to enhance user experience and functionality across the site.', 'wilson-devops' ); ?>
                         </p>
                         <a href="https://dejavutechkenya.com" target="_blank"
-                            class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
-                            <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
-                            <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20">
-                                <path fill="currentColor"
-                                    d="M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Nyeri Club -->
-                <div
-                    class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-teal-800 transition-shadow">
-                    <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Nyeri-Club.jpg"
-                            alt="Nyeri Club" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/nyeri-club/' ) ); ?>"
-                                class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
-                                <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                            <?php esc_html_e( 'Nyeri Club', 'wilson-devops' ); ?>
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <?php esc_html_e( "Nyeri Club's golf website designed with WordPress and Elementor, featuring elegant layouts, intuitive navigation, and a dynamic platform for members and enthusiasts to engage and explore golfing opportunities.", 'wilson-devops' ); ?>
-                        </p>
-                        <a href="https://nyericlub.co.ke" target="_blank"
                             class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
                             <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
                             <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"

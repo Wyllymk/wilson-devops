@@ -89,11 +89,85 @@ get_header();
         <!-- Projects Grid Section -->
         <div class="container mx-auto px-4 py-12">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Dejavu Technologies -->
-                <article class="project-card bg-cyber-light/50 dark:bg-cyber-dark/50 
+                <!-- VMS -->
+                <article class="project-card bg-cyber-light dark:bg-cyber-dark 
                     rounded-xl overflow-hidden drop-shadow-custom group hover:drop-shadow-cyber-cyan 
-                    transition-all duration-300" data-categories="wordpress,elementor"
-                    x-show="shouldShow('wordpress,elementor')">
+                    transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                    data-categories="wordpress" x-show="shouldShow('wordpress')">
+                    <div class="relative">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/vms.png" alt="VMS"
+                            class="w-full h-56 object-cover" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-cyber-cyan/50 to-transparent 
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="<?php echo esc_url(site_url('/vms')); ?>" class="px-4 py-2 rounded-full bg-[var(--color-cyber-pink)] text-white font-manrope 
+                                hover:scale-105 transition-all duration-300">
+                                <?php esc_html_e('View Project Details', 'wilson-devops'); ?>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-oswald text-xl text-cyber-blue dark:text-cyber-cyan mb-2">
+                            <?php esc_html_e('Visitor Management System', 'wilson-devops'); ?>
+                        </h3>
+                        <p class="font-manrope text-text-light-muted dark:text-text-dark-muted mb-4">
+                            <?php esc_html_e("A powerful visitor management system built to streamline check-ins, improve security, automate guest records, and provide organizations with a seamless, efficient platform for managing visitors effectively every day.", 'wilson-devops'); ?>
+                        </p>
+                        <a href="https://vms.nyericlub.co.ke" target="_blank" class="font-manrope text-cyber-blue dark:text-cyber-cyan 
+                            hover:text-[var(--color-cyber-coral)] dark:hover:text-[var(--color-cyber-pink)] 
+                            inline-flex items-center gap-2 transition-colors duration-300">
+                            <?php esc_html_e('Visit Website', 'wilson-devops'); ?>
+                            <svg class="w-5 h-5 fill-cyber-blue dark:fill-cyber-cyan" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20">
+                                <path fill="currentColor"
+                                    d="M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Nyeri Club -->
+                <article class="project-card bg-cyber-light dark:bg-cyber-dark 
+                    rounded-xl overflow-hidden drop-shadow-custom group hover:drop-shadow-cyber-cyan 
+                    transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                    data-categories="wordpress,elementor" x-show="shouldShow('wordpress,elementor')">
+                    <div class="relative">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/nyeri-club-1.png"
+                            alt="Nyeri Club" class="w-full h-56 object-cover" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-cyber-cyan/50 to-transparent 
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="<?php echo esc_url(site_url('/nyeri-club/')); ?>" class="px-4 py-2 rounded-full bg-[var(--color-cyber-pink)] text-white font-manrope 
+                                hover:scale-105 transition-all duration-300">
+                                <?php esc_html_e('View Project Details', 'wilson-devops'); ?>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-oswald text-xl text-cyber-blue dark:text-cyber-cyan mb-2">
+                            <?php esc_html_e('Nyeri Club', 'wilson-devops'); ?>
+                        </h3>
+                        <p class="font-manrope text-text-light-muted dark:text-text-dark-muted mb-4">
+                            <?php esc_html_e("Nyeri Club's golf website designed with WordPress and Elementor, featuring elegant layouts, intuitive navigation, and a dynamic platform for members and enthusiasts to engage and explore golfing opportunities.", 'wilson-devops'); ?>
+                        </p>
+                        <a href="https://nyericlub.co.ke" target="_blank" class="font-manrope text-cyber-blue dark:text-cyber-cyan 
+                            hover:text-[var(--color-cyber-coral)] dark:hover:text-[var(--color-cyber-pink)] 
+                            inline-flex items-center gap-2 transition-colors duration-300">
+                            <?php esc_html_e('Visit Website', 'wilson-devops'); ?>
+                            <svg class="w-5 h-5 fill-cyber-blue dark:fill-cyber-cyan" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20">
+                                <path fill="currentColor"
+                                    d="M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Dejavu Technologies -->
+                <article class="project-card bg-cyber-light dark:bg-cyber-dark 
+                    rounded-xl overflow-hidden drop-shadow-custom group hover:drop-shadow-cyber-cyan 
+                    transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                    data-categories="wordpress,elementor" x-show="shouldShow('wordpress,elementor')">
                     <div class="relative">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Dejavu.jpg"
                             alt="Dejavu Technologies" class="w-full h-56 object-cover" />
@@ -126,47 +200,11 @@ get_header();
                     </div>
                 </article>
 
-                <!-- Nyeri Club -->
-                <article class="project-card bg-cyber-light/50 dark:bg-cyber-dark/50 
-                    rounded-xl overflow-hidden drop-shadow-custom group hover:drop-shadow-cyber-cyan 
-                    transition-all duration-300" data-categories="wordpress,elementor"
-                    x-show="shouldShow('wordpress,elementor')">
-                    <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Nyeri-Club.jpg"
-                            alt="Nyeri Club" class="w-full h-56 object-cover" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-cyber-cyan/50 to-transparent 
-                            opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                            <a href="<?php echo esc_url(site_url('/nyeri-club/')); ?>" class="px-4 py-2 rounded-full bg-[var(--color-cyber-pink)] text-white font-manrope 
-                                hover:scale-105 transition-all duration-300">
-                                <?php esc_html_e('View Project Details', 'wilson-devops'); ?>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-oswald text-xl text-cyber-blue dark:text-cyber-cyan mb-2">
-                            <?php esc_html_e('Nyeri Club', 'wilson-devops'); ?>
-                        </h3>
-                        <p class="font-manrope text-text-light-muted dark:text-text-dark-muted mb-4">
-                            <?php esc_html_e("Nyeri Club's golf website designed with WordPress and Elementor, featuring elegant layouts, intuitive navigation, and a dynamic platform for members and enthusiasts to engage and explore golfing opportunities.", 'wilson-devops'); ?>
-                        </p>
-                        <a href="https://nyericlub.co.ke" target="_blank" class="font-manrope text-cyber-blue dark:text-cyber-cyan 
-                            hover:text-[var(--color-cyber-coral)] dark:hover:text-[var(--color-cyber-pink)] 
-                            inline-flex items-center gap-2 transition-colors duration-300">
-                            <?php esc_html_e('Visit Website', 'wilson-devops'); ?>
-                            <svg class="w-5 h-5 fill-cyber-blue dark:fill-cyber-cyan" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20">
-                                <path fill="currentColor"
-                                    d="M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z" />
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-
                 <!-- FaceShop 254 -->
-                <article class="project-card bg-cyber-light/50 dark:bg-cyber-dark/50 
+                <article class="project-card bg-cyber-light dark:bg-cyber-dark 
                     rounded-xl overflow-hidden drop-shadow-custom group hover:drop-shadow-cyber-cyan 
-                    transition-all duration-300" data-categories="woocommerce" x-show="shouldShow('woocommerce')">
+                    transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                    data-categories="woocommerce" x-show="shouldShow('woocommerce')">
                     <div class="relative">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Faceshop.jpg"
                             alt="FaceShop 254" class="w-full h-56 object-cover" />
@@ -200,9 +238,10 @@ get_header();
                 </article>
 
                 <!-- Gathathi-ini Boys -->
-                <article class="project-card bg-cyber-light/50 dark:bg-cyber-dark/50 
+                <article class="project-card bg-cyber-light dark:bg-cyber-dark 
                     rounded-xl overflow-hidden drop-shadow-custom group hover:drop-shadow-cyber-cyan 
-                    transition-all duration-300" data-categories="wordpress" x-show="shouldShow('wordpress')">
+                    transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                    data-categories="wordpress" x-show="shouldShow('wordpress')">
                     <div class="relative">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Gathathi-ini.jpg"
                             alt="Gathathi-ini Boys" class="w-full h-56 object-cover" />
@@ -236,10 +275,10 @@ get_header();
                 </article>
 
                 <!-- Aegeus Inspections -->
-                <article class="project-card bg-cyber-light/50 dark:bg-cyber-dark/50 
+                <article class="project-card bg-cyber-light dark:bg-cyber-dark 
                     rounded-xl overflow-hidden drop-shadow-custom group hover:drop-shadow-cyber-cyan 
-                    transition-all duration-300" data-categories="wordpress,elementor"
-                    x-show="shouldShow('wordpress,elementor')">
+                    transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                    data-categories="wordpress,elementor" x-show="shouldShow('wordpress,elementor')">
                     <div class="relative">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Aegeus-Inspections.jpg"
                             alt="Aegeus Inspections" class="w-full h-56 object-cover" />
@@ -273,10 +312,10 @@ get_header();
                 </article>
 
                 <!-- Aegeus Group -->
-                <article class="project-card bg-cyber-light/50 dark:bg-cyber-dark/50 
+                <article class="project-card bg-cyber-light dark:bg-cyber-dark 
                     rounded-xl overflow-hidden drop-shadow-custom group hover:drop-shadow-cyber-cyan 
-                    transition-all duration-300" data-categories="wordpress,elementor"
-                    x-show="shouldShow('wordpress,elementor')">
+                    transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                    data-categories="wordpress,elementor" x-show="shouldShow('wordpress,elementor')">
                     <div class="relative">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Aegeus-Group.jpg"
                             alt="Aegeus Group" class="w-full h-56 object-cover" />

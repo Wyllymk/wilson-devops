@@ -180,6 +180,11 @@ function wilson_devops_create_pages() {
 			'template' => 'page-templates/page-nyeri-club.php',
 		),
 		array(
+			'title'    => 'VMS',
+			'slug'     => 'vms',
+			'template' => 'page-templates/page-vms.php',
+		),
+		array(
 			'title'    => 'Dejavu Technologies',
 			'slug'     => 'dejavu-technologies',
 			'template' => 'page-templates/page-dejavu-technologies.php',

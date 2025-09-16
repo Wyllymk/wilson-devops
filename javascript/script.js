@@ -189,7 +189,7 @@ window.addEventListener('load', function () {
 document.addEventListener('DOMContentLoaded', () => {
 	// Common animation for services and projects cards
 	gsap.utils
-		.toArray('.services__card, .projects__card')
+		.toArray('.services__card, .projects__card, .project-card')
 		.forEach((card, index) => {
 			gsap.from(card, {
 				opacity: 0,
@@ -441,21 +441,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		repeat: -1,
 		ease: 'linear',
 	});
-
-	gsap.utils.toArray('.project-card').forEach((card, i) => {
-		gsap.from(card, {
-			opacity: 0,
-			y: 50,
-			duration: 1,
-			ease: 'power3.out',
-			scrollTrigger: {
-				trigger: card,
-				start: 'top 80%',
-				toggleActions: 'play none none none',
-			},
-			delay: i * 0.2,
-		});
-	});
 });
 
 // Project Pages
@@ -581,4 +566,94 @@ document.addEventListener('DOMContentLoaded', () => {
 		repeat: -1,
 		ease: 'linear',
 	});
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+	// Counter Animation
+	const counters = document.querySelectorAll('.counter');
+	const observerOptions = {
+		threshold: 0.7,
+	};
+
+	const counterObserver = new IntersectionObserver(function (entries) {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				const counter = entry.target;
+				const target = parseFloat(counter.getAttribute('data-target'));
+				const increment = target / 50;
+				let current = 0;
+
+				const updateCounter = () => {
+					if (current < target) {
+						current += increment;
+						counter.textContent = Math.ceil(current);
+						requestAnimationFrame(updateCounter);
+					} else {
+						counter.textContent = target;
+					}
+				};
+
+				updateCounter();
+				counterObserver.unobserve(counter);
+			}
+		});
+	}, observerOptions);
+
+	counters.forEach((counter) => {
+		counterObserver.observe(counter);
+	});
+
+	// Tab Functionality
+	const tabButtons = document.querySelectorAll('[data-tab]');
+	const tabContents = document.querySelectorAll('.tab-content');
+
+	tabButtons.forEach((button) => {
+		button.addEventListener('click', function () {
+			const targetTab = this.getAttribute('data-tab');
+
+			// Update button states
+			tabButtons.forEach((btn) => {
+				btn.classList.remove(
+					'tab-active',
+					'bg-cyber-blue',
+					'text-white'
+				);
+				btn.classList.add('bg-gray-200', 'text-gray-700');
+			});
+			this.classList.remove('bg-gray-200', 'text-gray-700');
+			this.classList.add('tab-active', 'bg-cyber-blue', 'text-white');
+
+			// Update content visibility
+			tabContents.forEach((content) => {
+				content.classList.remove('active');
+				content.classList.add('hidden');
+			});
+			document.getElementById(targetTab).classList.remove('hidden');
+			document.getElementById(targetTab).classList.add('active');
+		});
+	});
+
+	// Smooth scrolling for anchor links
+	document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault();
+			const target = document.querySelector(this.getAttribute('href'));
+			if (target) {
+				target.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+				});
+			}
+		});
+	});
+
+	// Add loading animation to demo links
+	document
+		.querySelectorAll('a[href*="vms.wilsondevops.com"]')
+		.forEach((link) => {
+			link.addEventListener('click', function () {
+				this.innerHTML =
+					'<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Loading Demo...';
+			});
+		});
 });
