@@ -191,7 +191,7 @@ get_header();
                             <div class="w-3 h-3 bg-red-500 rounded-full"></div>
                             <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
                             <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                            <div class="ml-4 text-gray-400 text-sm font-mono">vms-dashboard.local</div>
+                            <div class="ml-4 text-gray-400 text-sm font-mono">vms.nyericlub.co.ke</div>
                         </div>
 
                         <!-- Mock Dashboard Interface -->
@@ -840,7 +840,7 @@ get_header();
                     Start Your Project
                 </a>
                 <a href="https://vms.nyericlub.co.ke" target="_blank"
-                    class="px-8 py-3 border-2 border-white text-white rounded-full font-manrope text-lg hover:bg-white/10 transition-all duration-300 cursor-pointer">
+                    class="px-8 py-3 border-2 border-white text-white rounded-full font-manrope text-lg hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
                     Try Live Demo
                 </a>
             </div>

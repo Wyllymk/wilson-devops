@@ -421,15 +421,15 @@ get_header();
                     </div>
                 </div>
 
-                <!-- Dejavu Technologies -->
+                <!-- The Funded Way -->
                 <div
                     class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-teal-800 transition-shadow">
                     <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Dejavu.jpg"
-                            alt="Dejavu Technologies" class="w-full h-48 object-cover" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fundedway.png"
+                            alt="The Funded Way" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/dejavu-technologies/' ) ); ?>"
+                            <a href="<?php echo esc_url( site_url( '/funded-way' ) ); ?>"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -437,12 +437,12 @@ get_header();
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                            <?php esc_html_e( 'Dejavu Technologies', 'wilson-devops' ); ?>
+                            <?php esc_html_e( 'The Funded Way', 'wilson-devops' ); ?>
                         </h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <?php esc_html_e( 'The company website redesign utilizes WordPress and Elementor, featuring a custom shop page, seamless API integration, and an innovative design to enhance user experience and functionality across the site.', 'wilson-devops' ); ?>
+                            <?php esc_html_e( 'The Funded Way prop trading platform, built with WordPress and WooCommerce, delivers instant challenges up to $100K, custom checkouts, affiliate tracking, and 24-48 hour payouts for traders worldwide.', 'wilson-devops' ); ?>
                         </p>
-                        <a href="https://dejavutechkenya.com" target="_blank"
+                        <a href="https://thefundedway.com" target="_blank"
                             class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
                             <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
                             <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
@@ -454,15 +454,15 @@ get_header();
                     </div>
                 </div>
 
-                <!-- FaceShop 254 -->
+                <!-- Torus Africa -->
                 <div
-                    class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-teal-800 transition-shadow">
+                    class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-cyan-800 transition-shadow">
                     <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Faceshop.jpg"
-                            alt="FaceShop 254" class="w-full h-48 object-cover" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/torus.png" alt="Torus"
+                            class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/faceshop-254/' ) ); ?>"
+                            <a href="<?php echo esc_url( site_url( '/torus' ) ); ?>"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -470,12 +470,12 @@ get_header();
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                            <?php esc_html_e( 'FaceShop 254', 'wilson-devops' ); ?>
+                            <?php esc_html_e( 'Torus', 'wilson-devops' ); ?>
                         </h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <?php esc_html_e( 'The FaceShop 254 e-commerce overhaul, powered by WooCommerce, fixed plugin update issues, enhanced speed, optimized SEO, and improved performance and online visibility for a better user experience.', 'wilson-devops' ); ?>
+                            <?php esc_html_e( "A premier East African web design agency platform built with WordPress, custom theme, and modern JS. Comprehensive services, agile processes, and client-focused solutions for innovative websites worldwide.", 'wilson-devops' ); ?>
                         </p>
-                        <a href="https://faceshop254.com" target="_blank"
+                        <a href="https://torus.africa" target="_blank"
                             class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
                             <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
                             <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
@@ -487,15 +487,15 @@ get_header();
                     </div>
                 </div>
 
-                <!-- Gathathi-ini Boys -->
+                <!-- Institutional Funding -->
                 <div
                     class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-teal-800 transition-shadow">
                     <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Gathathi-ini.jpg"
-                            alt="Gathathi-ini Boys" class="w-full h-48 object-cover" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/institutional-funding.png"
+                            alt="Institutional Funding" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/gathathiini-boys/' ) ); ?>"
+                            <a href="<?php echo esc_url( site_url( '/institutional-funding' ) ); ?>"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -503,12 +503,13 @@ get_header();
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                            <?php esc_html_e( 'Gathathi-ini Boys', 'wilson-devops' ); ?>
+                            <?php esc_html_e( 'Institutional Funding', 'wilson-devops' ); ?>
                         </h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <?php esc_html_e( "The design and development of Gathathi-ini Boys High School's website, built on a custom WordPress theme, enhances communication and engagement, reflecting the school's ethos and improving its online presence.", 'wilson-devops' ); ?>
+                            <?php esc_html_e( 'The funding platform empowers organizations through transparent grants, strategic resources, impact tracking, and strong institutional partnerships, fostering sustainable development and ensuring financial accountability.', 'wilson-devops' ); ?>
                         </p>
-                        <a href="https://gathathiiniboyshighschool.sc.ke" target="_blank"
+
+                        <a href="https://institutionalfunding.ro" target="_blank"
                             class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
                             <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
                             <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
@@ -520,15 +521,15 @@ get_header();
                     </div>
                 </div>
 
-                <!-- Aegeus Inspections -->
+                <!-- Backed Sports -->
                 <div
                     class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-teal-800 transition-shadow">
                     <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Aegeus-Inspections.jpg"
-                            alt="Aegeus Inspections" class="w-full h-48 object-cover" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/backed-sports.png"
+                            alt="Backed Sports" class="w-full h-48 object-cover" />
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/aegeus-inspections/' ) ); ?>"
+                            <a href="<?php echo esc_url( site_url( '/backed-sports/' ) ); ?>"
                                 class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
                                 <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
                             </a>
@@ -536,12 +537,12 @@ get_header();
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                            <?php esc_html_e( 'Aegeus Inspections', 'wilson-devops' ); ?>
+                            <?php esc_html_e( 'Backed Sports', 'wilson-devops' ); ?>
                         </h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <?php esc_html_e( 'The website developed for Aegeus Inspections, using WordPress and Elementor, features over 40 pages and seamless integration, enhancing their online presence and enabling better audience engagement through Super DevOps.', 'wilson-devops' ); ?>
+                            <?php esc_html_e( 'Backed Sports enables users to predict outcomes, join funding challenges, and increase winnings through strategic sports picks with transparent, secure payouts and engaging experiences.', 'wilson-devops' ); ?>
                         </p>
-                        <a href="https://aegeusinspections.com" target="_blank"
+                        <a href="https://backedsports.wpenginepowered.com" target="_blank"
                             class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
                             <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
                             <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
@@ -553,38 +554,6 @@ get_header();
                     </div>
                 </div>
 
-                <!-- Aegeus Group -->
-                <div
-                    class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-teal-800 transition-shadow">
-                    <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Aegeus-Group.jpg"
-                            alt="Aegeus Group" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/aegeus-group/' ) ); ?>"
-                                class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
-                                <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                            <?php esc_html_e( 'Aegeus Group', 'wilson-devops' ); ?>
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <?php esc_html_e( 'The landing page for Aegeus Group, built with WordPress and Elementor, combines stunning design and seamless functionality, effectively showcasing the company’s offerings while engaging and captivating its target audience.', 'wilson-devops' ); ?>
-                        </p>
-                        <a href="https://aegeusgroup.com" target="_blank"
-                            class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
-                            <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
-                            <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20">
-                                <path fill="currentColor"
-                                    d="M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

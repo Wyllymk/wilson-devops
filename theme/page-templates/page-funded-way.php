@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the Nyeri Club project page
+ * The template for displaying the VMS project page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -31,39 +31,51 @@ get_header();
             <div class="relative z-10">
                 <h1 class="font-nico text-5xl md:text-7xl uppercase tracking-wide text-center 
                     text-cyber-blue dark:text-cyber-cyan mb-6 animate-pulse">
-                    Nyeri Club Website
+                    The Funded Way
                 </h1>
                 <p
                     class="font-manrope text-xl text-center text-text-light-muted dark:text-text-dark-muted max-w-3xl mx-auto mb-8">
-                    A golfing haven reimagined with WordPress and Elementor—elegance meets functionality in a serene
-                    digital fairway.
+                    A high-performance prop trading platform built with WordPress, WooCommerce, and modern JS. Instant
+                    challenges, custom checkouts, affiliate tracking, and seamless payouts for traders worldwide.
                 </p>
 
                 <!-- Tech Stack Pills -->
                 <div class="flex flex-wrap justify-center gap-3 mb-8">
                     <span
-                        class="px-4 py-2 rounded-full bg-cyber-blue/20 text-cyber-blue dark:bg-cyber-cyan/20 dark:text-cyber-cyan font-manrope text-sm border border-cyber-blue/30">WordPress
-                        6.5</span>
+                        class="px-4 py-2 rounded-full bg-cyber-blue/20 text-cyber-blue dark:bg-cyber-cyan/20 dark:text-cyber-cyan font-manrope text-sm border border-cyber-blue/30">
+                        WordPress
+                    </span>
                     <span
-                        class="px-4 py-2 rounded-full bg-cyber-coral/20 text-cyber-coral dark:bg-cyber-pink/20 dark:text-cyber-pink font-manrope text-sm border border-cyber-coral/30">Elementor</span>
+                        class="px-4 py-2 rounded-full bg-cyber-coral/20 text-cyber-coral dark:bg-cyber-pink/20 dark:text-cyber-pink font-manrope text-sm border border-cyber-coral/30">
+                        WooCommerce
+                    </span>
                     <span
-                        class="px-4 py-2 rounded-full bg-teal-500/20 text-teal-600 dark:text-teal-400 font-manrope text-sm border border-teal-500/30">Custom
-                        CSS</span>
+                        class="px-4 py-2 rounded-full bg-teal-500/20 text-teal-600 dark:text-teal-400 font-manrope text-sm border border-teal-500/30">
+                        GSAP
+                    </span>
                     <span
-                        class="px-4 py-2 rounded-full bg-purple-500/20 text-purple-600 dark:text-purple-400 font-manrope text-sm border border-purple-500/30">JavaScript</span>
+                        class="px-4 py-2 rounded-full bg-purple-500/20 text-purple-600 dark:text-purple-400 font-manrope text-sm border border-purple-500/30">
+                        Tailwind CSS
+                    </span>
                     <span
-                        class="px-4 py-2 rounded-full bg-green-500/20 text-green-600 dark:text-green-400 font-manrope text-sm border border-green-500/30">WebP
-                        Optimization</span>
+                        class="px-4 py-2 rounded-full bg-green-500/20 text-green-600 dark:text-green-400 font-manrope text-sm border border-green-500/30">
+                        AlpineJS
+                    </span>
                 </div>
 
                 <div class="flex justify-center gap-4 z-10 relative">
-                    <button x-on:click="window.open('https://nyericlub.co.ke', '_blank')"
-                        class="px-8 py-3 rounded-full bg-gradient-to-r from-cyber-blue to-cyber-coral dark:from-cyber-cyan dark:to-cyber-pink text-white font-manrope text-lg hover:scale-105 transform transition-all duration-300 drop-shadow-cyber-cyan hover:drop-shadow-2xl cursor-pointer">
-                        Visit Live Site
+                    <button x-on:click="window.open('https://thefundedway.com', '_blank')"
+                        class="px-8 py-3 rounded-full bg-gradient-to-r from-cyber-blue to-cyber-coral            dark:from-cyber-cyan dark:to-cyber-pink text-white font-manrope text-lg hover:scale-105 transform transition-all duration-300 drop-shadow-cyber-cyan hover:drop-shadow-2xl cursor-pointer">
+                        Live Site
+                    </button>
+
+                    <button x-on:click="window.open('https://github.com/wyllymk/funded-way', '_blank')"
+                        class="px-8 py-3 rounded-full border-2 border-cyber-cyan text-cyber-blue dark:text-cyber-cyan hover:bg-cyber-cyan/20 relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(0,0,0,0.15)] font-manrope text-lg cursor-pointer">
+                        View Code
                     </button>
 
                     <button x-on:click="window.location.href='<?php echo esc_url( home_url( '/contact' ) ); ?>'"
-                        class="px-8 py-3 rounded-full border-2 border-cyber-cyan text-cyber-blue dark:text-cyber-cyan hover:bg-cyber-cyan/20 relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(0,0,0,0.15)] font-manrope text-lg cursor-pointer">
+                        class="px-8 py-3 rounded-full border-2 border-cyber-coral text-cyber-coral  dark:text-cyber-pink hover:bg-cyber-coral/20 relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(0,0,0,0.15)] font-manrope text-lg cursor-pointer">
                         Hire Me
                     </button>
 
@@ -107,28 +119,27 @@ get_header();
                 <div
                     class="text-center p-6 rounded-xl bg-gradient-to-br from-cyber-blue/10 to-cyber-cyan/10 hover:scale-105 transition-transform duration-300">
                     <div class="text-4xl font-nico text-cyber-blue dark:text-cyber-cyan mb-2 counter"
-                        data-target="15000">
+                        data-target="1500">
                         0</div>
-                    <div class="font-manrope text-text-light-muted dark:text-text-dark-muted">Monthly Page Views
-                    </div>
+                    <div class="font-manrope text-text-light-muted dark:text-text-dark-muted">Challenges Sold</div>
                 </div>
                 <div
                     class="text-center p-6 rounded-xl bg-gradient-to-br from-cyber-coral/10 to-cyber-pink/10 hover:scale-105 transition-transform duration-300">
                     <div class="text-4xl font-nico text-cyber-coral dark:text-cyber-pink mb-2 counter"
-                        data-target="1.8">0</div>
-                    <div class="font-manrope text-text-light-muted dark:text-text-dark-muted">Seconds Load Time</div>
+                        data-target="99.9">0</div>
+                    <div class="font-manrope text-text-light-muted dark:text-text-dark-muted">% Payout Reliability</div>
                 </div>
                 <div
                     class="text-center p-6 rounded-xl bg-gradient-to-br from-teal-500/10 to-green-500/10 hover:scale-105 transition-transform duration-300">
-                    <div class="text-4xl font-nico text-teal-600 dark:text-teal-400 mb-2 counter" data-target="100">0
+                    <div class="text-4xl font-nico text-teal-600 dark:text-teal-400 mb-2 counter" data-target="190">0
                     </div>
-                    <div class="font-manrope text-text-light-muted dark:text-text-dark-muted">% Mobile Responsive</div>
+                    <div class="font-manrope text-text-light-muted dark:text-dark-muted">Countries Served</div>
                 </div>
                 <div
                     class="text-center p-6 rounded-xl bg-gradient-to-br from-purple-500/10 to-indigo-500/10 hover:scale-105 transition-transform duration-300">
-                    <div class="text-4xl font-nico text-purple-600 dark:text-purple-400 mb-2 counter" data-target="50">0
+                    <div class="text-4xl font-nico text-purple-600 dark:text-purple-400 mb-2 counter" data-target="24">0
                     </div>
-                    <div class="font-manrope text-text-light-muted dark:text-text-dark-muted">Custom Pages Built</div>
+                    <div class="font-manrope text-text-light-muted dark:text-text-dark-muted">Hour Payouts</div>
                 </div>
             </div>
         </div>
@@ -139,7 +150,7 @@ get_header();
         <div class="container mx-auto px-4">
             <h2 class="section__title relative text-5xl mx-auto my-5 mb-15 max-w-max">
                 <span class="relative z-10 text-4xl font-bold text-center text-gray-900 dark:text-white">
-                    <?php esc_html_e( 'System Overview', 'wilson-devops' ); ?>
+                    <?php esc_html_e( 'Platform Overview', 'wilson-devops' ); ?>
                 </span>
                 <span class="absolute top-2 -right-2 w-12 h-9 bg-teal-400/50 dark:bg-teal-600/50"></span>
             </h2>
@@ -147,88 +158,94 @@ get_header();
             <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
                 <div class="space-y-6">
                     <p class="font-manrope text-text-light-muted dark:text-text-dark-muted text-lg">
-                        The Nyeri Club website is a showcase of modern web design for a historic golf club. Built with
-                        WordPress and Elementor,
-                        it blends elegant layouts with intuitive navigation, offering members and enthusiasts a dynamic
-                        platform to explore golfing opportunities, serene landscapes, and club events.
+                        A cutting-edge prop firm platform empowering traders to access up to $100K in funded accounts.
+                        Built for speed, security, and scalability with custom WooCommerce integrations.
                     </p>
                     <p class="font-manrope text-text-light-muted dark:text-text-dark-muted">
-                        Key features include responsive design, stunning visuals of Mt. Kenya views, seamless
-                        membership integration, and event calendars—all tailored to reflect the club’s rich heritage.
+                        From challenge selection and instant payouts to affiliate tracking and trader
+                        dashboards—everything streamlined for global prop trading.
                     </p>
 
                     <!-- Core Features List -->
                     <div class="space-y-3">
                         <div class="flex items-center gap-3">
                             <div class="w-2 h-2 bg-cyber-cyan rounded-full"></div>
-                            <span class="font-manrope text-text-light-muted dark:text-text-dark-muted">Responsive
-                                layouts for all devices</span>
+                            <span class="font-manrope text-text-light-muted dark:text-text-dark-muted">
+                                Instant challenge challenges & scaling
+                            </span>
                         </div>
                         <div class="flex items-center gap-3">
                             <div class="w-2 h-2 bg-cyber-coral rounded-full"></div>
-                            <span class="font-manrope text-text-light-muted dark:text-text-dark-muted">Dynamic image
-                                galleries with WebP</span>
+                            <span class="font-manrope text-text-light-muted dark:text-text-dark-muted">
+                                Custom WooCommerce checkout & APIs
+                            </span>
                         </div>
                         <div class="flex items-center gap-3">
                             <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
-                            <span class="font-manrope text-text-light-muted dark:text-text-dark-muted">Custom Elementor
-                                widgets</span>
+                            <span class="font-manrope text-text-light-muted dark:text-text-dark-muted">
+                                Affiliate & add-on management
+                            </span>
                         </div>
                         <div class="flex items-center gap-3">
                             <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
-                            <span class="font-manrope text-text-light-muted dark:text-text-dark-muted">Event and
-                                membership forms</span>
+                            <span class="font-manrope text-text-light-muted dark:text-text-dark-muted">
+                                Real-time trader dashboards & payouts
+                            </span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Interactive Site Preview -->
+                <!-- Interactive Dashboard Preview -->
                 <div class="relative">
                     <div class="bg-gray-900 rounded-xl p-4 transform hover:scale-105 transition-all duration-300">
                         <div class="flex items-center gap-2 mb-4">
                             <div class="w-3 h-3 bg-red-500 rounded-full"></div>
                             <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
                             <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                            <div class="ml-4 text-gray-400 text-sm font-mono">nyericlub.co.ke</div>
+                            <div class="ml-4 text-gray-400 text-sm font-mono">thefundedway.com</div>
                         </div>
 
-                        <!-- Mock Site Interface -->
+                        <!-- Mock Dashboard Interface -->
                         <div class="bg-white dark:bg-gray-800 rounded-lg p-6 space-y-4">
                             <div class="flex justify-between items-center">
-                                <h3 class="font-bold text-gray-900 dark:text-white">Club Highlights</h3>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Live</span>
+                                <h3 class="font-bold text-gray-900 dark:text-white">Active Challenges</h3>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+                                    456 Traders
+                                </span>
                             </div>
 
                             <div class="grid grid-cols-3 gap-4">
                                 <div class="bg-cyber-blue/10 p-3 rounded-lg text-center">
-                                    <div class="text-2xl font-bold text-cyber-blue">18</div>
-                                    <div class="text-xs text-gray-600">Holes</div>
+                                    <div class="text-2xl font-bold text-cyber-blue">$120K</div>
+                                    <div class="text-xs text-gray-600">Total Earned</div>
                                 </div>
                                 <div class="bg-cyber-coral/10 p-3 rounded-lg text-center">
-                                    <div class="text-2xl font-bold text-cyber-coral">365</div>
-                                    <div class="text-xs text-gray-600">Days Open</div>
+                                    <div class="text-2xl font-bold text-cyber-coral">24h</div>
+                                    <div class="text-xs text-gray-600">Payouts</div>
                                 </div>
                                 <div class="bg-teal-500/10 p-3 rounded-lg text-center">
-                                    <div class="text-2xl font-bold text-teal-600">200+</div>
-                                    <div class="text-xs text-gray-600">Members</div>
+                                    <div class="text-2xl font-bold text-teal-600">4.45/5</div>
+                                    <div class="text-xs text-gray-600">Trustpilot</div>
                                 </div>
                             </div>
 
-                            <!-- Mock navigation links -->
+                            <!-- Mock visitor list -->
                             <div class="space-y-2">
                                 <div class="flex items-center gap-3 p-2 bg-gray-50 dark:bg-gray-700 rounded">
                                     <div class="w-8 h-8 bg-cyber-cyan rounded-full"></div>
                                     <div class="flex-1">
-                                        <div class="text-sm font-medium">Golf Course</div>
-                                        <div class="text-xs text-gray-500">Explore the fairways</div>
+                                        <div class="text-sm font-medium">Trader Pro</div>
+                                        <div class="text-xs text-gray-500">$5K Payout</div>
                                     </div>
+                                    <div class="text-xs text-green-600">Completed</div>
                                 </div>
                                 <div class="flex items-center gap-3 p-2 bg-gray-50 dark:bg-gray-700 rounded">
                                     <div class="w-8 h-8 bg-cyber-coral rounded-full"></div>
                                     <div class="flex-1">
-                                        <div class="text-sm font-medium">Events Calendar</div>
-                                        <div class="text-xs text-gray-500">Upcoming tournaments</div>
+                                        <div class="text-sm font-medium">Elite Scalper</div>
+                                        <div class="text-xs text-gray-500">Phase 2</div>
                                     </div>
+                                    <div class="text-xs text-gray-500">Active</div>
                                 </div>
                             </div>
                         </div>
@@ -268,10 +285,12 @@ get_header();
                                         clip-rule="evenodd"></path>
                                 </svg>
                             </div>
-                            <h3 class="font-oswald text-xl text-cyber-blue dark:text-cyber-cyan mb-2">Frontend Layer
+                            <h3 class="font-oswald text-xl text-cyber-blue dark:text-cyber-cyan mb-2">
+                                Frontend Layer
                             </h3>
-                            <p class="font-manrope text-sm text-text-light-muted dark:text-text-dark-muted">HTML5, CSS3,
-                                JavaScript, Elementor for drag-and-drop UI</p>
+                            <p class="font-manrope text-sm text-text-light-muted dark:text-text-dark-muted">
+                                Tailwind CSS, AlpineJS, GSAP for dynamic UIs & animations
+                            </p>
                         </div>
 
                         <!-- Application Layer -->
@@ -284,13 +303,15 @@ get_header();
                                     </path>
                                 </svg>
                             </div>
-                            <h3 class="font-oswald text-xl text-cyber-coral dark:text-cyber-pink mb-2">Application Layer
+                            <h3 class="font-oswald text-xl text-cyber-coral dark:text-cyber-pink mb-2">
+                                Application Layer
                             </h3>
-                            <p class="font-manrope text-sm text-text-light-muted dark:text-text-dark-muted">WordPress
-                                6.5, Custom Themes, Plugin Integrations</p>
+                            <p class="font-manrope text-sm text-text-light-muted dark:text-text-dark-muted">
+                                WordPress, WooCommerce APIs, Custom hooks for challenges & affiliates
+                            </p>
                         </div>
 
-                        <!-- Hosting Layer -->
+                        <!-- Database Layer -->
                         <div class="text-center">
                             <div
                                 class="w-20 h-20 bg-gradient-to-br from-teal-500 to-green-500 rounded-xl mx-auto mb-4 flex items-center justify-center">
@@ -303,9 +324,10 @@ get_header();
                                     <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"></path>
                                 </svg>
                             </div>
-                            <h3 class="font-oswald text-xl text-teal-600 dark:text-teal-400 mb-2">Hosting Layer</h3>
-                            <p class="font-manrope text-sm text-text-light-muted dark:text-text-dark-muted">Optimized
-                                Hosting, Caching, SEO Plugins</p>
+                            <h3 class="font-oswald text-xl text-teal-600 dark:text-teal-400 mb-2">Database Layer</h3>
+                            <p class="font-manrope text-sm text-text-light-muted dark:text-text-dark-muted">
+                                MySQL, Optimized Woo queries, Secure payout logging
+                            </p>
                         </div>
                     </div>
 
@@ -330,9 +352,9 @@ get_header();
                                 clip-rule="evenodd"></path>
                         </svg>
                     </div>
-                    <h4 class="font-oswald text-lg text-cyber-blue dark:text-cyber-cyan mb-2">Visual Elegance</h4>
-                    <p class="font-manrope text-sm text-text-light-muted dark:text-text-dark-muted">Custom CSS
-                        animations, gradient overlays, and high-res imagery</p>
+                    <h4 class="font-oswald text-lg text-cyber-blue dark:text-cyber-cyan mb-2">Secure Payouts</h4>
+                    <p class="font-manrope text-sm text-text-light-muted dark:text-text-dark-muted">Automated 24-48h
+                        processing, encrypted transactions, compliance-ready</p>
                 </div>
 
                 <div
@@ -344,9 +366,9 @@ get_header();
                             </path>
                         </svg>
                     </div>
-                    <h4 class="font-oswald text-lg text-cyber-coral dark:text-cyber-pink mb-2">Performance Tuned</h4>
-                    <p class="font-manrope text-sm text-text-light-muted dark:text-text-dark-muted">Lazy loading, WebP
-                        compression, and caching for sub-2s loads</p>
+                    <h4 class="font-oswald text-lg text-cyber-coral dark:text-cyber-pink mb-2">Affiliate System</h4>
+                    <p class="font-manrope text-sm text-text-light-muted dark:text-text-dark-muted">
+                        Multi-tier tracking, WooCommerce hooks, real-time commissions
                 </div>
 
                 <div
@@ -358,9 +380,9 @@ get_header();
                             </path>
                         </svg>
                     </div>
-                    <h4 class="font-oswald text-lg text-teal-600 dark:text-teal-400 mb-2">SEO Optimized</h4>
-                    <p class="font-manrope text-sm text-text-light-muted dark:text-text-dark-muted">Meta tags, schema
-                        markup, and fast indexing for better visibility</p>
+                    <h4 class="font-oswald text-lg text-teal-600 dark:text-teal-400 mb-2">Custom Add-ons</h4>
+                    <p class="font-manrope text-sm text-text-light-muted dark:text-text-dark-muted">
+                        Dynamic bundles, upsell flows, integrated with WooCommerce cart</p>
                 </div>
 
                 <div
@@ -372,9 +394,10 @@ get_header();
                                 clip-rule="evenodd"></path>
                         </svg>
                     </div>
-                    <h4 class="font-oswald text-lg text-purple-600 dark:text-purple-400 mb-2">Accessible Design</h4>
-                    <p class="font-manrope text-sm text-text-light-muted dark:text-text-dark-muted">WCAG compliance,
-                        keyboard nav, and alt text for all assets</p>
+                    <h4 class="font-oswald text-lg text-purple-600 dark:text-purple-400 mb-2">High Scalability</h4>
+                    <p class="font-manrope text-sm text-text-light-muted dark:text-text-dark-muted">
+                        Optimized for 100K+ users, caching, fast loading challenge
+                    </p>
                 </div>
             </div>
         </div>
@@ -405,11 +428,12 @@ get_header();
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-oswald text-xl text-red-500 mb-3">Challenge: Balancing Aesthetics &
-                                    Performance</h3>
+                                <h3 class="font-oswald text-xl text-red-500 mb-3">
+                                    Challenge: Custom Checkout
+                                </h3>
                                 <p class="font-manrope text-text-light-muted dark:text-text-dark-muted">
-                                    The client wanted a visually rich site with high-quality images of the golf course,
-                                    but this risked slow load times—critical for a membership-driven audience on mobile.
+                                    Standard WooCommerce didn't support dynamic challenge pricing, add-ons, and instant
+                                    cart redirects. Needed seamless ?add-to-cart flows.
                                 </p>
                             </div>
                         </div>
@@ -425,11 +449,12 @@ get_header();
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-oswald text-xl text-green-500 mb-3">Solution: Image Optimization
-                                    Pipeline</h3>
+                                <h3 class="font-oswald text-xl text-green-500 mb-3">
+                                    Solution: Woo API Overrides
+                                </h3>
                                 <p class="font-manrope text-text-light-muted dark:text-text-dark-muted">
-                                    Implemented WebP conversion, lazy loading, and CDN integration. Achieved sub-2s load
-                                    times while preserving stunning visuals of lush greens and Mt. Kenya vistas.
+                                    Extended WooCommerce with custom endpoints, AlpineJS for real-time cart updates, and
+                                    GSAP animations for smooth flows.
                                 </p>
                             </div>
                         </div>
@@ -449,11 +474,12 @@ get_header();
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-oswald text-xl text-red-500 mb-3">Challenge: Elementor Customization
+                                <h3 class="font-oswald text-xl text-red-500 mb-3">
+                                    Challenge: Affiliate Tracking
                                 </h3>
                                 <p class="font-manrope text-text-light-muted dark:text-text-dark-muted">
-                                    Achieving unique layouts beyond Elementor's templates required overriding defaults
-                                    without breaking updates or performance.
+                                    Multi-level commissions required real-time tracking across sessions. WooCommerce
+                                    plugins fell short on custom logic.
                                 </p>
                             </div>
                         </div>
@@ -469,10 +495,12 @@ get_header();
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-oswald text-xl text-green-500 mb-3">Solution: Custom CSS & JS Hooks</h3>
+                                <h3 class="font-oswald text-xl text-green-500 mb-3">
+                                    Solution: Custom Affiliate Engine
+                                </h3>
                                 <p class="font-manrope text-text-light-muted dark:text-text-dark-muted">
-                                    Developed child theme with targeted CSS overrides and JavaScript for interactive
-                                    elements like parallax scrolling on hero sections, ensuring seamless updates.
+                                    Built database-driven tracking with cookie persistence, integrated with Woo orders.
+                                    Real-time dashboards via Alpine.
                                 </p>
                             </div>
                         </div>
@@ -492,10 +520,12 @@ get_header();
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-oswald text-xl text-red-500 mb-3">Challenge: Content Integration</h3>
+                                <h3 class="font-oswald text-xl text-red-500 mb-3">
+                                    Challenge: Payout Automation
+                                </h3>
                                 <p class="font-manrope text-text-light-muted dark:text-text-dark-muted">
-                                    Integrating diverse content (golf courses, dining, events) into a cohesive structure
-                                    without overwhelming users or complicating admin workflows.
+                                    Fast 24-48h payouts needed integration with external gateways while maintaining
+                                    audit trails and compliance.
                                 </p>
                             </div>
                         </div>
@@ -511,10 +541,12 @@ get_header();
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-oswald text-xl text-green-500 mb-3">Solution: Modular Post Types</h3>
+                                <h3 class="font-oswald text-xl text-green-500 mb-3">
+                                    Solution: Gateway Hooks & Queues
+                                </h3>
                                 <p class="font-manrope text-text-light-muted dark:text-text-dark-muted">
-                                    Created custom post types and taxonomies for events and facilities, with Elementor
-                                    templates for easy admin management and intuitive user navigation.
+                                    Implemented WP cron jobs with Stripe/PayPal APIs, secure logging, and automated
+                                    notifications for traders.
                                 </p>
                             </div>
                         </div>
@@ -540,50 +572,51 @@ get_header();
                 <div class="flex flex-wrap justify-center gap-4 mb-12" id="featureTabs">
                     <button
                         class="px-6 py-3 rounded-full bg-cyber-blue text-white font-manrope transition-all duration-300 tab-active"
-                        data-tab="gallery">
-                        Gallery
+                        data-tab="challenges">
+                        Challenges
                     </button>
                     <button
                         class="px-6 py-3 rounded-full bg-gray-200 text-gray-700 font-manrope hover:bg-gray-300 transition-all duration-300"
-                        data-tab="navigation">
-                        Navigation
+                        data-tab="checkout">
+                        Checkout
                     </button>
                     <button
                         class="px-6 py-3 rounded-full bg-gray-200 text-gray-700 font-manrope hover:bg-gray-300 transition-all duration-300"
-                        data-tab="events">
-                        Events
+                        data-tab="affiliates">
+                        Affiliates
                     </button>
                     <button
                         class="px-6 py-3 rounded-full bg-gray-200 text-gray-700 font-manrope hover:bg-gray-300 transition-all duration-300"
-                        data-tab="membership">
-                        Membership
+                        data-tab="payouts">
+                        Payouts
                     </button>
                 </div>
 
                 <!-- Feature Content -->
                 <div class="relative">
-                    <!-- Gallery Tab -->
-                    <div class="tab-content active" id="gallery">
+                    <!-- Challenges Tab -->
+                    <div class="tab-content active" id="challenges">
                         <div class="grid lg:grid-cols-2 gap-12 items-center">
                             <div class="space-y-6">
-                                <h3 class="font-oswald text-2xl text-cyber-blue dark:text-cyber-cyan">Dynamic Gallery
+                                <h3 class="font-oswald text-2xl text-cyber-blue dark:text-cyber-cyan">
+                                    Challenge Selection
                                 </h3>
                                 <p class="font-manrope text-text-light-muted dark:text-text-dark-muted">
-                                    Responsive gallery showcasing stunning landscapes and events, with smooth lightbox
-                                    transitions and lazy-loaded images.
+                                    Instant filtering and purchase of 2-step challenges up to $100K. Dynamic pricing
+                                    with add-ons like extended drawdowns.
                                 </p>
                                 <div class="space-y-4">
                                     <div class="flex items-center gap-3">
                                         <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                                        <span class="font-manrope text-sm">Lightbox modals</span>
+                                        <span class="font-manrope text-sm">Profit targets & rules</span>
                                     </div>
                                     <div class="flex items-center gap-3">
                                         <div class="w-2 h-2 bg-cyber-cyan rounded-full animate-pulse"></div>
-                                        <span class="font-manrope text-sm">WebP optimized</span>
+                                        <span class="font-manrope text-sm">Scale-up options</span>
                                     </div>
                                     <div class="flex items-center gap-3">
                                         <div class="w-2 h-2 bg-cyber-coral rounded-full animate-pulse"></div>
-                                        <span class="font-manrope text-sm">Mobile swipe</span>
+                                        <span class="font-manrope text-sm">Instant buy</span>
                                     </div>
                                 </div>
                             </div>
@@ -591,47 +624,41 @@ get_header();
                                 <div
                                     class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 transform hover:scale-105 transition-all duration-300">
                                     <div class="flex justify-between items-center mb-6">
-                                        <h4 class="font-bold text-gray-900 dark:text-white">Photo Gallery</h4>
+                                        <h4 class="font-bold text-gray-900 dark:text-white">Challenge Filter</h4>
                                         <div class="flex gap-2">
                                             <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                                            <span class="text-sm text-green-600">Interactive</span>
+                                            <span class="text-sm text-green-600">Live</span>
                                         </div>
                                     </div>
-                                    <div class="space-y-4 text-gray-900 dark:text-white grid grid-cols-3 gap-2">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/nyeri-club-1.png"
-                                            alt="Nyeri Club"
-                                            class="w-full h-20 object-cover rounded cursor-pointer hover:opacity-80" />
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/nyeri-club-2.png"
-                                            alt="Nyeri Club"
-                                            class="w-full h-20 object-cover rounded cursor-pointer hover:opacity-80" />
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/nyeri-club-3.png"
-                                            alt="Nyeri Club"
-                                            class="w-full h-20 object-cover rounded cursor-pointer hover:opacity-80" />
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/nyeri-club-4.png"
-                                            alt="Nyeri Club"
-                                            class="w-full h-20 object-cover rounded cursor-pointer hover:opacity-80" />
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/nyeri-club-5.png"
-                                            alt="Nyeri Club"
-                                            class="w-full h-20 object-cover rounded cursor-pointer hover:opacity-80" />
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/nyeri-club-6.png"
-                                            alt="Nyeri Club"
-                                            class="w-full h-20 object-cover rounded cursor-pointer hover:opacity-80" />
-                                        <!-- <div class="w-full h-20 bg-gray-200 rounded animate-pulse"></div> -->
+                                    <div class="space-y-4 text-gray-900 dark:text-white">
+                                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                                            <span class="text-sm">Account Size</span>
+                                            <span class="font-bold text-cyber-blue">$100K</span>
+                                        </div>
+                                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                                            <span class="text-sm">Profit Target</span>
+                                            <span class="font-bold text-cyber-coral">6%</span>
+                                        </div>
+                                        <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                                            <span class="text-sm">Price</span>
+                                            <span class="font-bold text-yellow-600">$499</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Navigation Tab -->
-                    <div class="tab-content hidden" id="navigation">
+                    <!-- Checkout Tab -->
+                    <div class="tab-content hidden" id="checkout">
                         <div class="grid lg:grid-cols-2 gap-12 items-center">
                             <div class="space-y-6">
-                                <h3 class="font-oswald text-2xl text-cyber-coral dark:text-cyber-pink">Intuitive
-                                    Navigation</h3>
+                                <h3 class="font-oswald text-2xl text-cyber-coral dark:text-cyber-pink">
+                                    Custom Checkout
+                                </h3>
                                 <p class="font-manrope text-text-light-muted dark:text-text-dark-muted">
-                                    Sleek sticky menu that adapts to devices, with smooth scrolling and mega-dropdowns
-                                    for easy exploration.
+                                    Fully custom WooCommerce flow with ?add-to-cart params. Handles bundles, affiliates,
+                                    and instant redirects.
                                 </p>
                                 <div class="space-y-4">
                                     <div class="flex items-center gap-4">
@@ -639,21 +666,21 @@ get_header();
                                             class="w-8 h-8 bg-cyber-coral/20 rounded-full flex items-center justify-center">
                                             <span class="text-sm font-bold text-cyber-coral">1</span>
                                         </div>
-                                        <span class="font-manrope">Sticky header</span>
+                                        <span class="font-manrope">Add to cart</span>
                                     </div>
                                     <div class="flex items-center gap-4">
                                         <div
                                             class="w-8 h-8 bg-cyber-coral/20 rounded-full flex items-center justify-center">
                                             <span class="text-sm font-bold text-cyber-coral">2</span>
                                         </div>
-                                        <span class="font-manrope">Mega menus</span>
+                                        <span class="font-manrope">Review add-ons</span>
                                     </div>
                                     <div class="flex items-center gap-4">
                                         <div
                                             class="w-8 h-8 bg-cyber-coral/20 rounded-full flex items-center justify-center">
                                             <span class="text-sm font-bold text-cyber-coral">3</span>
                                         </div>
-                                        <span class="font-manrope">Mobile hamburger</span>
+                                        <span class="font-manrope">Secure payment</span>
                                     </div>
                                 </div>
                             </div>
@@ -669,106 +696,94 @@ get_header();
                                                     clip-rule="evenodd"></path>
                                             </svg>
                                         </div>
-                                        <h4 class="font-bold text-gray-900 dark:text-white">Site Navigation</h4>
+                                        <h4 class="font-bold text-gray-900 dark:text-white">Checkout</h4>
                                     </div>
                                     <div class="space-y-3 text-gray-900 dark:text-white">
-                                        <nav class="space-y-2">
-                                            <button href="#"
-                                                class="block p-2 hover:bg-gray-100 rounded dark:hover:bg-gray-700">
-                                                Home
-                                            </button>
-                                            <button href="#"
-                                                class="block p-2 hover:bg-gray-100 rounded dark:hover:bg-gray-700">About
-                                                Us
-                                            </button>
-                                            <button href="#"
-                                                class="block p-2 hover:bg-gray-100 rounded dark:hover:bg-gray-700">
-                                                Facilities
-                                            </button>
-                                            <button href="#"
-                                                class="block p-2 hover:bg-gray-100 rounded dark:hover:bg-gray-700">
-                                                Events
-                                            </button>
-                                            <button href="#"
-                                                class="block p-2 hover:bg-gray-100 rounded dark:hover:bg-gray-700">
-                                                Membership
-                                            </button>
-                                        </nav>
+                                        <input type="text" placeholder="Coupon Code"
+                                            class="w-full p-3 border rounded-lg dark:bg-gray-700 dark:border-gray-600">
+                                        <button
+                                            class="w-full py-3 bg-gradient-to-r from-cyber-coral to-cyber-pink text-white rounded-lg font-manrope hover:scale-105 transition-transform">
+                                            Proceed to Payment
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Events Tab -->
-                    <div class="tab-content hidden" id="events">
+                    <!-- Affiliates Tab -->
+                    <div class="tab-content hidden" id="affiliates">
                         <div class="grid lg:grid-cols-2 gap-12 items-center">
                             <div class="space-y-6">
-                                <h3 class="font-oswald text-2xl text-teal-600 dark:text-teal-400">Events Calendar</h3>
+                                <h3 class="font-oswald text-2xl text-teal-600 dark:text-teal-400">
+                                    Affiliate Dashboard
+                                </h3>
                                 <p class="font-manrope text-text-light-muted dark:text-text-dark-muted">
-                                    Dynamic calendar for tournaments and social events, with RSVP forms and automated
-                                    notifications.
+                                    Track referrals, commissions, and performance. Integrated with WooCommerce for
+                                    accurate attribution.
                                 </p>
                                 <div class="grid grid-cols-2 gap-4">
                                     <div class="p-4 bg-teal-500/10 rounded-lg text-center">
-                                        <div class="text-2xl font-bold text-teal-600">12</div>
-                                        <div class="text-sm text-gray-600">Upcoming</div>
+                                        <div class="text-2xl font-bold text-teal-600">256</div>
+                                        <div class="text-sm text-gray-600">Referrals</div>
                                     </div>
                                     <div class="p-4 bg-purple-500/10 rounded-lg text-center">
-                                        <div class="text-2xl font-bold text-purple-600">150</div>
-                                        <div class="text-sm text-gray-600">Attendees</div>
+                                        <div class="text-2xl font-bold text-purple-600">$12.5K</div>
+                                        <div class="text-sm text-gray-600">Earnings</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-xl">
-                                <h4 class="font-bold text-gray-900 dark:text-white mb-4">Event Highlights</h4>
+                                <h4 class="font-bold text-gray-900 dark:text-white mb-4">Referral Trends</h4>
                                 <div class="space-y-4">
-                                    <!-- Mock Calendar -->
+                                    <!-- Mock Chart -->
                                     <div
                                         class="h-32 bg-gradient-to-r from-teal-100 to-purple-100 dark:from-teal-900 dark:to-purple-900 rounded-lg flex items-end justify-around p-4">
-                                        <div class="w-8 bg-teal-500 rounded-t flex items-center justify-center text-white text-xs"
-                                            style="height: 60%;">Mon</div>
-                                        <div class="w-8 bg-teal-500 rounded-t flex items-center justify-center text-white text-xs"
-                                            style="height: 80%;">Tue</div>
-                                        <div class="w-8 bg-teal-500 rounded-t flex items-center justify-center text-white text-xs"
-                                            style="height: 40%;">Wed</div>
-                                        <div class="w-8 bg-teal-500 rounded-t flex items-center justify-center text-white text-xs"
-                                            style="height: 90%;">Thu</div>
-                                        <div class="w-8 bg-teal-500 rounded-t flex items-center justify-center text-white text-xs"
-                                            style="height: 70%;">Fri</div>
-                                        <div class="w-8 bg-teal-500 rounded-t flex items-center justify-center text-white text-xs"
-                                            style="height: 50%;">Sat</div>
-                                        <div class="w-8 bg-teal-500 rounded-t flex items-center justify-center text-white text-xs"
-                                            style="height: 85%;">Sun</div>
+                                        <div class="w-8 bg-teal-500 rounded-t" style="height: 60%;"></div>
+                                        <div class="w-8 bg-teal-500 rounded-t" style="height: 80%;"></div>
+                                        <div class="w-8 bg-teal-500 rounded-t" style="height: 40%;"></div>
+                                        <div class="w-8 bg-teal-500 rounded-t" style="height: 90%;"></div>
+                                        <div class="w-8 bg-teal-500 rounded-t" style="height: 70%;"></div>
+                                        <div class="w-8 bg-teal-500 rounded-t" style="height: 50%;"></div>
+                                        <div class="w-8 bg-teal-500 rounded-t" style="height: 85%;"></div>
                                     </div>
                                     <div class="flex justify-between text-xs text-gray-500">
-                                        <span>1</span>
-                                        <span>8</span>
-                                        <span>15</span>
-                                        <span>22</span>
-                                        <span>29</span>
-                                        <span></span>
-                                        <span></span>
+                                        <span>Week 1</span>
+                                        <span>Week 2</span>
+                                        <span>Week 3</span>
+                                        <span>Week 4</span>
+                                        <span>Week 5</span>
+                                        <span>Week 6</span>
+                                        <span>Week 7</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Membership Tab -->
-                    <div class="tab-content hidden" id="membership">
+                    <!-- Payouts Tab -->
+                    <div class="tab-content hidden" id="payouts">
                         <div class="grid lg:grid-cols-2 gap-12 items-center">
                             <div class="space-y-6">
-                                <h3 class="font-oswald text-2xl text-purple-600 dark:text-purple-400">Membership Portal
+                                <h3 class="font-oswald text-2xl text-purple-600 dark:text-purple-400">
+                                    Payout Management
                                 </h3>
                                 <p class="font-manrope text-text-light-muted dark:text-text-dark-muted">
-                                    Secure forms for inquiries and renewals, integrated with email notifications and
-                                    dynamic pricing tiers.
+                                    Automated processing with status tracking. Traders see real-time updates on
+                                    withdrawals.
                                 </p>
                                 <div class="space-y-3">
                                     <div
                                         class="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                                        <span class="font-manrope text-sm">Inquiry Forms</span>
+                                        <span class="font-manrope text-sm">Pending</span>
+                                        <div
+                                            class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center">
+                                            <span class="text-white text-xs">3</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                                        <span class="font-manrope text-sm">Processed</span>
                                         <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
                                             <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd"
@@ -779,18 +794,7 @@ get_header();
                                     </div>
                                     <div
                                         class="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                                        <span class="font-manrope text-sm">Pricing Tiers</span>
-                                        <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                    clip-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                                        <span class="font-manrope text-sm">Email Integration</span>
+                                        <span class="font-manrope text-sm">Total Paid</span>
                                         <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
                                             <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd"
@@ -802,22 +806,37 @@ get_header();
                                 </div>
                             </div>
                             <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-xl">
-                                <h4 class="font-bold text-gray-900 dark:text-white mb-4">Membership Inquiry</h4>
+                                <h4 class="font-bold text-gray-900 dark:text-white mb-4">
+                                    Payout Queue
+                                </h4>
                                 <div class="space-y-4">
                                     <div
                                         class="flex justify-between items-center p-3 border rounded-lg dark:border-gray-600">
-                                        <span class="font-manrope text-sm">Full Membership</span>
-                                        <span class="text-lg font-bold text-cyber-blue">KES 50,000</span>
+                                        <span class="font-manrope text-sm">Auto-Process</span>
+                                        <div class="w-12 h-6 bg-cyber-blue rounded-full relative">
+                                            <div
+                                                class="w-5 h-5 bg-white rounded-full absolute top-0.5 right-0.5 transition-transform">
+                                            </div>
+                                        </div>
                                     </div>
                                     <div
                                         class="flex justify-between items-center p-3 border rounded-lg dark:border-gray-600">
-                                        <span class="font-manrope text-sm">Associate</span>
-                                        <span class="text-lg font-bold text-cyber-blue">KES 25,000</span>
+                                        <span class="font-manrope text-sm">Email Alerts</span>
+                                        <div class="w-12 h-6 bg-cyber-blue rounded-full relative">
+                                            <div
+                                                class="w-5 h-5 bg-white rounded-full absolute top-0.5 right-0.5 transition-transform">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <button
-                                        class="w-full py-3 bg-gradient-to-r from-cyber-coral to-cyber-pink text-white rounded-lg font-manrope hover:scale-105 transition-transform">
-                                        Apply Now
-                                    </button>
+                                    <div
+                                        class="flex justify-between items-center p-3 border rounded-lg dark:border-gray-600">
+                                        <span class="font-manrope text-sm">Gateway: Stripe</span>
+                                        <div class="w-12 h-6 bg-gray-300 rounded-full relative">
+                                            <div
+                                                class="w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition-transform">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -831,17 +850,18 @@ get_header();
     <section class="py-20 bg-gradient-to-r from-cyber-blue to-cyber-coral dark:from-cyber-cyan dark:to-cyber-pink">
         <div class="container mx-auto px-4 text-center">
             <h2 class="font-nico text-4xl md:text-5xl text-white mb-6">
-                Ready to Tee Off Your Digital Presence?
+                Ready to Launch Your Prop Firm?
             </h2>
             <p class="font-manrope text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Let's craft a stunning website for your club or business. Elegant, fast, and tailored to inspire.
+                Let's build a custom trading platform like The Funded Way. Scalable, secure, and revenue-optimized for
+                your business.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>"
                     class="px-8 py-3 bg-white text-cyber-blue rounded-full font-manrope text-lg hover:scale-105 transform transition-all duration-300 cursor-pointer">
                     Start Your Project
                 </a>
-                <a href="https://nyericlub.co.ke" target="_blank"
+                <a href="https://thefundedway.com" target="_blank"
                     class="px-8 py-3 border-2 border-white text-white rounded-full font-manrope text-lg hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
                     Try Live Demo
                 </a>
@@ -851,5 +871,4 @@ get_header();
 
 </main>
 
-<?php
-get_footer();
+<?php get_footer();
