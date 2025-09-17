@@ -1,0 +1,727 @@
+# Copyright (C) 2025 Wilson
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Wilson Devops 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wilson-devops\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-09-17T12:30:26+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wilson-devops\n"
+
+#. Theme Name of the theme
+#: theme
+msgid "Wilson Devops"
+msgstr ""
+
+#. Theme URI of the theme
+#: theme
+msgid "https://wilsondevops.com"
+msgstr ""
+
+#. Description of the theme
+#: theme
+msgid "A modern WordPress portfolio theme powered by Tailwind CSS and Alpine.js. Perfect for showcasing your work with a clean and responsive design."
+msgstr ""
+
+#. Author of the theme
+#: theme
+msgid "Wilson"
+msgstr ""
+
+#. Author URI of the theme
+#: theme
+msgid "https://wilsondevops.com/"
+msgstr ""
+
+#: theme/404.php:28
+msgid "Oops! We couldn't find that page."
+msgstr ""
+
+#: theme/404.php:31
+msgid "It looks like the page you're looking for doesn't exist or has been moved. But don't worry, you can still explore our website."
+msgstr ""
+
+#: theme/404.php:36
+#: theme/page-templates/page-coming-soon.php:52
+msgid "Go to Homepage"
+msgstr ""
+
+#: theme/404.php:46
+msgid "404 Error Image"
+msgstr ""
+
+#. translators: 1: title.
+#: theme/comments.php:36
+msgid "One comment on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: theme/comments.php:44
+msgctxt "comments title"
+msgid "%1$s comment on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: theme/comments.php:74
+msgid "Comments are closed."
+msgstr ""
+
+#: theme/front-page.php:38
+msgid "Wilson Mbuthia"
+msgstr ""
+
+#: theme/front-page.php:44
+msgid "WordPress Developer,"
+msgstr ""
+
+#: theme/front-page.php:47
+msgid ""
+"with a keen eye for design, I excel at crafting engaging and\r\n"
+"                    user-friendly web interfaces."
+msgstr ""
+
+#: theme/front-page.php:55
+msgid ""
+"I bring a commitment to delivering top-notch work, complemented by a solid understanding\r\n"
+"                    of backend development."
+msgstr ""
+
+#: theme/front-page.php:62
+msgid "Eager to contribute my skills to your team and create impactful digital experiences."
+msgstr ""
+
+#: theme/front-page.php:67
+msgid "Contact Me"
+msgstr ""
+
+#: theme/front-page.php:142
+#: theme/template-parts/content/content-aside.php:36
+#: theme/template-parts/layout/header-content.php:50
+msgid "About Me"
+msgstr ""
+
+#: theme/front-page.php:168
+msgid ""
+"Experienced Software Developer proficient in coding and debugging, consistently delivering\r\n"
+"                        project objectives through the creation of refined, scalable, and production-ready code."
+msgstr ""
+
+#: theme/front-page.php:175
+msgid "Adept at collaborating within Agile and Scrum frameworks to achieve team goals effectively."
+msgstr ""
+
+#: theme/front-page.php:179
+msgid "Skills:"
+msgstr ""
+
+#: theme/front-page.php:183
+#: theme/front-page.php:286
+msgid "HTML"
+msgstr ""
+
+#: theme/front-page.php:184
+msgid "CSS"
+msgstr ""
+
+#: theme/front-page.php:185
+msgid "Javascript"
+msgstr ""
+
+#: theme/front-page.php:186
+#: theme/front-page.php:302
+msgid "TypeScript"
+msgstr ""
+
+#: theme/front-page.php:187
+msgid "React"
+msgstr ""
+
+#: theme/front-page.php:188
+msgid "Git & Github"
+msgstr ""
+
+#: theme/front-page.php:189
+msgid "Scss"
+msgstr ""
+
+#: theme/front-page.php:190
+#: theme/front-page.php:294
+msgid "Tailwind"
+msgstr ""
+
+#: theme/front-page.php:191
+msgid "Strapi"
+msgstr ""
+
+#: theme/front-page.php:192
+msgid "MySql"
+msgstr ""
+
+#: theme/front-page.php:193
+#: theme/front-page.php:306
+msgid "PHP"
+msgstr ""
+
+#: theme/front-page.php:194
+#: theme/front-page.php:322
+msgid "WordPress"
+msgstr ""
+
+#: theme/front-page.php:195
+msgid "NodeJs"
+msgstr ""
+
+#: theme/front-page.php:196
+#: theme/front-page.php:318
+msgid "AWS"
+msgstr ""
+
+#: theme/front-page.php:217
+#: theme/template-parts/content/content-aside.php:42
+#: theme/template-parts/layout/header-content.php:56
+msgid "Services"
+msgstr ""
+
+#: theme/front-page.php:234
+msgid "Full Stack"
+msgstr ""
+
+#: theme/front-page.php:237
+msgid "Building end-to-end web solutions with expertise in both front-end and back-end technologies. From user-friendly interfaces to powerful server-side functionality, I deliver seamless, integrated web applications and dashboards that scale with your business needs."
+msgstr ""
+
+#: theme/front-page.php:254
+msgid "Theme Development"
+msgstr ""
+
+#: theme/front-page.php:257
+msgid "I specialize in creating and customizing WordPress themes using HTML, Bootstrap, Tailwind, and CSS. My focus is on developing responsive, high-performance websites that provide exceptional user experiences and meet the unique needs of clients."
+msgstr ""
+
+#: theme/front-page.php:273
+msgid "Plugin Development"
+msgstr ""
+
+#: theme/front-page.php:276
+msgid "I specialize in developing custom WordPress plugins, using PHP, JavaScript, and MySQL to enhance server-side functionality. My expertise includes creating efficient backend solutions, integrating seamlessly with WordPress to provide enhanced features and performance."
+msgstr ""
+
+#: theme/front-page.php:290
+msgid "SCSS"
+msgstr ""
+
+#: theme/front-page.php:298
+msgid "JavaScript"
+msgstr ""
+
+#: theme/front-page.php:310
+msgid "MySQL"
+msgstr ""
+
+#: theme/front-page.php:314
+#: theme/front-page.php:330
+msgid "Github"
+msgstr ""
+
+#: theme/front-page.php:353
+msgid "Featured Projects"
+msgstr ""
+
+#: theme/front-page.php:368
+#: theme/front-page.php:401
+#: theme/front-page.php:434
+#: theme/front-page.php:467
+#: theme/front-page.php:500
+#: theme/front-page.php:534
+msgid "View Project Details"
+msgstr ""
+
+#: theme/front-page.php:374
+msgid "Visitor Management System"
+msgstr ""
+
+#: theme/front-page.php:377
+msgid "A powerful visitor management system built to streamline check-ins, improve security, automate guest records, and provide organizations with a seamless, efficient platform for managing visitors effectively every day."
+msgstr ""
+
+#: theme/front-page.php:381
+#: theme/front-page.php:414
+#: theme/front-page.php:447
+#: theme/front-page.php:480
+#: theme/front-page.php:514
+#: theme/front-page.php:547
+msgid "Visit Website"
+msgstr ""
+
+#: theme/front-page.php:407
+msgid "Nyeri Club"
+msgstr ""
+
+#: theme/front-page.php:410
+msgid "Nyeri Club's golf website designed with WordPress and Elementor, featuring elegant layouts, intuitive navigation, and a dynamic platform for members and enthusiasts to engage and explore golfing opportunities."
+msgstr ""
+
+#: theme/front-page.php:440
+msgid "The Funded Way"
+msgstr ""
+
+#: theme/front-page.php:443
+msgid "The Funded Way prop trading platform, built with WordPress and WooCommerce, delivers instant challenges up to $100K, custom checkouts, affiliate tracking, and 24-48 hour payouts for traders worldwide."
+msgstr ""
+
+#: theme/front-page.php:473
+msgid "Torus"
+msgstr ""
+
+#: theme/front-page.php:476
+msgid "A premier East African web design agency platform built with WordPress, custom theme, and modern JS. Comprehensive services, agile processes, and client-focused solutions for innovative websites worldwide."
+msgstr ""
+
+#: theme/front-page.php:506
+msgid "Institutional Funding"
+msgstr ""
+
+#: theme/front-page.php:509
+msgid "The funding platform empowers organizations through transparent grants, strategic resources, impact tracking, and strong institutional partnerships, fostering sustainable development and ensuring financial accountability."
+msgstr ""
+
+#: theme/front-page.php:540
+msgid "Backed Sports"
+msgstr ""
+
+#: theme/front-page.php:543
+msgid "Backed Sports enables users to predict outcomes, join funding challenges, and increase winnings through strategic sports picks with transparent, secure payouts and engaging experiences."
+msgstr ""
+
+#: theme/front-page.php:570
+#: theme/page-templates/page-contact.php:36
+msgid "Contact Me."
+msgstr ""
+
+#: theme/front-page.php:576
+#: theme/page-templates/page-contact.php:42
+msgid "I will read all emails. Send me any message you want and I'll get back to you."
+msgstr ""
+
+#: theme/front-page.php:579
+#: theme/page-templates/page-contact.php:45
+msgid "I need your"
+msgstr ""
+
+#: theme/front-page.php:580
+#: theme/page-templates/page-contact.php:46
+msgid "Name"
+msgstr ""
+
+#: theme/front-page.php:581
+#: theme/page-templates/page-contact.php:47
+msgid "and"
+msgstr ""
+
+#: theme/front-page.php:582
+#: theme/page-templates/page-contact.php:48
+msgid "Email Address"
+msgstr ""
+
+#: theme/front-page.php:583
+#: theme/page-templates/page-contact.php:49
+msgid ", I'll reply as quickly as possible."
+msgstr ""
+
+#: theme/front-page.php:596
+#: theme/page-templates/page-contact.php:62
+msgid "Send Me A Message"
+msgstr ""
+
+#: theme/front-page.php:646
+#: theme/page-templates/page-contact.php:112
+msgid "Full Name*"
+msgstr ""
+
+#: theme/front-page.php:657
+#: theme/page-templates/page-contact.php:123
+msgid "Email Address*"
+msgstr ""
+
+#: theme/front-page.php:667
+#: theme/page-templates/page-contact.php:133
+msgid "Subject"
+msgstr ""
+
+#: theme/front-page.php:677
+#: theme/page-templates/page-contact.php:143
+msgid "Message*"
+msgstr ""
+
+#: theme/front-page.php:684
+#: theme/page-templates/page-contact.php:150
+msgid "Submit"
+msgstr ""
+
+#: theme/front-page.php:695
+#: theme/page-templates/page-contact.php:161
+msgid "Don't want to send mails?"
+msgstr ""
+
+#: theme/front-page.php:698
+#: theme/page-templates/page-contact.php:164
+msgid "Write me on social media."
+msgstr ""
+
+#: theme/functions.php:85
+msgid "Primary"
+msgstr ""
+
+#: theme/functions.php:86
+msgid "Footer Menu"
+msgstr ""
+
+#: theme/functions.php:134
+msgid "Footer"
+msgstr ""
+
+#: theme/functions.php:136
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+
+#: theme/header.php:42
+msgid "Skip to content"
+msgstr ""
+
+#: theme/inc/template-functions.php:42
+msgid "Category Archives: "
+msgstr ""
+
+#: theme/inc/template-functions.php:44
+msgid "Tag Archives: "
+msgstr ""
+
+#: theme/inc/template-functions.php:46
+msgid "Author Archives: "
+msgstr ""
+
+#: theme/inc/template-functions.php:48
+msgid "Yearly Archives: "
+msgstr ""
+
+#: theme/inc/template-functions.php:48
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: theme/inc/template-functions.php:50
+msgid "Monthly Archives: "
+msgstr ""
+
+#: theme/inc/template-functions.php:50
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: theme/inc/template-functions.php:52
+msgid "Daily Archives: "
+msgstr ""
+
+#. translators: %s: Post type singular name
+#. translators: %s: Taxonomy singular name
+#: theme/inc/template-functions.php:57
+#: theme/inc/template-functions.php:64
+msgid "%s Archives"
+msgstr ""
+
+#: theme/inc/template-functions.php:68
+msgid "Archives:"
+msgstr ""
+
+#. translators: %s: Name of current post.
+#: theme/inc/template-functions.php:98
+msgid "Continue reading %s"
+msgstr ""
+
+#: theme/inc/template-functions.php:132
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: theme/inc/template-functions.php:134
+msgid "Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved."
+msgstr ""
+
+#. translators: %s: Comment author link.
+#: theme/inc/template-functions.php:156
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#. translators: 1: Comment date, 2: Comment time.
+#: theme/inc/template-functions.php:171
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: theme/inc/template-functions.php:178
+msgid "Edit"
+msgstr ""
+
+#: theme/inc/template-tags.php:46
+msgid "Posted by"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: theme/inc/template-tags.php:60
+msgid "Leave a comment<span class=\"sr-only\"> on %s</span>"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma.
+#: theme/inc/template-tags.php:82
+#: theme/inc/template-tags.php:93
+#: theme/inc/template-tags.php:143
+#: theme/inc/template-tags.php:154
+msgid ", "
+msgstr ""
+
+#: theme/inc/template-tags.php:87
+#: theme/inc/template-tags.php:148
+msgid "Posted in"
+msgstr ""
+
+#: theme/inc/template-tags.php:98
+#: theme/inc/template-tags.php:159
+msgid "Tags:"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: theme/inc/template-tags.php:114
+#: theme/inc/template-tags.php:175
+#: theme/template-parts/content/content-page.php:48
+msgid "Edit <span class=\"sr-only\">%s</span>"
+msgstr ""
+
+#: theme/inc/template-tags.php:266
+msgid "Newer posts"
+msgstr ""
+
+#: theme/inc/template-tags.php:267
+msgid "Older posts"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:142
+msgid "My Developer Journey"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:146
+msgid "From curious beginner to full-stack developer - every line of code tells a story"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:170
+msgid "First Lines of Code"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:173
+msgid "Started with HTML/CSS, building static sites for fun and discovering the magic of bringing designs to life."
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:205
+msgid "JavaScript & Beyond"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:208
+msgid "Dived into JS, React, and Node.js, delivering dynamic applications and learning the power of interactive web experiences."
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:227
+msgid "WordPress Ninja"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:230
+msgid "Mastered PHP and WordPress, creating custom themes and plugins that bridge creativity with functionality."
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:261
+msgid "Full-Stack Visionary"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:264
+msgid "Building scalable solutions with TypeScript, Strapi, and modern architectures that solve real-world problems."
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:283
+msgid "Open Source Advocate"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:286
+msgid "Contributing to the community with tools and libraries that help developers build better, faster."
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:308
+msgid "My Tech Arsenal"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:312
+msgid "The tools and technologies I use to bring ideas to life"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:359
+msgid "Proficiency"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:386
+msgid "My Coding Philosophy"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:390
+msgid "The principles that guide every line of code I write"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:415
+msgid "Clean Code"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:419
+msgid "I write readable, maintainable code that scales with projects and teams. Every function has a purpose, every variable tells a story, and every comment adds value."
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:447
+msgid "Collaboration"
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:451
+msgid "Thriving in Agile environments, I value teamwork and clear communication. The best solutions emerge when diverse minds work together toward a common goal."
+msgstr ""
+
+#: theme/page-templates/page-about-me.php:483
+msgid "Always exploring new tools and techniques to push boundaries. I believe the best solutions come from questioning the status quo and embracing emerging technologies."
+msgstr ""
+
+#: theme/page-templates/page-backed-sports.php:184
+#: theme/page-templates/page-funded-way.php:153
+#: theme/page-templates/page-institutional-funding.php:183
+#: theme/page-templates/page-torus.php:153
+msgid "Platform Overview"
+msgstr ""
+
+#: theme/page-templates/page-backed-sports.php:300
+#: theme/page-templates/page-funded-way.php:268
+#: theme/page-templates/page-institutional-funding.php:299
+#: theme/page-templates/page-nyeri-club.php:251
+#: theme/page-templates/page-torus.php:268
+#: theme/page-templates/page-vms.php:256
+msgid "Technical Architecture"
+msgstr ""
+
+#: theme/page-templates/page-backed-sports.php:442
+#: theme/page-templates/page-funded-way.php:411
+#: theme/page-templates/page-institutional-funding.php:441
+#: theme/page-templates/page-nyeri-club.php:388
+#: theme/page-templates/page-torus.php:411
+#: theme/page-templates/page-vms.php:395
+msgid "Development Journey"
+msgstr ""
+
+#: theme/page-templates/page-backed-sports.php:595
+#: theme/page-templates/page-funded-way.php:565
+#: theme/page-templates/page-institutional-funding.php:595
+#: theme/page-templates/page-nyeri-club.php:533
+#: theme/page-templates/page-torus.php:565
+#: theme/page-templates/page-vms.php:540
+msgid "Interactive Features"
+msgstr ""
+
+#: theme/page-templates/page-coming-soon.php:44
+msgid "We're Working on It!"
+msgstr ""
+
+#: theme/page-templates/page-coming-soon.php:47
+msgid "This page is under development. Stay tuned for exciting updates!"
+msgstr ""
+
+#: theme/page-templates/page-coming-soon.php:61
+msgid "Coming Soon Image"
+msgstr ""
+
+#: theme/page-templates/page-nyeri-club.php:142
+#: theme/page-templates/page-vms.php:144
+msgid "System Overview"
+msgstr ""
+
+#: theme/search.php:25
+#: theme/template-parts/content/content-none.php:24
+msgid "Search results for:"
+msgstr ""
+
+#: theme/single.php:28
+msgid "Next Post"
+msgstr ""
+
+#: theme/single.php:29
+msgid "Next post:"
+msgstr ""
+
+#: theme/single.php:31
+msgid "Previous Post"
+msgstr ""
+
+#: theme/single.php:32
+msgid "Previous post:"
+msgstr ""
+
+#: theme/template-parts/content/content-aside.php:23
+msgid "Menu"
+msgstr ""
+
+#: theme/template-parts/content/content-aside.php:30
+#: theme/template-parts/layout/header-content.php:44
+msgid "Home"
+msgstr ""
+
+#: theme/template-parts/content/content-aside.php:48
+#: theme/template-parts/layout/header-content.php:62
+msgid "Projects"
+msgstr ""
+
+#: theme/template-parts/content/content-aside.php:54
+#: theme/template-parts/layout/header-content.php:68
+msgid "Contact"
+msgstr ""
+
+#: theme/template-parts/content/content-excerpt.php:19
+#: theme/template-parts/content/content.php:19
+msgctxt "post"
+msgid "Featured"
+msgstr ""
+
+#: theme/template-parts/content/content-none.php:32
+msgid "Nothing Found"
+msgstr ""
+
+#: theme/template-parts/content/content-none.php:43
+msgid "Your site is set to show the most recent posts on your homepage, but you haven&rsquo;t published any posts."
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#: theme/template-parts/content/content-none.php:50
+msgid "Add or publish posts"
+msgstr ""
+
+#: theme/template-parts/content/content-none.php:60
+msgid "Your search generated no results. Please try a different search."
+msgstr ""
+
+#: theme/template-parts/content/content-none.php:69
+msgid "No content matched your request."
+msgstr ""
+
+#: theme/template-parts/content/content-page.php:34
+#: theme/template-parts/content/content-single.php:47
+#: theme/template-parts/content/content.php:37
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: theme/template-parts/content/content-single.php:34
+msgid "Continue reading<span class=\"sr-only\"> \"%s\"</span>"
+msgstr ""
