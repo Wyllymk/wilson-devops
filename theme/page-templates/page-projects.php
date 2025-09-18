@@ -26,6 +26,38 @@ get_header();
     <!-- Projects Hero Section -->
     <section
         class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-cyber-dark via-cyber-dark to-gray-900 dark:from-cyber-dark dark:via-gray-900 dark:to-black">
+        <!-- Animated Code Background -->
+        <div class="absolute inset-0 opacity-25 md:opacity-50 overflow-hidden">
+            <div class="absolute top-20 left-10 animate-pulse">
+                <pre class="text-cyber-cyan text-sm font-mono transform rotate-12">
+                    <code>
+                    const developer = {
+                        name: "Wilson",
+                        passion: "innovation",
+                        status: "coding..."
+                    };
+                    </code>
+                </pre>
+            </div>
+            <div class="absolute top-70 md:top-40 right-20 animate-bounce">
+                <pre class="text-cyber-pink text-xs font-mono transform -rotate-6">
+                    <code>
+                        &lt;div className="creative-mind"&gt;
+                            &lt;h1&gt;Building Dreams&lt;/h1&gt;
+                        &lt;/div&gt;
+                    </code>
+                </pre>
+            </div>
+            <div class="absolute bottom-155 md:bottom-52 left-0 md:left-42 animate-pulse">
+                <pre class="text-cyber-blue text-sm font-mono transform rotate-6">
+                    <code>
+                    function createMagic() {
+                        return code + creativity;
+                    }
+                    </code>
+                </pre>
+            </div>
+        </div>
         <!-- Animated Background Pattern -->
         <div class="absolute inset-0 opacity-20">
             <div class="absolute inset-0"
@@ -35,7 +67,7 @@ get_header();
 
         <!-- Hero Content -->
         <div class="container mx-auto px-4 text-center z-10 relative">
-            <h1 class="font-nico text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-wide mb-6 
+            <h1 class="font-nico text-5xl md:text-8xl lg:text-9xl font-black uppercase tracking-wide mb-6 
                 bg-gradient-to-r from-cyber-cyan via-cyber-blue to-cyber-pink bg-clip-text text-transparent
                 animate-pulse drop-shadow-cyber-cyan">
                 My Projects
@@ -87,7 +119,7 @@ get_header();
                     <button @click="setCategory('all')"
                         :class="{ 'bg-gradient-to-r from-cyber-cyan to-cyber-blue text-white shadow-lg drop-shadow-cyber-cyan scale-105': activeCategory === 'all', 
                               'bg-white/80 dark:bg-gray-800/80 text-text-light dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700': activeCategory !== 'all' }"
-                        class="px-6 py-3 rounded-full font-manrope font-semibold border-2 border-transparent
+                        class="px-3 py-1.5 md:px-6 md:py-3 rounded-full font-manrope font-semibold border-2 border-transparent
                     hover:border-cyber-cyan hover:drop-shadow-cyber-cyan transition-all duration-300 
                     transform hover:scale-105 cursor-pointer">
                         All
@@ -95,7 +127,7 @@ get_header();
                     <button @click="setCategory('wordpress')"
                         :class="{ 'bg-gradient-to-r from-cyber-cyan to-cyber-blue text-white shadow-lg drop-shadow-cyber-cyan scale-105': activeCategory === 'wordpress', 
                               'bg-white/80 dark:bg-gray-800/80 text-text-light dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700': activeCategory !== 'wordpress' }"
-                        class="px-6 py-3 rounded-full font-manrope font-semibold border-2 border-transparent
+                        class="px-3 py-1.5 md:px-6 md:py-3 rounded-full font-manrope font-semibold border-2 border-transparent
                     hover:border-cyber-cyan hover:drop-shadow-cyber-cyan transition-all duration-300 
                     transform hover:scale-105 cursor-pointer">
                         WordPress
@@ -103,7 +135,7 @@ get_header();
                     <button @click="setCategory('woocommerce')"
                         :class="{ 'bg-gradient-to-r from-cyber-cyan to-cyber-blue text-white shadow-lg drop-shadow-cyber-cyan scale-105': activeCategory === 'woocommerce', 
                               'bg-white/80 dark:bg-gray-800/80 text-text-light dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700': activeCategory !== 'woocommerce' }"
-                        class="px-6 py-3 rounded-full font-manrope font-semibold border-2 border-transparent
+                        class="px-3 py-1.5 md:px-6 md:py-3 rounded-full font-manrope font-semibold border-2 border-transparent
                     hover:border-cyber-cyan hover:drop-shadow-cyber-cyan transition-all duration-300 
                     transform hover:scale-105 cursor-pointer">
                         WooCommerce
@@ -111,7 +143,7 @@ get_header();
                     <button @click="setCategory('elementor')"
                         :class="{ 'bg-gradient-to-r from-cyber-cyan to-cyber-blue text-white shadow-lg drop-shadow-cyber-cyan scale-105': activeCategory === 'elementor', 
                               'bg-white/80 dark:bg-gray-800/80 text-text-light dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700': activeCategory !== 'elementor' }"
-                        class="px-6 py-3 rounded-full font-manrope font-semibold border-2 border-transparent
+                        class="px-3 py-1.5 md:px-6 md:py-3 rounded-full font-manrope font-semibold border-2 border-transparent
                     hover:border-cyber-cyan hover:drop-shadow-cyber-cyan transition-all duration-300 
                     transform hover:scale-105 cursor-pointer">
                         Elementor
@@ -119,7 +151,7 @@ get_header();
                     <button @click="setCategory('custom')"
                         :class="{ 'bg-gradient-to-r from-cyber-cyan to-cyber-blue text-white shadow-lg drop-shadow-cyber-cyan scale-105': activeCategory === 'custom', 
                               'bg-white/80 dark:bg-gray-800/80 text-text-light dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700': activeCategory !== 'custom' }"
-                        class="px-6 py-3 rounded-full font-manrope font-semibold border-2 border-transparent
+                        class="px-3 py-1.5 md:px-6 md:py-3 rounded-full font-manrope font-semibold border-2 border-transparent
                     hover:border-cyber-cyan hover:drop-shadow-cyber-cyan transition-all duration-300 
                     transform hover:scale-105 cursor-pointer">
                         Custom

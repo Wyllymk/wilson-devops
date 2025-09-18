@@ -16,70 +16,201 @@ function start_session() {
 add_action( 'wp', 'start_session', 1 );
 
 /**
- * Handles form submission for a contact form on the front page.
- *
- * This function processes the form submission when the user submits the form
- * on the front page. It performs security checks with nonce verification and
- * ensures that the form is not submitted by a bot via the honeypot method.
- * The form data is sanitized before it is used, and the message is sent via
- * email to the user with ID 1. The success or error message is stored in the
- * session to be displayed to the user after redirection.
- *
- * @return void
+ * Contact Form Handler
+ * Add this to your theme's functions.php file
  */
-function wilson_devops_handle_form_submission() {
-	global $forms_error, $forms_success;
 
-	// Check if it's the front page and a POST request is made with a valid nonce
-	if ( $_SERVER['REQUEST_METHOD'] === 'POST' && isset( $_POST['submit_mail'] ) && wp_verify_nonce( $_POST['_wpnonce_send_form_data'], 'send_form_data' ) ) {
-
-		// Check for honeypot to avoid spam submissions
-		if ( ! empty( $_POST['honeypot'] ) ) {
-			return; // Exit if honeypot field is filled (indicating a bot submission)
-		}
-
-		// Sanitize and get form data
-		$name    = sanitize_text_field( $_POST['name'] );
-		$email   = sanitize_email( $_POST['email'] );
-		$subject = sanitize_text_field( $_POST['subject'] );
-		$message = sanitize_textarea_field( $_POST['message'] );
-
-		// Get the user data for the user with ID 1
-		$user = get_userdata( 1 );
-
-		// Check if the user exists and retrieve their email
-		if ( $user ) {
-			$to = $user->user_email; // Use the email of the user with ID 1
-		} else {
-			// Fallback email in case the user with ID 1 doesn't exist
-			$to = 'wilsonkabatha@gmail.com'; // Set your fallback email address here
-		}
-
-		// Prepare email details
-		$subject = 'Wilson Devops Form Submission';
-		$body    = "Name: $name\nEmail: $email\nSubject: $subject\n\nMessage:\n$message";
-		$headers = array( 'Content-Type: text/plain; charset=UTF-8', 'From: ' . $email );
-
-		// Send the email
-		$sent = wp_mail( $to, $subject, $body, $headers );
-
-		// Optionally, check if the email was sent successfully
-		if ( $sent ) {
-			$forms_success[] = "Thank you for your message! We'll get back to you soon.";
-		} else {
-			$forms_error[] = 'Sorry, there was an error sending your message. Please try again later.';
-		}
-
-		// Store messages in the session
-		$_SESSION['forms_error']   = $forms_error;
-		$_SESSION['forms_success'] = $forms_success;
-
-		// Redirect to avoid form resubmission (Page refresh prevention)
-		wp_redirect( home_url() );
-		exit;
-	}
+// Enqueue scripts for contact form
+function wilson_contact_form_scripts() 
+{
+    if (is_page_template('contact-page.php') || is_page('contact')) {
+        wp_enqueue_script(
+            'contact-form-handler',
+            get_template_directory_uri() . '/js/contact.min.js',
+            array('jquery'),
+            '1.0.0',
+            true
+        );
+        
+        wp_localize_script('contact-form-handler', 'contact_ajax', array(
+            'ajax_url' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('contact_form_nonce'),
+            'messages' => array(
+                'sending' => __('Sending message...', 'wilson-devops'),
+                'success' => __('Message sent successfully! I\'ll get back to you soon.', 'wilson-devops'),
+                'error' => __('Something went wrong. Please try again.', 'wilson-devops'),
+                'required_fields' => __('Please fill in all required fields.', 'wilson-devops'),
+                'invalid_email' => __('Please enter a valid email address.', 'wilson-devops')
+            )
+        ));
+    }
 }
-add_action( 'template_redirect', 'wilson_devops_handle_form_submission' );
+add_action('wp_enqueue_scripts', 'wilson_contact_form_scripts');
+
+// Handle AJAX form submission for logged in and non-logged in users
+add_action('wp_ajax_submit_contact_form', 'handle_contact_form_submission');
+add_action('wp_ajax_nopriv_submit_contact_form', 'handle_contact_form_submission');
+
+function handle_contact_form_submission() 
+{
+    // Verify nonce for security
+    if (!wp_verify_nonce($_POST['nonce'], 'contact_form_nonce')) {
+        wp_die(json_encode(array(
+            'success' => false,
+            'message' => __('Security verification failed. Please refresh the page and try again.', 'wilson-devops')
+        )));
+    }
+
+    // Honeypot spam protection
+    if (!empty($_POST['honeypot'])) {
+        wp_die(json_encode(array(
+            'success' => false,
+            'message' => __('Spam detected.', 'wilson-devops')
+        )));
+    }
+
+    // Sanitize and validate form data
+    $name = sanitize_text_field($_POST['name']);
+    $email = sanitize_email($_POST['email']);
+    $subject = sanitize_text_field($_POST['subject']);
+    $message = sanitize_textarea_field($_POST['message']);
+
+    // Validation
+    $errors = array();
+    
+    if (empty($name)) {
+        $errors[] = __('Name is required.', 'wilson-devops');
+    }
+    
+    if (empty($email)) {
+        $errors[] = __('Email is required.', 'wilson-devops');
+    } elseif (!is_email($email)) {
+        $errors[] = __('Please enter a valid email address.', 'wilson-devops');
+    }
+    
+    if (empty($message)) {
+        $errors[] = __('Message is required.', 'wilson-devops');
+    }
+
+    // Rate limiting check (optional)
+    $user_ip = $_SERVER['REMOTE_ADDR'];
+    $rate_limit_key = 'contact_form_' . md5($user_ip);
+    $submission_count = get_transient($rate_limit_key);
+    
+    if ($submission_count && $submission_count >= 3) {
+        wp_die(json_encode(array(
+            'success' => false,
+            'message' => __('Too many submissions. Please wait before sending another message.', 'wilson-devops')
+        )));
+    }
+
+    if (!empty($errors)) {
+        wp_die(json_encode(array(
+            'success' => false,
+            'message' => implode(' ', $errors)
+        )));
+    }
+
+    // Prepare email
+    $to = get_option('admin_email'); // or specify your email
+    $email_subject = $subject ? '[Contact Form] ' . $subject : '[Contact Form] New Message from ' . $name;
+    
+    // Email body
+    $email_body = "New contact form submission:\n\n";
+    $email_body .= "Name: {$name}\n";
+    $email_body .= "Email: {$email}\n";
+    $email_body .= "Subject: {$subject}\n\n";
+    $email_body .= "Message:\n{$message}\n\n";
+    $email_body .= "---\n";
+    $email_body .= "Sent from: " . get_bloginfo('name') . " (" . home_url() . ")\n";
+    $email_body .= "IP Address: {$user_ip}\n";
+    $email_body .= "Date: " . current_time('mysql');
+
+    // Email headers
+    $headers = array();
+    $headers[] = 'Content-Type: text/plain; charset=UTF-8';
+    $headers[] = 'From: ' . get_bloginfo('name') . ' <' . get_option('admin_email') . '>';
+    $headers[] = 'Reply-To: ' . $name . ' <' . $email . '>';
+
+    // Send email
+    $mail_sent = wp_mail($to, $email_subject, $email_body, $headers);
+
+    if ($mail_sent) {
+        // Set rate limiting
+        $new_count = $submission_count ? $submission_count + 1 : 1;
+        set_transient($rate_limit_key, $new_count, 3600); // 1 hour
+
+        // Log successful submission (optional)
+        error_log("Contact form submission from {$name} ({$email}) - Subject: {$subject}");
+
+        wp_die(json_encode(array(
+            'success' => true,
+            'message' => __('Thank you for your message! I\'ll get back to you within 24 hours.', 'wilson-devops')
+        )));
+    } else {
+        // Log failed submission
+        error_log("Failed to send contact form email from {$name} ({$email})");
+        
+        wp_die(json_encode(array(
+            'success' => false,
+            'message' => __('Failed to send message. Please try again or contact me directly via social media.', 'wilson-devops')
+        )));
+    }
+}
+
+// Optional: Add contact form settings to WordPress admin
+function wilson_contact_form_admin_menu() 
+{
+    add_options_page(
+        'Contact Form Settings',
+        'Contact Form',
+        'manage_options',
+        'contact-form-settings',
+        'wilson_contact_form_admin_page'
+    );
+}
+add_action('admin_menu', 'wilson_contact_form_admin_menu');
+
+function wilson_contact_form_admin_page() 
+{
+    if (isset($_POST['save_settings'])) {
+        update_option('wilson_contact_email', sanitize_email($_POST['contact_email']));
+        update_option('wilson_contact_subject_prefix', sanitize_text_field($_POST['subject_prefix']));
+        echo '<div class="notice notice-success"><p>Settings saved!</p></div>';
+    }
+    
+    $contact_email = get_option('wilson_contact_email', get_option('admin_email'));
+    $subject_prefix = get_option('wilson_contact_subject_prefix', '[Contact Form]');
+    ?>
+<div class="wrap">
+    <h1>Contact Form Settings</h1>
+    <form method="post" action="">
+        <table class="form-table">
+            <tr>
+                <th scope="row">Contact Email</th>
+                <td>
+                    <input type="email" name="contact_email" value="<?php echo esc_attr($contact_email); ?>"
+                        class="regular-text" />
+                    <p class="description">Where contact form submissions will be sent.</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Subject Prefix</th>
+                <td>
+                    <input type="text" name="subject_prefix" value="<?php echo esc_attr($subject_prefix); ?>"
+                        class="regular-text" />
+                    <p class="description">Prefix added to email subjects.</p>
+                </td>
+            </tr>
+        </table>
+        <?php submit_button('Save Settings', 'primary', 'save_settings'); ?>
+    </form>
+
+    <h2>Recent Submissions</h2>
+    <p>Check your server error logs for submission records.</p>
+</div>
+<?php
+}
 
 /**
  * Creates the "Home" and "Coming Soon" pages if they don't exist.
@@ -92,7 +223,8 @@ add_action( 'template_redirect', 'wilson_devops_handle_form_submission' );
  *
  * @return void
  */
-function wilson_devops_create_home_page() {
+function wilson_devops_create_home_page() 
+{
 	// Check if the "Home" page exists using WP_Query
 	$home_page_query = new WP_Query(
 		array(
@@ -146,7 +278,8 @@ add_action( 'after_switch_theme', 'wilson_devops_create_home_page' );
  * for the theme. The function checks if each page already exists based on the slug and
  * if it does not, the page is created and associated with the appropriate template.
  */
-function wilson_devops_create_pages() {
+function wilson_devops_create_pages() 
+{
 	// Pages to create
 	$pages = array(
 		array(
@@ -232,7 +365,8 @@ add_action( 'after_switch_theme', 'wilson_devops_create_pages' );
 
 
 // Automatically set permalinks to 'postname' and timezone to +0300 on theme activation.
-function wilson_devops_setup_settings() {
+function wilson_devops_setup_settings() 
+{
     // Set permalinks to 'postname'
     global $wp_rewrite;
     $wp_rewrite->set_permalink_structure('/%postname%/');

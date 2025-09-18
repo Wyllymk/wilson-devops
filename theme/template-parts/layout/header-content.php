@@ -74,8 +74,9 @@ defined( 'ABSPATH' ) || exit;
                     <!-- Dark Mode Toggle Button -->
                     <div class="flex items-center text-prime-teal dark:text-white">
                         <!-- Button component -->
-                        <button class="p-2 cursor-pointer rounded-full bg-cyber-blue/20 dark:bg-cyber-cyan/20 
-						hover:shadow-[var(--drop-shadow-cyber-cyan)] transition-all duration-300" x-data="themeToggle" @click="toggle">
+                        <button
+                            class="p-2 cursor-pointer rounded-full bg-cyber-blue/20 dark:bg-cyber-cyan/20 hover:shadow-[var(--drop-shadow-cyber-cyan)] transition-all duration-300"
+                            x-data="themeToggle" @click="toggle">
                             <svg x-show="!isDark"
                                 class="w-7 h-7 transform transition-transform duration-300 fill-gray-950"
                                 xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 15 15">

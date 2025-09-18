@@ -6,17 +6,6 @@
  *
  * https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities
  */
-@keyframes float {
-	0%,
-	100% {
-		transform: translateY(0);
-	}
-
-	50% {
-		transform: translateY(-20px);
-	}
-}
-
 .animate-float {
 	animation: float 4s ease-in-out infinite;
 }
@@ -50,26 +39,6 @@
 	50% {
 		transform: translateY(-20px);
 	}
-}
-
-.animate-float {
-	animation: float 6s ease-in-out infinite;
-}
-
-.drop-shadow-cyber-cyan {
-	filter: drop-shadow(0 4px 20px rgba(34, 211, 238, 0.4));
-}
-
-.drop-shadow-cyber-coral {
-	filter: drop-shadow(0 4px 20px rgba(251, 113, 133, 0.4));
-}
-
-.drop-shadow-purple-400 {
-	filter: drop-shadow(0 4px 20px rgba(168, 85, 247, 0.4));
-}
-
-.drop-shadow-cyan-400 {
-	filter: drop-shadow(0 4px 20px rgba(34, 211, 238, 0.4));
 }
 
 /* Custom scrollbar for better aesthetics */
@@ -157,4 +126,44 @@ img:hover {
 	.space-y-12 > * + * {
 		margin-top: 2rem;
 	}
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px) rotate(0deg);
+	}
+
+	50% {
+		transform: translateY(-5px) rotate(1deg);
+	}
+}
+
+.tech-icon:hover {
+	animation: float 0.6s ease-in-out;
+}
+
+/* Staggered hover effects */
+.tech-grid .group:nth-child(1) {
+	animation-delay: 0s;
+}
+
+.tech-grid .group:nth-child(2) {
+	animation-delay: 0.1s;
+}
+
+.tech-grid .group:nth-child(3) {
+	animation-delay: 0.2s;
+}
+
+.tech-grid .group:nth-child(4) {
+	animation-delay: 0.3s;
+}
+
+.tech-grid .group:nth-child(5) {
+	animation-delay: 0.4s;
+}
+
+.tech-grid .group:nth-child(6) {
+	animation-delay: 0.5s;
 }

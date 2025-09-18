@@ -26,25 +26,37 @@ get_header();
 
     <!-- Hero Section -->
     <section
-        class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-cyber-light via-white to-gray-100 dark:from-cyber-dark dark:via-gray-900 dark:to-black">
+        class="pt-20 md:pt-0 min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-cyber-light via-white to-gray-100 dark:from-cyber-dark dark:via-gray-900 dark:to-black">
         <!-- Animated Code Background -->
-        <div class="absolute inset-0 opacity-5 overflow-hidden">
+        <div class="absolute inset-0 opacity-25 md:opacity-50 overflow-hidden">
             <div class="absolute top-20 left-10 animate-pulse">
-                <pre class="text-cyber-cyan text-sm font-mono transform rotate-12"><code>const developer = {
-  name: "Wilson",
-  passion: "innovation",
-  status: "coding..."
-};</code></pre>
+                <pre class="text-cyber-cyan text-sm font-mono transform rotate-12">
+                    <code>
+                    const developer = {
+                        name: "Wilson",
+                        passion: "innovation",
+                        status: "coding..."
+                    };
+                    </code>
+                </pre>
             </div>
-            <div class="absolute top-40 right-20 animate-bounce">
-                <pre class="text-cyber-pink text-xs font-mono transform -rotate-6"><code>&lt;div className="creative-mind"&gt;
-  &lt;h1&gt;Building Dreams&lt;/h1&gt;
-&lt;/div&gt;</code></pre>
+            <div class="absolute top-70 md:top-40 right-20 animate-bounce">
+                <pre class="text-cyber-pink text-xs font-mono transform -rotate-6">
+                    <code>
+                        &lt;div className="creative-mind"&gt;
+                            &lt;h1&gt;Building Dreams&lt;/h1&gt;
+                        &lt;/div&gt;
+                    </code>
+                </pre>
             </div>
-            <div class="absolute bottom-32 left-32 animate-pulse">
-                <pre class="text-cyber-blue text-sm font-mono transform rotate-6"><code>function createMagic() {
-  return code + creativity;
-}</code></pre>
+            <div class="absolute bottom-155 md:bottom-52 left-0 md:left-42 animate-pulse">
+                <pre class="text-cyber-blue text-sm font-mono transform rotate-6">
+                    <code>
+                    function createMagic() {
+                        return code + creativity;
+                    }
+                    </code>
+                </pre>
             </div>
         </div>
 
@@ -156,7 +168,7 @@ get_header();
                 <div class="space-y-16">
                     <!-- 2018 - First Lines of Code -->
                     <div class="relative flex items-center">
-                        <div class="w-1/2 pr-8 text-right">
+                        <div class="w-full md:w-1/2 pr-8 text-right">
                             <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700
                                 hover:shadow-2xl hover:border-cyber-cyan dark:hover:border-cyber-cyan
                                 transition-all duration-500 transform hover:-translate-y-2">
@@ -180,18 +192,18 @@ get_header();
                             rounded-full border-4 border-white dark:border-gray-800 z-10 
                             shadow-lg hover:scale-125 transition-transform duration-300"></div>
 
-                        <div class="w-1/2 pl-8"></div>
+                        <div class="w-none md:w-1/2 pl-8"></div>
                     </div>
 
                     <!-- 2020 - JavaScript & Beyond -->
                     <div class="relative flex items-center">
-                        <div class="w-1/2 pr-8"></div>
+                        <div class="w-none md:w-1/2 pr-8"></div>
 
                         <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-cyber-pink 
                             rounded-full border-4 border-white dark:border-gray-800 z-10 
                             shadow-lg hover:scale-125 transition-transform duration-300"></div>
 
-                        <div class="w-1/2 pl-8">
+                        <div class="w-full md:w-1/2 pl-8">
                             <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700
                                 hover:shadow-2xl hover:border-cyber-pink dark:hover:border-cyber-pink
                                 transition-all duration-500 transform hover:-translate-y-2">
@@ -213,7 +225,7 @@ get_header();
 
                     <!-- 2022 - WordPress Ninja -->
                     <div class="relative flex items-center">
-                        <div class="w-1/2 pr-8 text-right">
+                        <div class="w-full md:w-1/2 pr-8 text-right">
                             <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700
                                 hover:shadow-2xl hover:border-cyber-blue dark:hover:border-cyber-blue
                                 transition-all duration-500 transform hover:-translate-y-2">
@@ -236,18 +248,18 @@ get_header();
                             rounded-full border-4 border-white dark:border-gray-800 z-10 
                             shadow-lg hover:scale-125 transition-transform duration-300"></div>
 
-                        <div class="w-1/2 pl-8"></div>
+                        <div class="w-none md:w-1/2 pl-8"></div>
                     </div>
 
                     <!-- 2025 - Full-Stack Visionary -->
                     <div class="relative flex items-center">
-                        <div class="w-1/2 pr-8"></div>
+                        <div class="w-none md:w-1/2 pr-8"></div>
 
                         <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 
                             rounded-full border-4 border-white dark:border-gray-800 z-10 
                             shadow-lg hover:scale-125 transition-transform duration-300"></div>
 
-                        <div class="w-1/2 pl-8">
+                        <div class="w-full md:w-1/2 pl-8">
                             <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700
                                 hover:shadow-2xl hover:border-green-500 dark:hover:border-green-500
                                 transition-all duration-500 transform hover:-translate-y-2">
@@ -269,7 +281,7 @@ get_header();
 
                     <!-- 2026 - Open Source Advocate -->
                     <div class="relative flex items-center">
-                        <div class="w-1/2 pr-8 text-right">
+                        <div class="w-full md:w-1/2 pr-8 text-right">
                             <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700
                                 hover:shadow-2xl hover:border-purple-500 dark:hover:border-purple-500
                                 transition-all duration-500 transform hover:-translate-y-2">
@@ -292,7 +304,7 @@ get_header();
                             rounded-full border-4 border-white dark:border-gray-800 z-10 
                             shadow-lg hover:scale-125 transition-transform duration-300"></div>
 
-                        <div class="w-1/2 pl-8"></div>
+                        <div class="w-none md:w-1/2 pl-8"></div>
                     </div>
                 </div>
             </div>

@@ -18,7 +18,8 @@ get_header();
 
 ?>
 
-<main class="min-h-screen bg-white dark:bg-gray-950 transition-colors duration-400 ease-in-out">
+<main
+    class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-950 dark:to-gray-900 transition-all duration-500">
 
     <!-- Sidebar Navigation -->
     <div id="navMenu" class="transform translate-x-full opacity-0 w-64 py-4 px-4 z-40 fixed md:hidden top-0 h-full 
@@ -30,711 +31,835 @@ get_header();
     <!-- Overlay -->
     <div id="overlay" class="fixed inset-0 top-0 h-screen z-30 bg-black/70 hidden"></div>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 relative bg-gray-200 dark:bg-gray-900" id="home">
-        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <h1 class="home__name text-5xl font-bold font-nico text-gray-900 dark:text-white">
-                    <?php esc_html_e( 'Wilson Mbuthia', 'wilson-devops' ); ?>
-                </h1>
-                <p
-                    class="home__info relative text-start text-gray-800 dark:text-gray-200 mt-6 mb-6 text-xl lg:text-2xl pl-12">
-                    <span class="absolute left-0 top-3 w-8 h-0.5 bg-red-500"></span>
-                    <b class="bg-gradient-to-r from-red-500/30 to-transparent">
-                        <?php esc_html_e( 'WordPress Developer,', 'wilson-devops' ); ?>
-                    </b>
-                    <?php
-					esc_html_e(
-						'with a keen eye for design, I excel at crafting engaging and
-                    user-friendly web interfaces.',
-						'wilson-devops'
-					);
-					?>
-                    <br />
-                    <?php
-					esc_html_e(
-						'I bring a commitment to delivering top-notch work, complemented by a solid understanding
-                    of backend development.',
-						'wilson-devops'
-					);
-					?>
-                    <br />
-                    <?php esc_html_e( 'Eager to contribute my skills to your team and create impactful digital experiences.', 'wilson-devops' ); ?>
-                </p>
-                <div class="flex justify-center gap-4 relative self-center">
-                    <a href="#contact"
-                        class="home__info inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition-colors">
-                        <?php esc_html_e( 'Contact Me', 'wilson-devops' ); ?> <i class="fa-solid fa-paper-plane"></i>
-                    </a>
+    <!-- Hero Section with Animated Background -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden" id="home">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div
+                class="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-full blur-xl animate-pulse">
+            </div>
+            <div
+                class="absolute bottom-20 right-10 w-24 h-24 bg-gradient-to-r from-pink-400/20 to-red-500/20 rounded-full blur-lg animate-bounce">
+            </div>
+            <div class="absolute top-1/2 left-1/2 w-40 h-40 bg-gradient-to-r from-purple-400/10 to-indigo-500/10 rounded-full blur-2xl animate-pulse"
+                style="animation-delay: 1s;"></div>
+        </div>
+
+        <!-- Grid Pattern Overlay -->
+        <div
+            class="absolute inset-0 bg-grid-slate-100/25 dark:bg-grid-slate-700/25 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Content Column -->
+                <div class="space-y-8 text-center lg:text-left">
+                    <!-- Greeting -->
                     <div
-                        class="home__perfil absolute -bottom-[825%] md:bottom-1 left-0 md:right-[-25rem] lg:right-[-33rem] xl:right-[-41rem] 2xl:right-[-45rem] md:left-auto m-auto flex flex-col gap-4">
-                        <!-- Twitter -->
-                        <a href="https://twitter.com/WilsonMbuthiaK" target="_blank"
-                            class="p-2 bg-gray-700 hover:bg-black text-white text-xl md:text-2xl md:p-2 rounded-full flex justify-center items-center transition-colors duration-400">
-                            <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path fill="currentColor"
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 dark:bg-gray-800/30 backdrop-blur-md rounded-full border border-white/20 dark:border-gray-700/50">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="text-sm text-gray-700 dark:text-gray-300">Available for work</span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <div class="space-y-4">
+                        <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+                            <span
+                                class="bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+                                Wilson
+                            </span>
+                            <br>
+                            <span
+                                class="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent animate-pulse">
+                                Mbuthia
+                            </span>
+                        </h1>
+
+                        <div class="text-xl lg:text-2xl text-gray-600 dark:text-gray-400 space-y-2">
+                            <div class="inline-flex items-center gap-2">
+                                <span class="w-8 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-600"></span>
+                                <span
+                                    class="font-semibold bg-gradient-to-r from-cyan-600 to-blue-700 bg-clip-text text-transparent">
+                                    Full Stack Developer
+                                </span>
+                            </div>
+                            <p class="leading-relaxed">
+                                Creating digital experiences that blend innovation with functionality.
+                                Specialized in WordPress, React, and modern web technologies.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#projects"
+                            class="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
+                            View My Work
+                            <svg class="w-5 h-5 inline-block ml-2 group-hover:translate-x-1 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                        <a href="#contact"
+                            class="px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-full font-semibold transition-all duration-300 hover:border-cyan-500 hover:text-cyan-600 dark:hover:text-cyan-400">
+                            Get In Touch
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex gap-6 justify-center lg:justify-start pt-8">
+                        <?php
+                        $social_links = [
+                            ['icon' => 'github', 'url' => 'https://github.com/Wyllymk', 'label' => 'GitHub'],
+                            ['icon' => 'linkedin', 'url' => 'https://www.linkedin.com/in/wilson-mbuthia-k/', 'label' => 'LinkedIn'],
+                            ['icon' => 'twitter', 'url' => 'https://twitter.com/WilsonMbuthiaK', 'label' => 'Twitter'],
+                            ['icon' => 'whatsapp', 'url' => 'https://wa.me/+254703639230', 'label' => 'WhatsApp']
+                        ];
+                        
+                        foreach ($social_links as $social): ?>
+                        <a href="<?php echo esc_url($social['url']); ?>" target="_blank" rel="noopener noreferrer"
+                            class="p-3 bg-gray-100 dark:bg-gray-800/30 backdrop-blur-md rounded-full border border-gray-200 dark:border-gray-700/50 text-gray-600 dark:text-gray-400 hover:text-cyan-500 hover:border-cyan-500/50 transition-all duration-300 hover:scale-110"
+                            aria-label="<?php echo esc_attr($social['label']); ?>">
+                            <?php if ($social['icon'] === 'github'): ?>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            <?php elseif ($social['icon'] === 'linkedin'): ?>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                            <?php elseif ($social['icon'] === 'twitter'): ?>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
                                     d="M8 2H1l8.26 11.014L1.45 22H4.1l6.388-7.349L16 22h7l-8.608-11.478L21.8 2h-2.65l-5.986 6.886L8 2Zm9 18L5 4h2l12 16h-2Z" />
                             </svg>
-                        </a>
-                        <!-- LinkedIn -->
-                        <a href="https://www.linkedin.com/in/wilson-mbuthia-k/" target="_blank"
-                            class="p-2 bg-gray-700 hover:bg-linkedin text-white text-xl md:text-2xl md:p-2 rounded-full flex justify-center items-center transition-colors duration-400">
-                            <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                <path fill="currentColor"
-                                    d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1 1 10.49-10.5a10.5 10.5 0 0 1-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z" />
+                            <?php elseif ($social['icon'] === 'whatsapp'): ?>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.488" />
                             </svg>
+                            <?php endif; ?>
                         </a>
-                        <!-- GitHub -->
-                        <a href="https://github.com/Wyllymk" target="_blank"
-                            class="p-2 bg-gray-700 hover:bg-black text-white text-xl md:text-2xl md:p-2 rounded-full flex justify-center items-center transition-colors duration-400">
-                            <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" width="200" height="200"
-                                viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                            </svg>
-                        </a>
-                        <!-- WhatsApp -->
-                        <a href="https://wa.me/+254703639230?text=Hi%20I%20want%20to%20get%20in%20touch" target="_blank"
-                            rel="nofollow"
-                            class="p-2 bg-gray-700 hover:bg-whatsapp text-white text-xl md:text-2xl md:p-2 rounded-full flex justify-center items-center transition-colors duration-400">
+                        <?php endforeach; ?>
+                    </div>
+                </div>
 
-                            <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" width="200" height="200"
-                                viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.188 8.188 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18c.21-.58.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01Z" />
-                            </svg>
-                        </a>
+                <!-- Image Column -->
+                <div class="relative flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <!-- Main Image -->
+                        <div class="relative w-80 h-80 lg:w-96 lg:h-96">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur-lg opacity-30 animate-pulse">
+                            </div>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Developer.webp"
+                                alt="Wilson Mbuthia - Full Stack Developer"
+                                class="relative z-10 w-full h-full object-cover rounded-full border-4 border-white/20 dark:border-gray-800/30 shadow-2xl">
+                        </div>
+
+                        <!-- Floating Elements -->
+                        <div
+                            class="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg rotate-12 animate-bounce opacity-90 flex items-center justify-center">
+                            <span class="text-2xl">⚡</span>
+                        </div>
+                        <div
+                            class="absolute -bottom-4 -left-4 w-20 h-20 bg-gradient-to-r from-green-400 to-cyan-500 rounded-full animate-pulse opacity-90 flex items-center justify-center">
+                            <span class="text-3xl">🚀</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="home__perfil relative max-w-64 md:max-w-screen-lg mx-auto md:right-7 lg:right-5 right-0">
-                <!-- Image -->
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Developer.webp" alt="Wilson Mbuthia"
-                    class="relative rounded-2xl shadow-2xl top-0 md:top-12 lg:top-0 w-full max-w-md sm:max-w-xs md:max-w-64 lg:max-w-sm xl:max-w-2xl h-auto max-h-[70vh] object-contain mx-auto z-20" />
-                <!-- Circle -->
-                <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-teal-900/20 rounded-full animate-pulse z-30">
-                </div>
-                <!-- Image border -->
-                <div
-                    class="absolute rounded-2xl bottom-0 -right-3 w-full h-full max-h-[54vh] lg:max-h-[70vh] bg-gray-100 dark:bg-gray-800 border-4 border-gray-950 z-10 transition-all duration-400 ease-in-out md:-right-5 md:-bottom-16 lg:-bottom-0 md:border-6 md:bg-gray-200 dark:md:bg-gray-800">
-                </div>
-                <!-- Spiral Arrow -->
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spiral-arrow.png"
-                    alt="Decorative arrow"
-                    class="absolute top-8 -left-20 md:-left-32 transform rotate-45 skew-y-12 filter invert-0 dark:invert w-16 h-16 object-contain animate-bounce" />
-                <!-- Black stars -->
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Black-Star.png" alt="Decorative Stars"
-                    class="absolute bottom-80 md:bottom-8 left-52 md:-left-40 filter invert-0 dark:invert w-16 h-16 object-contain opacity-40 animate-ping" />
-                <!-- Geometric -->
-                <div
-                    class="relative bottom-64 -left-10 w-6 h-6 bg-primary rotate-[-30deg] before:content-[''] before:absolute before:w-5 before:h-5 before:border-2 before:border-black dark:before:border-white before:-left-1.5 before:-top-1.5 md:scale-120 animate-pulse">
-                </div>
 
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <div class="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center">
+                    <div class="w-1 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2 animate-pulse"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="py-20 bg-gray-100 dark:bg-gray-800" id="about me">
-        <div class="about__container container mx-auto px-4">
-            <h2 class="section__title relative text-5xl mx-auto my-6 mb-10 max-w-max">
-                <span class="relative z-10 text-4xl font-bold text-center text-gray-900 dark:text-white">
-                    <?php esc_html_e( 'About Me', 'wilson-devops' ); ?>
-                </span>
-                <span class="absolute top-2 -right-2 w-12 h-9 bg-teal-400/50 dark:bg-teal-600/50"></span>
-            </h2>
+    <section class="py-20 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm" id="about">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                    <span
+                        class="bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+                        About Me
+                    </span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full"></div>
+            </div>
 
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="about__image relative">
-                    <!-- Image -->
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Dev.webp" alt="About Wilson"
-                        class="relative rounded-2xl shadow-2xl w-full border-8 border-teal-950 max-w-64 sm:max-w-xs md:max-w-sm xl:max-w-xl h-auto max-h-[70vh] object-cover mx-auto z-20" />
-                    <!-- Circle -->
-                    <div
-                        class="absolute -bottom-6 left-0 w-20 md:w-24 h-20 md:h-24 bg-teal-800 rounded-full animate-pulse z-30 opacity-30">
-                    </div>
-                    <!-- Geometric -->
-                    <div
-                        class="relative bottom-64 -right-10 w-6 h-6 bg-primary rotate-[-30deg] before:absolute before:w-5 before:h-5 before:border-2 before:border-black dark:before:border-white before:-left-1.5 before:-top-1.5 md:scale-120 animate-pulse">
-                    </div>
-                    <!-- Square -->
-                    <div class="absolute right-2 -bottom-2 w-10 h-10 bg-red-500 md:w-16 md:h-16 md:-right-3">
-                    </div>
-                </div>
-                <div class="about__info space-y-6">
-                    <p class="relative text-start text-gray-800 dark:text-gray-300 mt-6 mb-6 text-xl lg:text-2xl pl-12">
-                        <span class="absolute left-0 top-4 w-8 h-0.5 bg-red-500"></span>
-                        <?php
-						esc_html_e(
-							'Experienced Software Developer proficient in coding and debugging, consistently delivering
-                        project objectives through the creation of refined, scalable, and production-ready code.',
-							'wilson-devops'
-						);
-						?>
-                        <br />
-                        <?php esc_html_e( 'Adept at collaborating within Agile and Scrum frameworks to achieve team goals effectively.', 'wilson-devops' ); ?>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Experienced Software Developer with expertise in coding and debugging, consistently delivering
+                        refined, scalable, production-ready solutions. I specialize in creating modern web applications
+                        that combine exceptional user experiences with robust backend functionality.
                     </p>
-                    <div class="space-y-4">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white font-satisfy">
-                            <?php esc_html_e( 'Skills:', 'wilson-devops' ); ?></h3>
-                        <div class="flex flex-wrap gap-3">
-                            <?php
-							$skills = array(
-								__( 'HTML', 'wilson-devops' ),
-								__( 'CSS', 'wilson-devops' ),
-								__( 'Javascript', 'wilson-devops' ),
-								__( 'TypeScript', 'wilson-devops' ),
-								__( 'React', 'wilson-devops' ),
-								__( 'Git & Github', 'wilson-devops' ),
-								__( 'Scss', 'wilson-devops' ),
-                                __( 'Tailwind', 'wilson-devops' ),
-								__( 'Strapi', 'wilson-devops' ),
-								__( 'MySql', 'wilson-devops' ),
-                                __( 'PHP', 'wilson-devops' ),
-								__( 'WordPress', 'wilson-devops' ),
-								__( 'NodeJs', 'wilson-devops' ),
-                                __( 'AWS', 'wilson-devops' ),
-							);
 
-							foreach ( $skills as $skill ) {
-								$classes = 'cursor-pointer px-4 py-2 bg-white hover:bg-teal-500 dark:bg-gray-700 dark:hover:bg-teal-900 rounded-full shadow-md text-gray-900 dark:text-white';
-								echo '<span class="' . esc_attr( $classes ) . '">' . esc_html( $skill ) . '</span>';
-							}
-							?>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Proficient in Agile and Scrum methodologies, I collaborate effectively with teams to achieve
+                        project objectives while maintaining high code quality and performance standards.
+                    </p>
+
+                    <!-- Skills Grid -->
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-8">
+                        <?php
+                        $skills = [
+                            ['name' => 'WordPress', 'level' => 95],
+                            ['name' => 'PHP', 'level' => 90],
+                            ['name' => 'JavaScript', 'level' => 88],
+                            ['name' => 'React', 'level' => 85],
+                            ['name' => 'TypeScript', 'level' => 82],
+                            ['name' => 'Tailwind CSS', 'level' => 92]
+                        ];
+                        
+                        foreach ($skills as $skill): ?>
+                        <div
+                            class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                            <div class="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                                <?php echo esc_html($skill['name']); ?>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full transition-all duration-1000"
+                                    style="width: <?php echo $skill['level']; ?>%"></div>
+                            </div>
                         </div>
-
+                        <?php endforeach; ?>
                     </div>
                 </div>
+
+                <div class="relative">
+                    <div
+                        class="bg-gradient-to-br from-cyan-500/10 to-blue-600/10 dark:from-cyan-500/5 dark:to-blue-600/5 p-8 rounded-2xl backdrop-blur-sm border border-white/20 dark:border-gray-800/30">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Dev.webp"
+                            alt="Wilson Mbuthia coding" class="w-full rounded-xl shadow-lg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats/Achievement section for About Me -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                <div class="text-center">
+                    <div class="text-3xl lg:text-4xl font-bold text-cyan-600 dark:text-cyan-400 mb-2">50+</div>
+                    <div class="text-gray-600 dark:text-gray-400">Projects Completed</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl lg:text-4xl font-bold text-cyan-600 dark:text-cyan-400 mb-2">5+</div>
+                    <div class="text-gray-600 dark:text-gray-400">Years Experience</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl lg:text-4xl font-bold text-cyan-600 dark:text-cyan-400 mb-2">25+</div>
+                    <div class="text-gray-600 dark:text-gray-400">Happy Clients</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl lg:text-4xl font-bold text-cyan-600 dark:text-cyan-400 mb-2">24/7</div>
+                    <div class="text-gray-600 dark:text-gray-400">Support Available</div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="<?php echo esc_url(home_url('/about-me')); ?>"
+                    class="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
+                    Learn More About Me
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="py-20 bg-gray-200 dark:bg-gray-900" id="services">
-        <div class="container mx-auto px-4">
-            <h2 class="relative text-5xl mx-auto my-6 mb-10 max-w-max">
-                <span class="relative z-10 text-4xl font-bold text-center text-gray-900 dark:text-white">
-                    <?php esc_html_e( 'Services', 'wilson-devops' ); ?>
-                </span>
-                <span class="absolute top-2 -right-2 w-12 h-9 bg-teal-400/50 dark:bg-teal-600/50"></span>
-            </h2>
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white dark:from-gray-950 dark:to-gray-900" id="services">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                    <span
+                        class="bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+                        Services
+                    </span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full"></div>
+            </div>
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Full Stack -->
-                <div
-                    class="services__card p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-shadow group hover:shadow-teal-800">
-                    <div class="w-12 h-12 bg-teal-600 rounded-lg flex items-center justify-center mb-6 z-10">
-                        <svg class="w-8 h-8 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24">
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M6 19a2 2 0 0 1-2-2v-4l-1-1l1-1V7a2 2 0 0 1 2-2m6 6.875l3-1.687m-3 1.687v3.375m0-3.375l-3-1.687m3 1.687l3 1.688M12 8.5v3.375m0 0l-3 1.688M18 19a2 2 0 0 0 2-2v-4l1-1l-1-1V7a2 2 0 0 0-2-2" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 z-10">
-                        <?php esc_html_e( 'Full Stack', 'wilson-devops' ); ?>
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 z-10">
-                        <?php echo esc_html__( 'Building end-to-end web solutions with expertise in both front-end and back-end technologies. From user-friendly interfaces to powerful server-side functionality, I deliver seamless, integrated web applications and dashboards that scale with your business needs.', 'wilson-devops' ); ?>
-                    </p>
-                </div>
-
-                <!-- Theme Development -->
-                <div
-                    class="services__card p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-shadow group hover:shadow-teal-800">
-                    <div class="w-12 h-12 bg-teal-600 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 16 16">
-                            <path fill="currentColor"
-                                d="M0 11.25c0-.966.784-1.75 1.75-1.75h12.5c.966 0 1.75.784 1.75 1.75v3A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25Zm2-9.5C2 .784 2.784 0 3.75 0h8.5C13.216 0 14 .784 14 1.75v5a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 2 6.75Zm1.75-.25a.25.25 0 0 0-.25.25v5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5a.25.25 0 0 0-.25-.25Zm-2 9.5a.25.25 0 0 0-.25.25v3c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-3a.25.25 0 0 0-.25-.25Z" />
-                            <path fill="currentColor"
-                                d="M7 12.75a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Zm-4 0a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75Z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                        <?php esc_html_e( 'Theme Development', 'wilson-devops' ); ?>
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300">
-                        <?php echo esc_html__( 'I specialize in creating and customizing WordPress themes using HTML, Bootstrap, Tailwind, and CSS. My focus is on developing responsive, high-performance websites that provide exceptional user experiences and meet the unique needs of clients.', 'wilson-devops' ); ?>
-                    </p>
-                </div>
-
-                <!-- Plugin Development -->
-                <div
-                    class="services__card p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-shadow group hover:shadow-teal-800">
-                    <div class="w-12 h-12 bg-teal-600 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 14 14">
-                            <path fill="currentColor" fill-rule="evenodd"
-                                d="M1.457.5C.652.5 0 1.152 0 1.957v7.586C0 10.348.652 11 1.457 11h4.026l-.535 1.495H4a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5h-.948L8.517 11h4.026C13.348 11 14 10.348 14 9.543V1.957C14 1.152 13.348.5 12.543.5zm6.53 2.289a.75.75 0 0 1 .475.948l-1.5 4.5a.75.75 0 1 1-1.424-.474l1.5-4.5a.75.75 0 0 1 .95-.474Zm-2.999 2.28a.75.75 0 1 0-.976-1.138l-1.75 1.5a.75.75 0 0 0 .008 1.145l1.5 1.25a.75.75 0 0 0 .96-1.152l-.818-.682zm5.242-.895a.75.75 0 1 0-.96 1.152l.818.682l-1.076.923a.75.75 0 1 0 .976 1.138l1.75-1.5a.75.75 0 0 0-.008-1.145z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                        <?php esc_html_e( 'Plugin Development', 'wilson-devops' ); ?>
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300">
-                        <?php echo esc_html__( 'I specialize in developing custom WordPress plugins, using PHP, JavaScript, and MySQL to enhance server-side functionality. My expertise includes creating efficient backend solutions, integrating seamlessly with WordPress to provide enhanced features and performance.', 'wilson-devops' ); ?>
-                    </p>
-                </div>
-            </div>
-
-            <!-- Technology Stack -->
-            <div class="mt-16 grid grid-cols-5 md:grid-cols-10 gap-8 items-center justify-items-center">
                 <?php
-				$tech_stack = array(
-					array(
-						'name'  => __( 'HTML', 'wilson-devops' ),
-						'image' => 'html-5.008cf296.svg',
-					),
-					array(
-						'name'  => __( 'SCSS', 'wilson-devops' ),
-						'image' => 'scss.98aab7f4.svg',
-					),
-					array(
-						'name'  => __( 'Tailwind', 'wilson-devops' ),
-						'image' => 'tailwind-css.41e68952.svg',
-					),
-					array(
-						'name'  => __( 'JavaScript', 'wilson-devops' ),
-						'image' => 'javascript.bf9de660.svg',
-					),
-					array(
-						'name'  => __( 'TypeScript', 'wilson-devops' ),
-						'image' => 'typescript-icon.svg',
-					),
-					array(
-						'name'  => __( 'PHP', 'wilson-devops' ),
-						'image' => 'php.a1592ac5.svg',
-					),
-					array(
-						'name'  => __( 'MySQL', 'wilson-devops' ),
-						'image' => 'mysql.c01bedfc.svg',
-					),
-					array(
-						'name'  => __( 'Github', 'wilson-devops' ),
-						'image' => 'github.93f8e2ad.svg',
-					),
-					array(
-						'name'  => __( 'AWS', 'wilson-devops' ),
-						'image' => 'aws.svg',
-					),
-					array(
-						'name'  => __( 'WordPress', 'wilson-devops' ),
-						'image' => 'icons8-wordpress-94.png',
-					),
-				);
-
-				foreach ( $tech_stack as $tech ) {
-					// Base classes for all icons
-					$base_classes       = 'w-12 h-12 md:w-16 md:h-16 object-contain cursor-pointer transition-transform transform hover:scale-105';
-					$additional_classes = $tech['name'] === __( 'Github', 'wilson-devops' ) ? 'filter invert dark:invert-0' : '';
-
-					$image = '<img src="' . esc_url( get_template_directory_uri() . '/assets/img/' . $tech['image'] ) . '" class="' . esc_attr( "$base_classes $additional_classes" ) . '" alt="' . esc_attr( $tech['name'] ) . '">';
-
-					// Tooltip and hover setup
-					echo '<div class="relative group">
-                            ' . $image . '
-                            <span class="absolute bottom-14 left-1/2 transform -translate-x-1/2 scale-0 group-hover:scale-100 transition-transform bg-gray-800 text-white text-sm py-1 px-3 rounded-md shadow-lg">
-                                ' . esc_html( $tech['name'] ) . '
-                            </span>
-                        </div>';
-				}
-				?>
+                $services = [
+                    [
+                        'icon' => '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>',
+                        'title' => 'Full Stack Development',
+                        'description' => 'Building complete web solutions with modern technologies including React, Node.js, and PHP. From concept to deployment, I deliver scalable applications.'
+                    ],
+                    [
+                        'icon' => '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path></svg>',
+                        'title' => 'WordPress Development',
+                        'description' => 'Custom WordPress themes and plugins development. Specializing in performance optimization, security, and seamless user experiences.'
+                    ],
+                    [
+                        'icon' => '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>',
+                        'title' => 'Responsive Design',
+                        'description' => 'Creating mobile-first, responsive designs that work perfectly across all devices and screen sizes using modern CSS frameworks.'
+                    ]
+                ];
+                
+                foreach ($services as $index => $service): ?>
+                <div class="group relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    </div>
+                    <div
+                        class="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/50 dark:border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <?php echo $service['icon']; ?>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                            <?php echo esc_html($service['title']); ?>
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            <?php echo esc_html($service['description']); ?>
+                        </p>
+                    </div>
+                </div>
+                <?php endforeach; ?>
             </div>
 
+            <div class="text-center mt-16">
+                <div class="max-w-2xl mx-auto mb-8">
+                    <p class="text-lg text-gray-600 dark:text-gray-400">
+                        Interested in working together? Explore all my services and let's discuss how I can help bring
+                        your vision to life.
+                    </p>
+                </div>
+                <a href="<?php echo esc_url(home_url('/services')); ?>"
+                    class="group inline-flex items-center gap-3 px-8 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-2 border-gray-200 dark:border-gray-600 rounded-full font-semibold transition-all duration-300 hover:border-cyan-500 hover:text-cyan-600 dark:hover:text-cyan-400 hover:scale-105">
+                    View All Services
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="py-20 bg-gray-100 dark:bg-gray-800" id="projects">
-        <div class="container mx-auto px-4">
-            <h2 class="relative text-5xl mx-auto my-6 mb-10 max-w-max">
-                <span class="relative z-10 text-4xl font-bold text-center text-gray-900 dark:text-white">
-                    <?php esc_html_e( 'Featured Projects', 'wilson-devops' ); ?>
+    <!-- Technology Stack Section -->
+    <section
+        class="mt-20 py-16 bg-gradient-to-br from-white/50 to-gray-50/50 dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-sm rounded-3xl border border-gray-200/30 dark:border-gray-700/30">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl lg:text-4xl font-bold mb-4">
+                <span
+                    class="bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+                    Technology Stack
                 </span>
-                <span class="absolute top-2 -right-2 w-12 h-9 bg-teal-400/50 dark:bg-teal-600/50"></span>
-            </h2>
+            </h3>
+            <div class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full mb-6"></div>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                I leverage cutting-edge technologies and modern frameworks to build scalable,
+                performant applications that deliver exceptional user experiences.
+            </p>
+        </div>
+
+        <!-- Frontend Technologies -->
+        <div class="mb-12">
+            <h4 class="text-xl font-semibold text-gray-800 dark:text-gray-200 text-center mb-8">Frontend Technologies
+            </h4>
+            <div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center">
+                <?php
+            $frontend_tech = [
+                [
+                    'name' => 'HTML5',
+                    'image' => 'html-5.008cf296.svg',
+                    'color' => 'hover:text-orange-500'
+                ],
+                [
+                    'name' => 'CSS3',
+                    'image' => 'css3.png',
+                    'color' => 'hover:text-blue-500'
+                ],
+                [
+                    'name' => 'JavaScript',
+                    'image' => 'javascript.bf9de660.svg',
+                    'color' => 'hover:text-yellow-500'
+                ],
+                [
+                    'name' => 'TypeScript',
+                    'image' => 'typescript-icon.svg',
+                    'color' => 'hover:text-blue-600'
+                ],
+                [
+                    'name' => 'React',
+                    'image' => 'react.png',
+                    'color' => 'hover:text-cyan-500'
+                ],
+                [
+                    'name' => 'Tailwind CSS',
+                    'image' => 'tailwind-css.41e68952.svg',
+                    'color' => 'hover:text-teal-500'
+                ]
+            ];
+            
+            foreach ($frontend_tech as $tech): ?>
+                <div class="group relative">
+                    <div
+                        class="w-16 h-16 md:w-20 md:h-20 bg-white dark:bg-gray-800 rounded-2xl shadow-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl <?php echo $tech['color']; ?> border border-gray-200/50 dark:border-gray-700/50 group-hover:border-cyan-500/30">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $tech['image']; ?>"
+                            alt="<?php echo esc_attr($tech['name']); ?>"
+                            class="w-10 h-10 md:w-12 md:h-12 object-contain <?php echo strpos($tech['name'], 'GitHub') !== false ? 'filter invert dark:invert-0' : ''; ?>">
+                    </div>
+                    <div
+                        class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-gray-800 dark:bg-gray-700 text-white text-xs py-1 px-3 rounded-full whitespace-nowrap">
+                        <?php echo esc_html($tech['name']); ?>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+        <!-- Backend Technologies -->
+        <div class="mb-12">
+            <h4 class="text-xl font-semibold text-gray-800 dark:text-gray-200 text-center mb-8">Backend Technologies
+            </h4>
+            <div class="grid grid-cols-3 md:grid-cols-5 gap-8 items-center justify-items-center">
+                <?php
+            $backend_tech = [
+                [
+                    'name' => 'PHP',
+                    'image' => 'php.a1592ac5.svg',
+                    'color' => 'hover:text-purple-600'
+                ],
+                [
+                    'name' => 'Node.js',
+                    'image' => 'node.png',
+                    'color' => 'hover:text-green-600'
+                ],
+                [
+                    'name' => 'MySQL',
+                    'image' => 'mysql.c01bedfc.svg',
+                    'color' => 'hover:text-blue-600'
+                ],
+                [
+                    'name' => 'WordPress',
+                    'image' => 'icons8-wordpress-94.png',
+                    'color' => 'hover:text-blue-500'
+                ],
+                [
+                    'name' => 'REST APIs',
+                    'image' => 'api.svg',
+                    'color' => 'hover:text-green-500'
+                ]
+            ];
+            
+            foreach ($backend_tech as $tech): ?>
+                <div class="group relative">
+                    <div
+                        class="w-16 h-16 md:w-20 md:h-20 bg-white dark:bg-gray-800 rounded-2xl shadow-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl <?php echo $tech['color']; ?> border border-gray-200/50 dark:border-gray-700/50 group-hover:border-cyan-500/30">
+                        <?php if ($tech['name'] === 'REST APIs'): ?>
+                        <svg class="w-10 h-10 md:w-12 md:h-12" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        <?php else: ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $tech['image']; ?>"
+                            alt="<?php echo esc_attr($tech['name']); ?>"
+                            class="w-10 h-10 md:w-12 md:h-12 object-contain">
+                        <?php endif; ?>
+                    </div>
+                    <div
+                        class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-gray-800 dark:bg-gray-700 text-white text-xs py-1 px-3 rounded-full whitespace-nowrap">
+                        <?php echo esc_html($tech['name']); ?>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+        <!-- Tools & Services -->
+        <div class="mb-12">
+            <h4 class="text-xl font-semibold text-gray-800 dark:text-gray-200 text-center mb-8">Tools & Services</h4>
+            <div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center">
+                <?php
+            $tools_tech = [
+                [
+                    'name' => 'Git',
+                    'image' => 'git.png',
+                    'color' => 'hover:text-red-500'
+                ],
+                [
+                    'name' => 'GitHub',
+                    'image' => 'github.93f8e2ad.svg',
+                    'color' => 'hover:text-gray-900 dark:hover:text-white',
+                    'invert' => true
+                ],
+                [
+                    'name' => 'AWS',
+                    'image' => 'aws.svg',
+                    'color' => 'hover:text-orange-500'
+                ],
+                [
+                    'name' => 'Docker',
+                    'image' => 'docker.png',
+                    'color' => 'hover:text-blue-500'
+                ],
+                [
+                    'name' => 'VS Code',
+                    'image' => 'vscode.png',
+                    'color' => 'hover:text-blue-600'
+                ],
+                [
+                    'name' => 'Figma',
+                    'image' => 'figma.png',
+                    'color' => 'hover:text-purple-500'
+                ]
+            ];
+            
+            foreach ($tools_tech as $tech): ?>
+                <div class="group relative">
+                    <div
+                        class="w-16 h-16 md:w-20 md:h-20 bg-white dark:bg-gray-800 rounded-2xl shadow-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl <?php echo $tech['color']; ?> border border-gray-200/50 dark:border-gray-700/50 group-hover:border-cyan-500/30">
+                        <?php if (isset($tech['invert']) && $tech['invert']): ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $tech['image']; ?>"
+                            alt="<?php echo esc_attr($tech['name']); ?>"
+                            class="w-10 h-10 md:w-12 md:h-12 object-contain filter invert dark:invert-0">
+                        <?php else: ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $tech['image']; ?>"
+                            alt="<?php echo esc_attr($tech['name']); ?>"
+                            class="w-10 h-10 md:w-12 md:h-12 object-contain">
+                        <?php endif; ?>
+                    </div>
+                    <div
+                        class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-gray-800 dark:bg-gray-700 text-white text-xs py-1 px-3 rounded-full whitespace-nowrap">
+                        <?php echo esc_html($tech['name']); ?>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center">
+            <div
+                class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 backdrop-blur-md rounded-full border border-cyan-500/20 mb-6">
+                <svg class="w-5 h-5 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <span class="text-gray-700 dark:text-gray-300 font-medium">Powered by modern technologies</span>
+            </div>
+
+            <p class="text-gray-600 dark:text-gray-400 mb-6 max-w-xl mx-auto">
+                Always learning and adapting to the latest technologies to deliver the best solutions for your projects.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#projects"
+                    class="group inline-flex justify-center items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
+                    See My Work
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+                <a href="#contact"
+                    class="group inline-flex justify-center items-center gap-2 px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-full font-medium transition-all duration-300 hover:border-cyan-500 hover:text-cyan-600 dark:hover:text-cyan-400">
+                    Start a Project
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="py-20 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm" id="projects">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                    <span
+                        class="bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+                        Featured Projects
+                    </span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full"></div>
+            </div>
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- VMS -->
+                <?php
+                $projects = [
+                    [
+                        'image' => 'vms.png',
+                        'title' => 'Visitor Management System',
+                        'description' => 'A comprehensive visitor management platform built with WordPress and custom PHP. Features real-time check-ins, automated notifications, and detailed reporting.',
+                        'url' => 'https://vms.nyericlub.co.ke',
+                        'tech' => ['WordPress', 'PHP', 'MySQL', 'JavaScript']
+                    ],
+                    [
+                        'image' => 'fundedway.png',
+                        'title' => 'The Funded Way',
+                        'description' => 'Advanced prop trading platform with instant challenges up to $100K, custom payment processing, and affiliate tracking system.',
+                        'url' => 'https://thefundedway.com',
+                        'tech' => ['WordPress', 'WooCommerce', 'Custom PHP', 'API Integration']
+                    ],
+                    [
+                        'image' => 'torus.png',
+                        'title' => 'Torus Africa',
+                        'description' => 'Modern web design agency website showcasing services, portfolio, and client testimonials with advanced animations and interactions.',
+                        'url' => 'https://torus.africa',
+                        'tech' => ['WordPress', 'Custom Theme', 'JavaScript', 'CSS Animations']
+                    ]
+                ];
+                
+                foreach ($projects as $project): ?>
                 <div
-                    class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-teal-800 transition-shadow">
-                    <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/vms.png" alt="vms"
-                            class="w-full h-48 object-cover" />
+                    class="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 border border-gray-200/50 dark:border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $project['image']; ?>"
+                            alt="<?php echo esc_attr($project['title']); ?>"
+                            class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy">
                         <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/vms' ) ); ?>"
-                                class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
-                                <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
-                            </a>
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                            <?php esc_html_e( 'Visitor Management System', 'wilson-devops' ); ?>
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <?php esc_html_e("A powerful visitor management system built to streamline check-ins, improve security, automate guest records, and provide organizations with a seamless, efficient platform for managing visitors effectively every day.", 'wilson-devops'); ?>
-                        </p>
-                        <a href="https://vms.nyericlub.co.ke" target="_blank"
-                            class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
-                            <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
-                            <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20">
-                                <path fill="currentColor"
-                                    d="M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z" />
-                            </svg>
+                        <a href="<?php echo esc_url($project['url']); ?>" target="_blank" rel="noopener noreferrer"
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span
+                                class="px-6 py-3 bg-white/90 text-gray-900 rounded-full font-semibold shadow-lg hover:bg-white transition-colors">
+                                View Project
+                            </span>
                         </a>
                     </div>
-                </div>
 
-                <!-- Nyeri Club -->
-                <div
-                    class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-teal-800 transition-shadow">
-                    <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/nyeri-club-1.png"
-                            alt="Nyeri Club" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/nyeri-club/' ) ); ?>"
-                                class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
-                                <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
-                            </a>
-                        </div>
-                    </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                            <?php esc_html_e( 'Nyeri Club', 'wilson-devops' ); ?>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                            <?php echo esc_html($project['title']); ?>
                         </h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <?php esc_html_e( "Nyeri Club's golf website designed with WordPress and Elementor, featuring elegant layouts, intuitive navigation, and a dynamic platform for members and enthusiasts to engage and explore golfing opportunities.", 'wilson-devops' ); ?>
-                        </p>
-                        <a href="https://nyericlub.co.ke" target="_blank"
-                            class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
-                            <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
-                            <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20">
-                                <path fill="currentColor"
-                                    d="M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- The Funded Way -->
-                <div
-                    class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-teal-800 transition-shadow">
-                    <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fundedway.png"
-                            alt="The Funded Way" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/funded-way' ) ); ?>"
-                                class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
-                                <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                            <?php esc_html_e( 'The Funded Way', 'wilson-devops' ); ?>
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <?php esc_html_e( 'The Funded Way prop trading platform, built with WordPress and WooCommerce, delivers instant challenges up to $100K, custom checkouts, affiliate tracking, and 24-48 hour payouts for traders worldwide.', 'wilson-devops' ); ?>
-                        </p>
-                        <a href="https://thefundedway.com" target="_blank"
-                            class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
-                            <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
-                            <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20">
-                                <path fill="currentColor"
-                                    d="M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Torus Africa -->
-                <div
-                    class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-cyan-800 transition-shadow">
-                    <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/torus.png" alt="Torus"
-                            class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/torus' ) ); ?>"
-                                class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
-                                <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                            <?php esc_html_e( 'Torus', 'wilson-devops' ); ?>
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <?php esc_html_e( "A premier East African web design agency platform built with WordPress, custom theme, and modern JS. Comprehensive services, agile processes, and client-focused solutions for innovative websites worldwide.", 'wilson-devops' ); ?>
-                        </p>
-                        <a href="https://torus.africa" target="_blank"
-                            class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
-                            <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
-                            <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20">
-                                <path fill="currentColor"
-                                    d="M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Institutional Funding -->
-                <div
-                    class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-teal-800 transition-shadow">
-                    <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/institutional-funding.png"
-                            alt="Institutional Funding" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/institutional-funding' ) ); ?>"
-                                class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
-                                <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                            <?php esc_html_e( 'Institutional Funding', 'wilson-devops' ); ?>
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <?php esc_html_e( 'The funding platform empowers organizations through transparent grants, strategic resources, impact tracking, and strong institutional partnerships, fostering sustainable development and ensuring financial accountability.', 'wilson-devops' ); ?>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            <?php echo esc_html($project['description']); ?>
                         </p>
 
-                        <a href="https://institutionalfunding.ro" target="_blank"
-                            class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
-                            <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
-                            <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20">
-                                <path fill="currentColor"
-                                    d="M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Backed Sports -->
-                <div
-                    class="projects__card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group hover:shadow-teal-800 transition-shadow">
-                    <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/backed-sports.png"
-                            alt="Backed Sports" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="<?php echo esc_url( site_url( '/backed-sports/' ) ); ?>"
-                                class="bg-white text-gray-900 px-4 py-2 rounded-lg flex items-center gap-2">
-                                <?php esc_html_e( 'View Project Details', 'wilson-devops' ); ?>
-                            </a>
+                        <div class="flex flex-wrap gap-2">
+                            <?php foreach ($project['tech'] as $tech): ?>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm rounded-full">
+                                <?php echo esc_html($tech); ?>
+                            </span>
+                            <?php endforeach; ?>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                            <?php esc_html_e( 'Backed Sports', 'wilson-devops' ); ?>
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <?php esc_html_e( 'Backed Sports enables users to predict outcomes, join funding challenges, and increase winnings through strategic sports picks with transparent, secure payouts and engaging experiences.', 'wilson-devops' ); ?>
-                        </p>
-                        <a href="https://backedsports.wpenginepowered.com" target="_blank"
-                            class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-2">
-                            <?php esc_html_e( 'Visit Website', 'wilson-devops' ); ?>
-                            <svg class="w-5 h-5 fill-gray-900 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20">
-                                <path fill="currentColor"
-                                    d="M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z" />
-                            </svg>
-                        </a>
-                    </div>
                 </div>
+                <?php endforeach; ?>
+            </div>
 
+            <div class="text-center mt-16">
+                <div class="max-w-2xl mx-auto mb-8">
+                    <p class="text-lg text-gray-600 dark:text-gray-400">
+                        These are just a few highlights from my portfolio. Check out my complete collection of projects
+                        and case studies.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="<?php echo esc_url(site_url('/projects')); ?>"
+                        class="group inline-flex justify-center items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
+                        View All Projects
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Wyllymk" target="_blank" rel="noopener noreferrer"
+                        class="group inline-flex justify-center items-center gap-3 px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-full font-semibold transition-all duration-300 hover:border-cyan-500 hover:text-cyan-600 dark:hover:text-cyan-400 hover:scale-105">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        View on GitHub
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="py-20 bg-gray-200 dark:bg-gray-900" id="contact">
-        <div class="container mx-auto px-4 relative">
-            <!-- Contact Information -->
+    <section
+        class="py-20 bg-gradient-to-br from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 relative overflow-hidden"
+        id="contact">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
             <div
-                class="contact__data lg:absolute top-8 lg:left-14 xl:left-28 2xl:left-72 w-full lg:max-w-sm xl:max-w-md md:max-w-xl h-auto bg-gray-300 dark:bg-gray-800 px-6 py-12 mx-auto lg:ml-0 lg:mr-auto border-b-4 border-teal-800 z-10 transition-colors duration-300">
-                <!-- Title -->
-                <h2 class="relative text-5xl mx-auto my-6 mb-10 max-w-max">
-                    <span class="relative z-10 text-4xl font-bold text-center text-gray-900 dark:text-white">
-                        <?php esc_html_e( 'Contact Me.', 'wilson-devops' ); ?>
+                class="absolute top-20 right-20 w-32 h-32 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-full blur-xl">
+            </div>
+            <div
+                class="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-r from-pink-400/10 to-red-500/10 rounded-full blur-lg">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                    <span
+                        class="bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+                        Get In Touch
                     </span>
-                    <span class="absolute top-2 -right-2 w-12 h-9 bg-teal-400 dark:bg-teal-600 opacity-50"></span>
                 </h2>
-                <!-- Description -->
-                <p class="text-black dark:text-gray-300 text-start">
-                    <?php esc_html_e( 'I will read all emails. Send me any message you want and I\'ll get back to you.', 'wilson-devops' ); ?>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full"></div>
+                <p class="text-lg text-gray-600 dark:text-gray-400 mt-6 max-w-2xl mx-auto">
+                    Ready to bring your ideas to life? Let's discuss your project and create something extraordinary
+                    together.
                 </p>
-                <p class="text-black dark:text-gray-300 text-start mt-3">
-                    <?php esc_html_e( 'I need your', 'wilson-devops' ); ?>
-                    <b><?php esc_html_e( 'Name', 'wilson-devops' ); ?></b>
-                    <?php esc_html_e( 'and', 'wilson-devops' ); ?>
-                    <b><?php esc_html_e( 'Email Address', 'wilson-devops' ); ?></b>
-                    <?php esc_html_e( ", I'll reply as quickly as possible.", 'wilson-devops' ); ?>
-                </p>
-                <!-- Geometric -->
-                <div
-                    class="relative bottom-64 xl:left-96 left-60 md:left-80 w-6 h-6 bg-primary rotate-[-30deg] before:content-[''] before:absolute before:w-5 before:h-5 before:border-2 before:border-black dark:before:border-white before:-left-1.5 before:-top-1.5 md:scale-120 animate-pulse">
-                </div>
             </div>
 
-            <!-- Contact Form -->
-            <div class="contact__mail max-w-xl mx-auto mt-10 xl:mr-40 2xl:mr-56 lg:mr-1">
-                <div class="bg-gray-950 dark:bg-black rounded-xl shadow-lg md:p-8">
-                    <div class="py-6 px-4 transition-colors duration-300">
-                        <h2 class="text-white text-center font-nico text-4xl mb-8">
-                            <?php esc_html_e( 'Send Me A Message', 'wilson-devops' ); ?>
-                        </h2>
-                        <!-- Success Alert -->
-                        <?php
-							// Get messages and clear from session
-							$forms_error   = isset( $_SESSION['forms_error'] ) ? $_SESSION['forms_error'] : array();
-							$forms_success = isset( $_SESSION['forms_success'] ) ? $_SESSION['forms_success'] : array();
-							unset( $_SESSION['forms_error'], $_SESSION['forms_success'] );
-						?>
+            <div class="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Let's Connect</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-8">
+                            I'm always excited to work on new projects and collaborate with amazing people.
+                            Send me a message and I'll get back to you as soon as possible.
+                        </p>
+                    </div>
 
-                        <!-- Success Alert -->
-                        <?php if ( ! empty( $forms_success ) ) : ?>
-                        <?php foreach ( $forms_success as $success ) : ?>
-                        <div class="flex items-center justify-between bg-green-500 border-l-4 border-green-700 text-white p-4 mb-4 rounded"
-                            role="alert">
+                    <!-- Contact Methods -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
                             <div>
-                                <strong>Success!</strong>
-                                <p class="text-sm"><?php echo esc_html( $success ); ?>
-                                </p>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Email</div>
+                                <div class="text-gray-900 dark:text-white font-medium">wilsonkabatha@gmail.com</div>
                             </div>
-                            <button type="button" class="float-right text-white hover:text-gray-300"
-                                onclick="this.parentElement.style.display='none';">×</button>
                         </div>
-                        <?php endforeach; ?>
-                        <?php endif; ?>
 
-                        <!-- Error Alert -->
-                        <?php if ( ! empty( $forms_error ) ) : ?>
-                        <?php foreach ( $forms_error as $error ) : ?>
-                        <div class="flex items-center justify-between bg-red-500 border-l-4 border-red-700 text-white p-4 mb-4 rounded"
-                            role="alert">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-600 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.488" />
+                                </svg>
+                            </div>
                             <div>
-                                <strong>Warning!</strong>
-                                <p class="text-sm"><?php echo esc_html( $error ); ?></p>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">WhatsApp</div>
+                                <div class="text-gray-900 dark:text-white font-medium">+254 703 639230</div>
                             </div>
-                            <button type="button" class="float-right text-white hover:text-gray-300"
-                                onclick="this.parentElement.style.display='none';">×</button>
                         </div>
-                        <?php endforeach; ?>
-                        <?php endif; ?>
-                        <form class="grid gap-5" method="post" enctype="multipart/form-data">
-                            <?php wp_nonce_field( 'send_form_data', '_wpnonce_send_form_data' ); ?>
-                            <input type="text" name="honeypot" class="hidden">
-                            <!-- Input Group -->
-                            <div class="relative w-full h-14 group">
-                                <input type="text" id="name" placeholder=" " name="name"
-                                    class="peer absolute w-full h-full bg-gray-900 dark:bg-black border-b border-gray-700 text-white px-4 py-2 text-base font-medium outline-none focus:border-teal-800 hover:border-teal-800 focus:border-b-2 hover:border-b-2 group-hover:scale-x-100 transition-all duration-400"
-                                    required />
-                                <label for="name"
-                                    class="absolute top-2 left-2.5 text-gray-400 text-sm font-medium bg-gray-950 px-2 pointer-events-none opacity-0 peer-placeholder-shown:opacity-100 peer-placeholder-shown:top-2.5 peer-focus:opacity-100 peer-focus:-top-4 transition-all duration-400">
-                                    <?php esc_html_e( 'Full Name*', 'wilson-devops' ); ?>
-                                </label>
-                            </div>
 
-                            <!-- Email Group -->
-                            <div class="relative w-full h-14">
-                                <input type="email" id="email" placeholder=" " name="email"
-                                    class="peer absolute w-full h-full bg-gray-900 dark:bg-black border-b border-gray-700 text-white px-4 py-2 text-base font-medium outline-none focus:border-teal-800 hover:border-teal-800 focus:border-b-2 hover:border-b-2 group-hover:scale-x-100 transition-all duration-400"
-                                    required />
-                                <label for="email"
-                                    class="absolute top-2 left-2.5 text-gray-400 text-sm font-medium bg-gray-950 px-2 pointer-events-none opacity-0 peer-placeholder-shown:opacity-100 peer-placeholder-shown:top-2.5 peer-focus:opacity-100 peer-focus:-top-4 transition-all duration-400">
-                                    <?php esc_html_e( 'Email Address*', 'wilson-devops' ); ?>
-                                </label>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
                             </div>
-
-                            <!-- Subject Group -->
-                            <div class="relative w-full h-14">
-                                <input type="text" id="subject" placeholder=" " name="subject"
-                                    class="peer absolute w-full h-full bg-gray-900 dark:bg-black border-b border-gray-700 text-white px-4 py-2 text-base font-medium outline-none focus:border-teal-800 hover:border-teal-800 focus:border-b-2 hover:border-b-2 transition-all duration-400" />
-                                <label for="subject"
-                                    class="absolute top-2 left-2.5 text-gray-400 text-sm font-medium bg-gray-950 px-2 pointer-events-none opacity-0 peer-placeholder-shown:opacity-100 peer-placeholder-shown:top-2.5 peer-focus:opacity-100 peer-focus:-top-4 transition-all duration-400">
-                                    <?php esc_html_e( 'Subject', 'wilson-devops' ); ?>
-                                </label>
+                            <div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Location</div>
+                                <div class="text-gray-900 dark:text-white font-medium">Nairobi, Kenya</div>
                             </div>
-
-                            <!-- Message Group -->
-                            <div class="relative">
-                                <textarea id="message" rows="4" placeholder=" " name="message"
-                                    class="peer resize-none w-full bg-gray-900 dark:bg-black border focus:border-2 hover:border-2 border-gray-700 hover:border-teal-800 focus:border-teal-800 text-white px-4 py-2 text-base font-medium outline-none transition-all duration-400"></textarea>
-                                <label for="message"
-                                    class="absolute top-2 left-2.5 text-gray-400 text-sm font-medium bg-gray-950 px-2 pointer-events-none opacity-0 peer-placeholder-shown:opacity-100 peer-placeholder-shown:top-2.5 peer-focus:opacity-100 peer-focus:-top-4 transition-all duration-400">
-                                    <?php esc_html_e( 'Message*', 'wilson-devops' ); ?>
-                                </label>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <button type="submit" name="submit_mail"
-                                class="bg-teal-500 hover:bg-teal-700 text-white font-medium px-6 py-3 mt-4 rounded cursor-pointer transition-colors duration-400">
-                                <?php esc_html_e( 'Submit', 'wilson-devops' ); ?>
-                            </button>
-                        </form>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Social Media Links -->
-            <div
-                class="contact__social lg:absolute bottom-0 lg:left-14 xl:left-44 2xl:left-72 w-full max-w-sm mt-10 mx-auto text-center bg-transparent text-gray-900 dark:text-gray-300 p-6 rounded-xl">
-                <p class="mb-3">
-                    <?php esc_html_e( "Don't want to send mails?", 'wilson-devops' ); ?>
-                </p>
-                <p class="mb-6">
-                    <?php esc_html_e( 'Write me on social media.', 'wilson-devops' ); ?>
-                </p>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spiral-arrow.png"
-                    alt="Decorative arrow"
-                    class="absolute bottom-40 right-32 transform rotate-45 skew-y-12 filter invert-0 dark:invert w-16 h-16 object-contain animate-bounce" />
-                <div class="flex justify-center space-x-4">
-                    <!-- Twitter -->
-                    <a href="https://twitter.com/WilsonMbuthiaK" target="_blank"
-                        class="p-3 rounded-full bg-gray-700 hover:bg-black transition duration-400">
-                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M8 2H1l8.26 11.014L1.45 22H4.1l6.388-7.349L16 22h7l-8.608-11.478L21.8 2h-2.65l-5.986 6.886L8 2Zm9 18L5 4h2l12 16h-2Z" />
-                        </svg>
-                    </a>
-                    <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/in/wilson-mbuthia-k/" target="_blank"
-                        class="p-3 rounded-full bg-gray-700 hover:bg-linkedin transition">
-                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                            <path fill="currentColor"
-                                d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1 1 10.49-10.5a10.5 10.5 0 0 1-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z" />
-                        </svg>
-                    </a>
-                    <!-- GitHub -->
-                    <a href="https://github.com/Wyllymk" target="_blank"
-                        class="p-3 rounded-full bg-gray-700 hover:bg-black transition">
-                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.84 1.236 1.84 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.775.418-1.305.762-1.605c-2.665-.3-5.467-1.335-5.467-5.931c0-1.31.47-2.38 1.235-3.221c-.135-.303-.54-1.52.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.555 3.285-1.23 3.285-1.23c.645 1.655.24 2.872.12 3.176c.765.84 1.23 1.91 1.23 3.221c0 4.615-2.81 5.63-5.475 5.92c.435.375.81 1.11.81 2.24c0 1.62-.015 2.94-.015 3.34c0 .315.21.69.825.575C20.565 22.09 24 17.592 24 12.296c0-6.627-5.373-12-12-12z" />
-                        </svg>
-                    </a>
-                    <!-- WhatsApp -->
-                    <a href="https://wa.me/+254703639230?text=Hi%20I%20want%20to%20get%20in%20touch" target="_blank"
-                        rel="nofollow" class="p-3 rounded-full bg-gray-700 hover:bg-whatsapp transition">
+                <!-- Contact Form -->
+                <div
+                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg">
+                    <!-- Form Messages -->
+                    <?php
+                    $contact_success = isset($_SESSION['contact_success']) ? $_SESSION['contact_success'] : '';
+                    $contact_error = isset($_SESSION['contact_error']) ? $_SESSION['contact_error'] : '';
+                    unset($_SESSION['contact_success'], $_SESSION['contact_error']);
+                    ?>
 
-                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" width="200" height="200"
-                            viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.188 8.188 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18c.21-.58.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01Z" />
-                        </svg>
-                    </a>
+                    <?php if ($contact_success): ?>
+                    <div
+                        class="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded-lg text-green-800 dark:text-green-200">
+                        <?php echo esc_html($contact_success); ?>
+                    </div>
+                    <?php endif; ?>
+
+                    <?php if ($contact_error): ?>
+                    <div
+                        class="mb-6 p-4 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700 rounded-lg text-red-800 dark:text-red-200">
+                        <?php echo esc_html($contact_error); ?>
+                    </div>
+                    <?php endif; ?>
+
+                    <form method="post" class="space-y-6">
+                        <?php wp_nonce_field('contact_form_nonce', '_wpnonce_contact_form'); ?>
+                        <input type="text" name="honeypot" class="hidden" tabindex="-1" autocomplete="off">
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="group">
+                                <label for="name"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                    Name *
+                                </label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 dark:focus:border-cyan-400 dark:focus:ring-cyan-400/20 text-gray-900 dark:text-white transition-all duration-300"
+                                    placeholder="Your full name">
+                            </div>
+
+                            <div class="group">
+                                <label for="email"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                    Email *
+                                </label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 dark:focus:border-cyan-400 dark:focus:ring-cyan-400/20 text-gray-900 dark:text-white transition-all duration-300"
+                                    placeholder="your@email.com">
+                            </div>
+                        </div>
+
+                        <div class="group">
+                            <label for="subject"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                Subject
+                            </label>
+                            <input type="text" id="subject" name="subject"
+                                class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 dark:focus:border-cyan-400 dark:focus:ring-cyan-400/20 text-gray-900 dark:text-white transition-all duration-300"
+                                placeholder="What's this about?">
+                        </div>
+
+                        <div class="group">
+                            <label for="message"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                Message *
+                            </label>
+                            <textarea id="message" name="message" rows="6" required
+                                class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 dark:focus:border-cyan-400 dark:focus:ring-cyan-400/20 text-gray-900 dark:text-white resize-none transition-all duration-300"
+                                placeholder="Tell me about your project..."></textarea>
+                        </div>
+
+                        <button type="submit" name="submit_contact"
+                            class="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -742,5 +867,34 @@ get_header();
 
 </main>
 
-<?php
-get_footer();
+<script>
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Add loading animation to form
+document.querySelector('form').addEventListener('submit', function(e) {
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    // Re-enable button after 3 seconds (fallback)
+    setTimeout(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }, 3000);
+});
+</script>
+
+<?php get_footer();

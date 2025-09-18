@@ -72,8 +72,8 @@ Alpine.data('themeToggle', () => ({
 }));
 
 window.Alpine = Alpine;
-Alpine.start();
 
+// Menu
 document.addEventListener('DOMContentLoaded', function () {
 	const menuButton = document.querySelector('#menuButton');
 	const menuLinks = document.querySelectorAll('.menu-link'); // Select all mobile menu links
@@ -189,7 +189,7 @@ window.addEventListener('load', function () {
 document.addEventListener('DOMContentLoaded', () => {
 	// Common animation for services and projects cards
 	gsap.utils
-		.toArray('.services__card, .projects__card, .project-card')
+		.toArray('.services__card, .projects__card')
 		.forEach((card, index) => {
 			gsap.from(card, {
 				opacity: 0,
@@ -265,182 +265,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				});
 			});
 	}
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-	// Animate the central line growing from top to bottom
-	gsap.fromTo(
-		'.journey-line',
-		{
-			height: 0,
-		},
-		{
-			height: '100%',
-			duration: 2,
-			ease: 'power2.out',
-			scrollTrigger: {
-				trigger: '.journey-section',
-				start: 'top 80%',
-				toggleActions: 'play none none reset',
-			},
-		}
-	);
-
-	// Animate each journey item on scroll
-	gsap.utils.toArray('.journey-item').forEach((item, index) => {
-		gsap.fromTo(
-			item.querySelectorAll('.flex-1'),
-			{
-				opacity: 0,
-				x: index % 2 === 0 ? 50 : -50,
-			},
-			{
-				opacity: 1,
-				x: 0,
-				duration: 1,
-				ease: 'power3.out',
-				scrollTrigger: {
-					trigger: item,
-					start: 'top 80%',
-					toggleActions: 'play none none reset',
-				},
-			}
-		);
-		gsap.fromTo(
-			item.querySelector('.journey-dot'),
-			{
-				scale: 0,
-			},
-			{
-				scale: 1,
-				duration: 0.8,
-				ease: 'elastic.out(1, 0.5)',
-				scrollTrigger: {
-					trigger: item,
-					start: 'top 80%',
-					toggleActions: 'play none none reset',
-				},
-			}
-		);
-	});
-
-	// Pulse effect for dots
-	gsap.to('.journey-dot', {
-		scale: 1.2,
-		duration: 1,
-		repeat: -1,
-		yoyo: true,
-		ease: 'sine.inOut',
-		stagger: 0.3,
-	});
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-	// Intro animation
-	gsap.from('.intro-section h1', {
-		opacity: 0,
-		y: 50,
-		duration: 1,
-		ease: 'power3.out',
-	});
-	gsap.from('.intro-section p', {
-		opacity: 0,
-		y: 30,
-		duration: 1,
-		delay: 0.3,
-	});
-	gsap.from('.intro-section a', {
-		opacity: 0,
-		scale: 0.9,
-		duration: 1,
-		delay: 0.6,
-	});
-	gsap.to('#servicePath', {
-		duration: 4,
-		strokeDasharray: '200',
-		strokeDashoffset: '200',
-		repeat: -1,
-		ease: 'linear',
-	});
-
-	// Service cards animation
-	gsap.utils.toArray('.service-card').forEach((card, i) => {
-		gsap.from(card, {
-			opacity: 0,
-			y: 50,
-			duration: 1,
-			ease: 'power3.out',
-			scrollTrigger: {
-				trigger: card,
-				start: 'top 80%',
-				toggleActions: 'play none none none',
-			},
-			delay: i * 0.2,
-		});
-	});
-
-	// Process steps animation
-	gsap.from('.process-line', {
-		height: 0,
-		duration: 1.5,
-		ease: 'power2.out',
-		scrollTrigger: {
-			trigger: '.process-step',
-			start: 'top 80%',
-		},
-	});
-	gsap.utils.toArray('.process-step').forEach((step, i) => {
-		gsap.from(step, {
-			opacity: 0,
-			x: i % 2 === 0 ? -50 : 50,
-			duration: 1,
-			ease: 'power3.out',
-			scrollTrigger: {
-				trigger: step,
-				start: 'top 80%',
-				toggleActions: 'play none none none',
-			},
-			delay: i * 0.3,
-		});
-	});
-
-	// Tech items animation
-	gsap.utils.toArray('.tech-item').forEach((item, i) => {
-		gsap.from(item, {
-			opacity: 0,
-			scale: 0.8,
-			duration: 0.8,
-			ease: 'elastic.out(1, 0.5)',
-			scrollTrigger: {
-				trigger: item,
-				start: 'top 90%',
-				toggleActions: 'play none none none',
-			},
-			delay: i * 0.1,
-		});
-	});
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-	gsap.from('.projects-hero h1', {
-		opacity: 0,
-		y: 50,
-		duration: 1,
-		ease: 'power3.out',
-	});
-	gsap.from('.projects-hero p', {
-		opacity: 0,
-		y: 30,
-		duration: 1,
-		delay: 0.3,
-	});
-	gsap.to('#projectPath', {
-		duration: 4,
-		strokeDasharray: '200',
-		strokeDashoffset: '200',
-		repeat: -1,
-		ease: 'linear',
-	});
 });
 
 // Project Pages
@@ -549,23 +373,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	animateCards('.challenges-section .rounded-xl');
 	animateSolutions('.solutions-section .solution');
 	animateFeatureCards('.feature-card');
-
-	// SVG Path Animation (unique to this page)
-	gsap.to('#dejavuPath', {
-		duration: 4,
-		strokeDasharray: '200',
-		strokeDashoffset: '200',
-		repeat: -1,
-		ease: 'linear',
-	});
-
-	gsap.to('#nyeriPath', {
-		duration: 4,
-		strokeDasharray: '200',
-		strokeDashoffset: '200',
-		repeat: -1,
-		ease: 'linear',
-	});
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -656,4 +463,8 @@ document.addEventListener('DOMContentLoaded', function () {
 					'<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Loading Demo...';
 			});
 		});
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	Alpine.start();
 });
