@@ -73,7 +73,87 @@ Alpine.data('themeToggle', () => ({
 
 window.Alpine = Alpine;
 
-// Menu
+// ===========================
+// SCROLL TO TOP
+// ===========================
+document.addEventListener('alpine:init', () => {
+	Alpine.data('scrollToTop', () => ({
+		visible: false,
+		lastScrollY: window.scrollY,
+
+		init() {
+			window.addEventListener('scroll', this.onScroll.bind(this));
+		},
+
+		onScroll() {
+			const currentScrollY = window.scrollY;
+
+			if (currentScrollY > 200 && currentScrollY < this.lastScrollY) {
+				this.visible = true;
+			} else {
+				this.visible = false;
+			}
+
+			this.lastScrollY = currentScrollY;
+		},
+
+		scrollTop() {
+			const start = window.pageYOffset;
+			const duration = 2000; // 2 second
+			const startTime = performance.now();
+
+			const easeInOutQuad = (t, b, c, d) => {
+				t /= d / 2;
+				if (t < 1) return (c / 2) * t * t + b;
+				t--;
+				return (-c / 2) * (t * (t - 2) - 1) + b;
+			};
+
+			const animateScroll = (currentTime) => {
+				const timeElapsed = currentTime - startTime;
+				const run = easeInOutQuad(timeElapsed, start, -start, duration);
+				window.scrollTo(0, run);
+
+				if (timeElapsed < duration) {
+					requestAnimationFrame(animateScroll);
+				} else {
+					window.scrollTo(0, 0); // Ensure it ends exactly at top
+				}
+			};
+
+			requestAnimationFrame(animateScroll);
+		},
+	}));
+});
+
+// 1. Sticky Header (Alpine.js)
+Alpine.data('stickyHeader', () => ({
+	isScrolled: false,
+	isHidden: false,
+	lastScrollY: 0,
+
+	init() {
+		this.lastScrollY = window.scrollY;
+
+		window.addEventListener('scroll', () => {
+			const currentScrollY = window.scrollY;
+
+			// Blur effect when scrolled ≥ 20px
+			this.isScrolled = currentScrollY > 20;
+
+			// Detect direction
+			if (currentScrollY > this.lastScrollY && currentScrollY > 50) {
+				this.isHidden = true; // scrolling down
+			} else if (currentScrollY < this.lastScrollY) {
+				this.isHidden = false; // scrolling up
+			}
+
+			this.lastScrollY = currentScrollY;
+		});
+	},
+}));
+
+// 2. Mobile Menu + Section Highlighting
 document.addEventListener('DOMContentLoaded', function () {
 	const menuButton = document.querySelector('#menuButton');
 	const menuLinks = document.querySelectorAll('.menu-link'); // Select all mobile menu links
@@ -176,6 +256,55 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Observe all sections
 	sections.forEach((section) => {
 		observer.observe(section);
+	});
+});
+
+// 3. Smooth Scroll
+function smoothScrollTo(targetId) {
+	const target = document.getElementById(targetId);
+	if (!target) return;
+
+	const header = document.querySelector('header');
+	const offset = header ? header.offsetHeight : 0;
+	const startPosition = window.pageYOffset;
+	const targetPosition =
+		target.getBoundingClientRect().top + startPosition - offset;
+	const distance = targetPosition - startPosition;
+	const duration = 2000;
+	let startTime = null;
+
+	function animation(currentTime) {
+		if (startTime === null) startTime = currentTime;
+		const timeElapsed = currentTime - startTime;
+		const run = easeInOutQuad(
+			timeElapsed,
+			startPosition,
+			distance,
+			duration
+		);
+		window.scrollTo(0, run);
+		if (timeElapsed < duration) requestAnimationFrame(animation);
+	}
+
+	function easeInOutQuad(t, b, c, d) {
+		t /= d / 2;
+		if (t < 1) return (c / 2) * t * t + b;
+		t--;
+		return (-c / 2) * (t * (t - 2) - 1) + b;
+	}
+
+	requestAnimationFrame(animation);
+}
+
+// Attach smooth scroll to anchors
+document.addEventListener('DOMContentLoaded', () => {
+	document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+		anchor.addEventListener('click', (e) => {
+			const targetId = anchor.getAttribute('href').substring(1);
+			if (!targetId) return;
+			e.preventDefault();
+			smoothScrollTo(targetId);
+		});
 	});
 });
 
@@ -465,6 +594,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 });
 
+// ✅ Start Alpine once
 document.addEventListener('DOMContentLoaded', () => {
 	Alpine.start();
 });

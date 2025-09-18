@@ -180,7 +180,7 @@ function wilson_contact_form_admin_page()
     }
     
     $contact_email = get_option('wilson_contact_email', get_option('admin_email'));
-    $subject_prefix = get_option('wilson_contact_subject_prefix', '[Contact Form]');
+    $subject_prefix = get_option('wilson_contact_subject_prefix', '[Wilson Devops]');
     ?>
 <div class="wrap">
     <h1>Contact Form Settings</h1>

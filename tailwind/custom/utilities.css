@@ -167,3 +167,20 @@ img:hover {
 .tech-grid .group:nth-child(6) {
 	animation-delay: 0.5s;
 }
+
+.contact-card:hover {
+	animation: float 3s ease-in-out infinite;
+}
+
+/* Staggered animations for contact cards */
+.contact-card:nth-child(1) {
+	animation-delay: 0s;
+}
+
+.contact-card:nth-child(2) {
+	animation-delay: 0.5s;
+}
+
+.contact-card:nth-child(3) {
+	animation-delay: 1s;
+}

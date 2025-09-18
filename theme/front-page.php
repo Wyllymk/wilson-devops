@@ -183,7 +183,7 @@ get_header();
     </section>
 
     <!-- About Section -->
-    <section class="py-20 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm" id="about">
+    <section class="py-20 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm" id="about me">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl lg:text-5xl font-bold mb-6">
@@ -695,206 +695,267 @@ get_header();
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact CTA Section -->
     <section
-        class="py-20 bg-gradient-to-br from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 relative overflow-hidden"
+        class="py-20 bg-gradient-to-br from-cyber-light via-white to-gray-100 dark:from-gray-950 dark:via-black dark:to-gray-900 relative overflow-hidden"
         id="contact">
-        <!-- Background Elements -->
-        <div class="absolute inset-0">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden z-0">
+            <!-- Floating Particles -->
             <div
-                class="absolute top-20 right-20 w-32 h-32 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-full blur-xl">
+                class="absolute top-20 left-10 w-2 h-2 bg-cyan-500 dark:bg-cyan-400 rounded-full animate-ping opacity-40 dark:opacity-60">
             </div>
             <div
-                class="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-r from-pink-400/10 to-red-500/10 rounded-full blur-lg">
+                class="absolute top-40 right-20 w-3 h-3 bg-blue-600 dark:bg-blue-500 rounded-full animate-pulse opacity-30 dark:opacity-50">
             </div>
+            <div
+                class="absolute bottom-40 left-20 w-1 h-1 bg-purple-600 dark:bg-purple-400 rounded-full animate-bounce opacity-50 dark:opacity-70">
+            </div>
+            <div class="absolute bottom-20 right-40 w-2 h-2 bg-pink-600 dark:bg-pink-400 rounded-full animate-ping opacity-25 dark:opacity-40"
+                style="animation-delay: 1s;"></div>
+
+            <!-- Gradient Orbs -->
+            <div
+                class="absolute -top-40 -left-40 w-80 h-80 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 dark:from-cyan-500/20 dark:to-blue-600/20 rounded-full blur-3xl animate-pulse">
+            </div>
+            <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-gradient-to-r from-purple-500/8 to-pink-600/8 dark:from-purple-500/15 dark:to-pink-600/15 rounded-full blur-3xl animate-pulse"
+                style="animation-delay: 2s;"></div>
+
+            <!-- Geometric Shapes -->
+            <div class="absolute top-1/4 right-1/4 w-6 h-6 border-2 border-cyan-500/20 dark:border-cyan-400/30 rotate-45 animate-spin opacity-40 dark:opacity-60"
+                style="animation-duration: 8s;"></div>
+            <div class="absolute bottom-1/3 left-1/4 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-400 dark:to-purple-500 rotate-12 animate-bounce opacity-30 dark:opacity-50"
+                style="animation-delay: 1.5s;"></div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+            <!-- Main CTA Content -->
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 dark:from-cyan-500/20 dark:to-blue-600/20 backdrop-blur-md rounded-full border border-cyan-500/20 dark:border-cyan-500/30 mb-8">
+                    <div class="w-2 h-2 bg-green-500 dark:bg-green-400 rounded-full animate-pulse"></div>
+                    <span class="text-cyan-700 dark:text-cyan-300 text-sm font-medium">Ready to collaborate</span>
+                </div>
+
+                <h2 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                     <span
-                        class="bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-                        Get In Touch
+                        class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 dark:from-white dark:via-gray-200 dark:to-gray-300 bg-clip-text text-transparent">
+                        Let's Build Something
+                    </span>
+                    <br>
+                    <span
+                        class="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-700 dark:from-cyan-400 dark:via-blue-500 dark:to-purple-600 bg-clip-text text-transparent">
+                        Extraordinary Together
                     </span>
                 </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full"></div>
-                <p class="text-lg text-gray-600 dark:text-gray-400 mt-6 max-w-2xl mx-auto">
-                    Ready to bring your ideas to life? Let's discuss your project and create something extraordinary
-                    together.
+
+                <p class="text-xl text-gray-700 dark:text-gray-300 mb-12 leading-relaxed max-w-2xl mx-auto">
+                    Ready to transform your ideas into digital reality? I'm here to help you create
+                    exceptional web experiences that drive results and captivate your audience.
                 </p>
+
+                <!-- Primary CTA Button -->
+                <div class="mb-16">
+                    <a href="<?php echo esc_url(site_url('/contact')); ?>"
+                        class="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg font-semibold rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                            </path>
+                        </svg>
+                        Start Your Project
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
-                <!-- Contact Info -->
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Let's Connect</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-8">
-                            I'm always excited to work on new projects and collaborate with amazing people.
-                            Send me a message and I'll get back to you as soon as possible.
-                        </p>
+            <!-- Contact Information Cards -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Email Card -->
+                <div class="group relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-600/5 dark:from-cyan-500/10 dark:to-blue-600/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300">
                     </div>
-
-                    <!-- Contact Methods -->
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4">
-                            <div
-                                class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400">Email</div>
-                                <div class="text-gray-900 dark:text-white font-medium">wilsonkabatha@gmail.com</div>
-                            </div>
+                    <div
+                        class="relative bg-white/80 dark:bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-gray-200/60 dark:border-white/10 hover:border-cyan-500/40 dark:hover:border-cyan-500/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 text-center">
+                        <!-- Icon -->
+                        <div
+                            class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
                         </div>
 
-                        <div class="flex items-center gap-4">
-                            <div
-                                class="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-600 rounded-full flex items-center justify-center">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Email Me</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">For project inquiries and collaborations</p>
+
+                        <a href="mailto:wilsonkabatha@gmail.com"
+                            class="inline-flex items-center gap-2 text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 font-medium transition-colors group/link">
+                            wilsonkabatha@gmail.com
+                            <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <!-- Quick Action Button -->
+                        <div class="mt-6">
+                            <a href="mailto:wilsonkabatha@gmail.com"
+                                class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 text-gray-800 dark:text-white rounded-full text-sm font-medium transition-all duration-300 border border-gray-200 dark:border-white/20 hover:border-cyan-500/50">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                                </svg>
+                                Send Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Card -->
+                <div class="group relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-green-500/5 to-cyan-600/5 dark:from-green-500/10 dark:to-cyan-600/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    </div>
+                    <div
+                        class="relative bg-white/80 dark:bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-gray-200/60 dark:border-white/10 hover:border-green-500/40 dark:hover:border-green-500/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 text-center">
+                        <!-- Icon -->
+                        <div
+                            class="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.488" />
+                            </svg>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">WhatsApp</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Quick chat and instant responses</p>
+
+                        <div class="text-green-600 dark:text-green-400 font-medium mb-1">+254 703 639230</div>
+                        <div class="text-gray-500 dark:text-gray-500 text-sm mb-4">Available 9 AM - 6 PM EAT</div>
+
+                        <!-- Quick Action Button -->
+                        <div class="mt-6">
+                            <a href="https://wa.me/+254703639230?text=Hi%20Wilson,%20I'd%20like%20to%20discuss%20a%20project"
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 text-gray-800 dark:text-white rounded-full text-sm font-medium transition-all duration-300 border border-gray-200 dark:border-white/20 hover:border-green-500/50">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                     <path
-                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.488" />
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347" />
                                 </svg>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400">WhatsApp</div>
-                                <div class="text-gray-900 dark:text-white font-medium">+254 703 639230</div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-4">
-                            <div
-                                class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                    </path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400">Location</div>
-                                <div class="text-gray-900 dark:text-white font-medium">Nairobi, Kenya</div>
-                            </div>
+                                Start Chat
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Contact Form -->
-                <div
-                    class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg">
-                    <!-- Form Messages -->
-                    <?php
-                    $contact_success = isset($_SESSION['contact_success']) ? $_SESSION['contact_success'] : '';
-                    $contact_error = isset($_SESSION['contact_error']) ? $_SESSION['contact_error'] : '';
-                    unset($_SESSION['contact_success'], $_SESSION['contact_error']);
-                    ?>
-
-                    <?php if ($contact_success): ?>
+                <!-- Location & Meeting Card -->
+                <div class="group relative">
                     <div
-                        class="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded-lg text-green-800 dark:text-green-200">
-                        <?php echo esc_html($contact_success); ?>
+                        class="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-600/5 dark:from-purple-500/10 dark:to-pink-600/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300">
                     </div>
-                    <?php endif; ?>
-
-                    <?php if ($contact_error): ?>
                     <div
-                        class="mb-6 p-4 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700 rounded-lg text-red-800 dark:text-red-200">
-                        <?php echo esc_html($contact_error); ?>
+                        class="relative bg-white/80 dark:bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-gray-200/60 dark:border-white/10 hover:border-purple-500/40 dark:hover:border-purple-500/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 text-center">
+                        <!-- Icon -->
+                        <div
+                            class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Let's Meet</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Virtual or in-person consultations</p>
+
+                        <div class="text-purple-600 dark:text-purple-400 font-medium mb-1">Nairobi, Kenya</div>
+                        <div class="text-gray-500 dark:text-gray-500 text-sm mb-4">Remote work worldwide</div>
+
+                        <!-- Quick Action Button -->
+                        <div class="mt-6">
+                            <a href="<?php echo esc_url(site_url('/contact')); ?>"
+                                class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 text-gray-800 dark:text-white rounded-full text-sm font-medium transition-all duration-300 border border-gray-200 dark:border-white/20 hover:border-purple-500/50">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 8h6m-6 4h6m2-16v20a2 2 0 01-2 2H6a2 2 0 01-2-2V3a2 2 0 012-2h12a2 2 0 012 2z">
+                                    </path>
+                                </svg>
+                                Schedule Call
+                            </a>
+                        </div>
                     </div>
-                    <?php endif; ?>
-
-                    <form method="post" class="space-y-6">
-                        <?php wp_nonce_field('contact_form_nonce', '_wpnonce_contact_form'); ?>
-                        <input type="text" name="honeypot" class="hidden" tabindex="-1" autocomplete="off">
-
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="group">
-                                <label for="name"
-                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                                    Name *
-                                </label>
-                                <input type="text" id="name" name="name" required
-                                    class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 dark:focus:border-cyan-400 dark:focus:ring-cyan-400/20 text-gray-900 dark:text-white transition-all duration-300"
-                                    placeholder="Your full name">
-                            </div>
-
-                            <div class="group">
-                                <label for="email"
-                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                                    Email *
-                                </label>
-                                <input type="email" id="email" name="email" required
-                                    class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 dark:focus:border-cyan-400 dark:focus:ring-cyan-400/20 text-gray-900 dark:text-white transition-all duration-300"
-                                    placeholder="your@email.com">
-                            </div>
-                        </div>
-
-                        <div class="group">
-                            <label for="subject"
-                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                                Subject
-                            </label>
-                            <input type="text" id="subject" name="subject"
-                                class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 dark:focus:border-cyan-400 dark:focus:ring-cyan-400/20 text-gray-900 dark:text-white transition-all duration-300"
-                                placeholder="What's this about?">
-                        </div>
-
-                        <div class="group">
-                            <label for="message"
-                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                                Message *
-                            </label>
-                            <textarea id="message" name="message" rows="6" required
-                                class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 dark:focus:border-cyan-400 dark:focus:ring-cyan-400/20 text-gray-900 dark:text-white resize-none transition-all duration-300"
-                                placeholder="Tell me about your project..."></textarea>
-                        </div>
-
-                        <button type="submit" name="submit_contact"
-                            class="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105">
-                            Send Message
-                        </button>
-                    </form>
                 </div>
             </div>
+        </div>
+
+        <!-- Social Links & Additional CTAs -->
+        <div class="mt-16 text-center relative z-10">
+            <div class="mb-8">
+                <p class="text-gray-400 mb-6">Or connect with me on social media</p>
+
+                <div class="flex justify-center gap-4">
+                    <?php
+                    $social_platforms = [
+                        [
+                            'name' => 'LinkedIn',
+                            'url'  => 'https://www.linkedin.com/in/wilson-mbuthia-k/',
+                            'icon' => '<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>',
+                            'hover' => 'hover:bg-[#0077b5] hover:drop-shadow-[var(--drop-shadow-cyber-blue)]',
+                        ],
+                        [
+                            'name' => 'GitHub',
+                            'url'  => 'https://github.com/Wyllymk',
+                            'icon' => '<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>',
+                            'hover' => 'hover:bg-gray-900 hover:drop-shadow-[var(--drop-shadow-cyber-purple)]',
+                        ],
+                        [
+                            'name' => 'Twitter',
+                            'url'  => 'https://twitter.com/WilsonMbuthiaK',
+                            'icon' => '<path d="M8 2H1l8.26 11.014L1.45 22H4.1l6.388-7.349L16 22h7l-8.608-11.478L21.8 2h-2.65l-5.986 6.886L8 2Zm9 18L5 4h2l12 16h-2Z"/>',
+                            'hover' => 'hover:bg-[#1DA1F2] hover:drop-shadow-[var(--drop-shadow-cyber-cyan)]',
+                        ],
+                    ];
+
+                    foreach ($social_platforms as $platform): ?>
+                    <a href="<?php echo esc_url($platform['url']); ?>" target="_blank" rel="noopener noreferrer"
+                        class="group p-3 bg-gray-200 dark:bg-gray-800 rounded-full border border-gray-300/50 dark:border-gray-600/50 transition-all duration-300 ease-out <?php echo $platform['hover']; ?>"
+                        aria-label="<?php echo esc_attr($platform['name']); ?>">
+                        <svg class="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <?php echo $platform['icon']; ?>
+                        </svg>
+                    </a>
+                    <?php endforeach; ?>
+                </div>
+
+            </div>
+
+            <!-- Response Time Indicator -->
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-md rounded-full border border-white/10">
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span class="text-gray-300 text-sm">Typically responds within 24 hours</span>
+            </div>
+        </div>
+        </div>
+
+        <!-- Bottom Wave Effect -->
+        <div
+            class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white dark:from-gray-950 to-transparent">
         </div>
     </section>
 
 </main>
-
-<script>
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Add loading animation to form
-document.querySelector('form').addEventListener('submit', function(e) {
-    const submitBtn = this.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-
-    // Re-enable button after 3 seconds (fallback)
-    setTimeout(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }, 3000);
-});
-</script>
 
 <?php get_footer();
