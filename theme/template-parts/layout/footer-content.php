@@ -61,7 +61,7 @@ defined( 'ABSPATH' ) || exit;
                     Wilson DevOps
                 </h3>
                 <p class="text-gray-600 dark:text-gray-400 max-w-md mx-auto leading-relaxed">
-                    Building scalable solutions with modern technology.
+                    Building scalable solutions with modern technology.<br>
                     <span class="text-teal-500 dark:text-teal-400 font-medium">Code • Cloud • Innovation</span>
                 </p>
             </div>
