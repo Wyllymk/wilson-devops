@@ -54,24 +54,22 @@ add_action('wp_ajax_nopriv_submit_contact_form', 'handle_contact_form_submission
 function handle_contact_form_submission() 
 {
     // Verify nonce for security
-    if (!wp_verify_nonce($_POST['nonce'], 'contact_form_nonce')) {
-        wp_die(json_encode(array(
-            'success' => false,
+    if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'contact_form_nonce')) {
+        wp_send_json_error(array(
             'message' => __('Security verification failed. Please refresh the page and try again.', 'wilson-devops')
-        )));
+        ));
     }
 
     // Honeypot spam protection
     if (!empty($_POST['honeypot'])) {
-        wp_die(json_encode(array(
-            'success' => false,
+        wp_send_json_error(array(
             'message' => __('Spam detected.', 'wilson-devops')
-        )));
+        ));
     }
 
     // Sanitize and validate form data
-    $name = sanitize_text_field($_POST['name']);
-    $email = sanitize_email($_POST['email']);
+    $name    = sanitize_text_field($_POST['name']);
+    $email   = sanitize_email($_POST['email']);
     $subject = sanitize_text_field($_POST['subject']);
     $message = sanitize_textarea_field($_POST['message']);
 
@@ -92,7 +90,7 @@ function handle_contact_form_submission()
         $errors[] = __('Message is required.', 'wilson-devops');
     }
 
-    // Rate limiting check (optional)
+    // Rate limiting check
     $user_ip = $_SERVER['REMOTE_ADDR'];
     $rate_limit_key = 'contact_form_' . md5($user_ip);
     $submission_count = get_transient($rate_limit_key);
@@ -112,35 +110,94 @@ function handle_contact_form_submission()
     }
 
     // Prepare email
-    $to = get_option('admin_email'); // or specify your email
+    $to = get_option('admin_email'); 
     $email_subject = $subject ? '[Contact Form] ' . $subject : '[Contact Form] New Message from ' . $name;
-    
-    // Email body
-    $email_body = "New contact form submission:\n\n";
-    $email_body .= "Name: {$name}\n";
-    $email_body .= "Email: {$email}\n";
-    $email_body .= "Subject: {$subject}\n\n";
-    $email_body .= "Message:\n{$message}\n\n";
-    $email_body .= "---\n";
-    $email_body .= "Sent from: " . get_bloginfo('name') . " (" . home_url() . ")\n";
-    $email_body .= "IP Address: {$user_ip}\n";
-    $email_body .= "Date: " . current_time('mysql');
+
+    // Build HTML email body with your theme colors
+    $email_body = '
+    <html>
+    <head>
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--color-background, #f5f7fa); /* fallback to cyber-light */
+            color: var(--color-text-light, #1a202c);
+            padding: 20px;
+        }
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: var(--color-cyber-cyan, #00d4ff);
+            margin-top: 0;
+        }
+        .field {
+            margin-bottom: 12px;
+        }
+        .label {
+            font-weight: bold;
+            color: var(--color-nav-blue, #605c8d);
+        }
+        .value {
+            margin-left: 5px;
+            color: var(--color-text-light, #1a202c);
+        }
+        .message-box {
+            padding: 12px;
+            background: var(--color-cyber-light, #f5f7fa);
+            border-radius: 6px;
+            border: 1px solid var(--color-text-light-muted, #718096);
+            white-space: pre-line;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: var(--color-text-dark-muted, #a0aec0);
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+        a {
+            color: var(--color-cyber-blue, #007bff);
+            text-decoration: none;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h2>📩 New Contact Form Submission</h2>
+        <div class="field"><span class="label">Name:</span><span class="value">'.esc_html($name).'</span></div>
+        <div class="field"><span class="label">Email:</span><span class="value">'.esc_html($email).'</span></div>
+        <div class="field"><span class="label">Subject:</span><span class="value">'.esc_html($subject).'</span></div>
+        <div class="field"><span class="label">Message:</span>
+          <div class="message-box">'.nl2br(esc_html($message)).'</div>
+        </div>
+        <div class="footer">
+          Sent from <a href="'.home_url().'" target="_blank">'.get_bloginfo('name').'</a><br>
+          IP Address: '.$user_ip.'<br>
+          Date: '.current_time('mysql').'
+        </div>
+      </div>
+    </body>
+    </html>';
 
     // Email headers
     $headers = array();
-    $headers[] = 'Content-Type: text/plain; charset=UTF-8';
-    $headers[] = 'From: ' . get_bloginfo('name') . ' <' . get_option('admin_email') . '>';
-    $headers[] = 'Reply-To: ' . $name . ' <' . $email . '>';
+    $headers[] = 'Content-Type: text/html; charset=UTF-8';
+    $headers[] = 'From: '.get_bloginfo('name').' <'.get_option('admin_email').'>';
+    $headers[] = 'Reply-To: '.$name.' <'.$email.'>';
 
     // Send email
     $mail_sent = wp_mail($to, $email_subject, $email_body, $headers);
 
     if ($mail_sent) {
-        // Set rate limiting
         $new_count = $submission_count ? $submission_count + 1 : 1;
         set_transient($rate_limit_key, $new_count, 3600); // 1 hour
 
-        // Log successful submission (optional)
         error_log("Contact form submission from {$name} ({$email}) - Subject: {$subject}");
 
         wp_die(json_encode(array(
@@ -148,13 +205,12 @@ function handle_contact_form_submission()
             'message' => __('Thank you for your message! I\'ll get back to you within 24 hours.', 'wilson-devops')
         )));
     } else {
-        // Log failed submission
         error_log("Failed to send contact form email from {$name} ({$email})");
         
-        wp_die(json_encode(array(
-            'success' => false,
+        wp_send_json_error(array(
             'message' => __('Failed to send message. Please try again or contact me directly via social media.', 'wilson-devops')
-        )));
+        ));
+
     }
 }
 

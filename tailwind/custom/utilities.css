@@ -6,6 +6,37 @@
  *
  * https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities
  */
+/* Custom scrollbar for better aesthetics */
+/* Firefox */
+* {
+	scrollbar-width: thin; /* auto | thin | none */
+	scrollbar-color: #06b6d4 rgba(156, 163, 175, 0.1); /* thumb | track */
+	/* thumb colors then track */
+}
+
+/* IE/old Edge (fallback) */
+html {
+	-ms-overflow-style: scrollbar; /* ensures scrollbar is visible */
+}
+/* Chrome, Safari, Edge */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(156, 163, 175, 0.1);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, #06b6d4, #f97316);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(to bottom, #0891b2, #ea580c);
+}
+
 .animate-float {
 	animation: float 4s ease-in-out infinite;
 }
@@ -39,25 +70,6 @@
 	50% {
 		transform: translateY(-20px);
 	}
-}
-
-/* Custom scrollbar for better aesthetics */
-::-webkit-scrollbar {
-	width: 8px;
-}
-
-::-webkit-scrollbar-track {
-	background: rgba(156, 163, 175, 0.1);
-	border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb {
-	background: linear-gradient(to bottom, #06b6d4, #f97316);
-	border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(to bottom, #0891b2, #ea580c);
 }
 
 /* Enhance hover effects */

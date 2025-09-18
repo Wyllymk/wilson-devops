@@ -274,7 +274,7 @@ get_header();
 
                                 <!-- Submit Button -->
                                 <button type="submit" id="submit-btn"
-                                    class="group relative w-full py-4 px-8 bg-gradient-to-r from-cyber-blue to-cyber-coral dark:from-cyber-cyan dark:to-cyber-pink text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                                    class="group relative w-full py-4 px-8 bg-gradient-to-r from-cyber-blue to-cyber-coral dark:from-cyber-cyan dark:to-cyber-pink text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 overflow-hidden cursor-pointer">
                                     <span class="relative z-10 flex items-center justify-center">
                                         <span id="btn-icon">
                                             <svg class="w-5 h-5 mr-2 group-hover:animate-bounce" fill="none"
