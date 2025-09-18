@@ -56,9 +56,9 @@ get_header();
                 <div class="space-y-8 text-center lg:text-left">
                     <!-- Greeting -->
                     <div
-                        class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 dark:bg-gray-800/30 backdrop-blur-md rounded-full border border-white/20 dark:border-gray-700/50">
-                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                        <span class="text-sm text-gray-700 dark:text-gray-300">Available for work</span>
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 dark:from-cyan-500/20 dark:to-blue-600/20 backdrop-blur-md rounded-full border border-cyan-500/20 dark:border-cyan-500/30 mb-8">
+                        <div class="w-2 h-2 bg-green-500 dark:bg-green-400 rounded-full animate-pulse"></div>
+                        <span class="text-cyan-700 dark:text-cyan-300 text-sm font-medium">Available for work</span>
                     </div>
 
                     <!-- Main Heading -->

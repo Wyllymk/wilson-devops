@@ -25,7 +25,7 @@ get_header();
 
     <!-- Projects Hero Section -->
     <section
-        class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-cyber-light via-white to-gray-100 dark:from-cyber-dark dark:via-gray-900 dark:to-black">
+        class="min-h-[75vh] md:min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-cyber-light via-white to-gray-100 dark:from-cyber-dark dark:via-gray-900 dark:to-black">
         <!-- Animated Code Background -->
         <div class="absolute inset-0 opacity-25 md:opacity-50 overflow-hidden">
             <div class="absolute top-20 left-10 animate-pulse">
@@ -48,7 +48,7 @@ get_header();
                     </code>
                 </pre>
             </div>
-            <div class="absolute bottom-155 md:bottom-52 left-0 md:left-42 animate-pulse">
+            <div class="absolute bottom-40 md:bottom-52 left-0 md:left-42 animate-pulse">
                 <pre class="text-cyber-blue text-sm font-mono transform rotate-6">
                     <code>
                     function createMagic() {
@@ -77,26 +77,26 @@ get_header();
                 A showcase of my work crafted with passion, precision, and cutting-edge tech. Each project represents
                 innovation solving real-world challenges.
             </p>
-
-            <!-- Scroll Indicator -->
-            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer"
-                onclick="document.querySelector('.filter-section').scrollIntoView({behavior: 'smooth'})">
-                <svg class="w-6 h-6 text-cyber-cyan" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 16l-6-6h12l-6 6z" />
-                </svg>
-            </div>
         </div>
 
         <!-- Floating Elements -->
         <div class="absolute top-20 left-20 w-4 h-4 bg-cyber-cyan rounded-full opacity-60 animate-ping"></div>
         <div class="absolute top-40 right-32 w-3 h-3 bg-cyber-pink rounded-full opacity-40 animate-pulse"></div>
         <div class="absolute bottom-32 left-40 w-2 h-2 bg-cyber-blue rounded-full opacity-80 animate-bounce"></div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer"
+            onclick="document.querySelector('.filter-section').scrollIntoView({behavior: 'smooth'})">
+            <svg class="w-6 h-6 text-cyber-cyan" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 16l-6-6h12l-6 6z" />
+            </svg>
+        </div>
     </section>
 
     <section x-data="projectFilter()">
         <!-- Projects Filter Section -->
         <section
-            class="py-12 sticky top-0 z-20 bg-cyber-light/95 dark:bg-cyber-dark/95 backdrop-blur-xl border-b border-gray-200/20 dark:border-gray-700/20">
+            class="pt-12 pb-6 sticky top-10 z-20 bg-cyber-light/95 dark:bg-cyber-dark/95 backdrop-blur-xl border-b border-gray-200/20 dark:border-gray-700/20">
             <div class="container mx-auto px-4">
                 <!-- Search Bar -->
                 <div class="relative max-w-lg mx-auto mb-8">
