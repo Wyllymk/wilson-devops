@@ -31,6 +31,7 @@ defined( 'ABSPATH' ) || exit;
         href="<?php echo get_template_directory_uri(); ?>/assets/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Easy Manage" />
     <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/site.webmanifest" />
+    <meta name="google-site-verification" content="JfBfOEVgeyTxHCjGkZ9DbE0MfmYhGZTCq5TZJ13UeiM" />
     <?php wp_head(); ?>
 </head>
 

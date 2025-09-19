@@ -32,7 +32,7 @@ get_header();
     <div id="overlay" class="fixed inset-0 top-0 h-screen z-30 bg-black/70 hidden"></div>
 
     <!-- Hero Section with Animated Background -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden" id="home">
+    <section class="pt-20 md:pt-0 relative min-h-screen flex items-center justify-center overflow-hidden" id="home">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 overflow-hidden">
             <div

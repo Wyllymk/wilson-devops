@@ -26,7 +26,7 @@ get_header();
 
     <!-- Hero Section -->
     <section
-        class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-cyber-light via-white to-gray-100 dark:from-cyber-dark dark:via-gray-900 dark:to-black">
+        class="pt-20 md:pt-0 min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-cyber-light via-white to-gray-100 dark:from-cyber-dark dark:via-gray-900 dark:to-black">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0">
             <!-- Floating code snippets -->
