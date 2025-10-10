@@ -382,6 +382,11 @@ function wilson_devops_create_pages()
 			'title'    => 'AI Prop',
 			'slug'     => 'ai-prop',
 			'template' => 'page-templates/page-ai-prop.php',
+		), 
+        array(
+			'title'    => 'Prop Funded',
+			'slug'     => 'prop-funded',
+			'template' => 'page-templates/page-prop-funded.php',
 		),       
 		array(
 			'title'    => 'Torus',

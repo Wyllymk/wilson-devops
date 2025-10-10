@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 
     <div class="transition-all duration-300 ease-in-out">
         <div class="w-full px-4 lg:px-8">
-            <nav class="flex items-center justify-between py-2 md:py-4">
+            <nav class="flex items-center justify-between py-2">
 
                 <!-- Logo Section -->
                 <div class="flex items-center justify-center md:w-60 relative group">

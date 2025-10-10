@@ -29,7 +29,8 @@ defined( 'ABSPATH' ) || exit;
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180"
         href="<?php echo get_template_directory_uri(); ?>/assets/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Easy Manage" />
+    <meta name="apple-mobile-web-app-title" content="Wilson Devops" />
+    <meta name="application-name" content="Wilson Devops" />
     <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/site.webmanifest" />
     <meta name="google-site-verification" content="JfBfOEVgeyTxHCjGkZ9DbE0MfmYhGZTCq5TZJ13UeiM" />
     <?php wp_head(); ?>
