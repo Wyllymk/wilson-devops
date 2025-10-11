@@ -334,101 +334,167 @@ add_action( 'after_switch_theme', 'wilson_devops_create_home_page' );
  * for the theme. The function checks if each page already exists based on the slug and
  * if it does not, the page is created and associated with the appropriate template.
  */
-function wilson_devops_create_pages() 
-{
-	// Pages to create
+/**
+ * Creates core site pages and ensures correct hierarchy, slugs, and templates.
+ *
+ * - Creates Home, Coming Soon, Contact, About Me, Services, Projects.
+ * - Creates Project child pages.
+ * - Sets Home as the static front page.
+ */
+function wilson_devops_create_core_pages() {
 	$pages = array(
+		// === Parent Pages ===
+		array(
+			'title'    => 'Home',
+			'slug'     => 'home',
+			'template' => '',
+			'parent'   => 0,
+			'is_front' => true,
+		),
 		array(
 			'title'    => 'Coming Soon',
 			'slug'     => 'coming-soon',
 			'template' => 'page-templates/page-coming-soon.php',
+			'parent'   => 0,
 		),
 		array(
 			'title'    => 'Contact',
 			'slug'     => 'contact',
 			'template' => 'page-templates/page-contact.php',
+			'parent'   => 0,
 		),
 		array(
 			'title'    => 'About Me',
 			'slug'     => 'about-me',
 			'template' => 'page-templates/page-about-me.php',
+			'parent'   => 0,
 		),
 		array(
 			'title'    => 'Services',
 			'slug'     => 'services',
 			'template' => 'page-templates/page-services.php',
+			'parent'   => 0,
 		),
 		array(
 			'title'    => 'Projects',
 			'slug'     => 'projects',
 			'template' => 'page-templates/page-projects.php',
+			'parent'   => 0,
 		),
+
+		// === Child Pages under Projects ===
 		array(
 			'title'    => 'VMS',
 			'slug'     => 'vms',
 			'template' => 'page-templates/page-vms.php',
+			'parent'   => 'projects',
 		),
 		array(
 			'title'    => 'Nyeri Club',
 			'slug'     => 'nyeri-club',
 			'template' => 'page-templates/page-nyeri-club.php',
-		),		
+			'parent'   => 'projects',
+		),
 		array(
 			'title'    => 'The Funded Way',
 			'slug'     => 'funded-way',
 			'template' => 'page-templates/page-funded-way.php',
+			'parent'   => 'projects',
 		),
-        array(
+		array(
 			'title'    => 'AI Prop',
 			'slug'     => 'ai-prop',
 			'template' => 'page-templates/page-ai-prop.php',
-		), 
-        array(
+			'parent'   => 'projects',
+		),
+		array(
 			'title'    => 'Prop Funded',
 			'slug'     => 'prop-funded',
 			'template' => 'page-templates/page-prop-funded.php',
-		),       
+			'parent'   => 'projects',
+		),
 		array(
 			'title'    => 'Torus',
 			'slug'     => 'torus',
 			'template' => 'page-templates/page-torus.php',
+			'parent'   => 'projects',
 		),
 		array(
 			'title'    => 'Institutional Funding',
 			'slug'     => 'institutional-funding',
 			'template' => 'page-templates/page-institutional-funding.php',
-		),		
+			'parent'   => 'projects',
+		),
 		array(
 			'title'    => 'Backed Sports',
 			'slug'     => 'backed-sports',
 			'template' => 'page-templates/page-backed-sports.php',
-		)
+			'parent'   => 'projects',
+		),
+		array(
+			'title'    => 'Blu Sky',
+			'slug'     => 'blu-sky',
+			'template' => 'page-templates/page-blu-sky.php',
+			'parent'   => 'projects',
+		),
 	);
 
-	// Loop through each page and create if it doesn't exist
+	$created_pages = [];
+
 	foreach ( $pages as $page ) {
-		$page_exists = get_page_by_path( $page['slug'] );
+		// Check if page already exists by title
+		$existing_page = get_page_by_title( $page['title'] );
 
-		if ( ! $page_exists ) {
-			$new_page = array(
-				'post_title'   => $page['title'],
-				'post_content' => '',
-				'post_status'  => 'publish',
-				'post_type'    => 'page',
-				'post_name'    => $page['slug'],
-			);
-
-			$page_id = wp_insert_post( $new_page );
-
-			if ( $page_id && ! is_wp_error( $page_id ) ) {
-				update_post_meta( $page_id, '_wp_page_template', $page['template'] );
+		if ( $existing_page ) {
+			// Update slug if different
+			if ( $existing_page->post_name !== $page['slug'] ) {
+				wp_update_post(
+					array(
+						'ID'        => $existing_page->ID,
+						'post_name' => $page['slug'],
+					)
+				);
 			}
+			$page_id = $existing_page->ID;
+		} else {
+			// Determine parent ID (if parent slug given)
+			$parent_id = 0;
+			if ( ! empty( $page['parent'] ) && $page['parent'] !== 0 ) {
+				$parent_page = get_page_by_path( $page['parent'] );
+				if ( $parent_page ) {
+					$parent_id = $parent_page->ID;
+				}
+			}
+
+			// Create new page
+			$page_id = wp_insert_post(
+				array(
+					'post_title'   => $page['title'],
+					'post_name'    => $page['slug'],
+					'post_content' => '',
+					'post_status'  => 'publish',
+					'post_type'    => 'page',
+					'post_parent'  => $parent_id,
+				)
+			);
+		}
+
+		// Assign template if specified
+		if ( ! empty( $page['template'] ) && ! is_wp_error( $page_id ) ) {
+			update_post_meta( $page_id, '_wp_page_template', $page['template'] );
+		}
+
+		// Track created/updated pages
+		$created_pages[ $page['slug'] ] = $page_id;
+
+		// Set Home as front page
+		if ( isset( $page['is_front'] ) && $page['is_front'] ) {
+			update_option( 'page_on_front', $page_id );
+			update_option( 'show_on_front', 'page' );
 		}
 	}
 }
-
-add_action( 'after_switch_theme', 'wilson_devops_create_pages' );
-
+add_action( 'after_switch_theme', 'wilson_devops_create_core_pages' );
 
 // Automatically set permalinks to 'postname' and timezone to +0300 on theme activation.
 function wilson_devops_setup_settings() 

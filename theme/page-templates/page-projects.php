@@ -180,7 +180,7 @@ get_header();
                             <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark/80 via-transparent to-transparent 
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300 
                             flex items-end justify-center pb-8">
-                                <a href="<?php echo esc_url(site_url('/vms')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
+                                <a href="<?php echo esc_url(site_url('/projects/vms')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
                                 text-white font-manrope font-semibold shadow-lg hover:shadow-xl
                                 transform hover:scale-105 transition-all duration-300">
                                     View Details
@@ -237,7 +237,7 @@ get_header();
                             <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark/80 via-transparent to-transparent 
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300 
                             flex items-end justify-center pb-8">
-                                <a href="<?php echo esc_url(site_url('/nyeri-club/')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
+                                <a href="<?php echo esc_url(site_url('/projects/nyeri-club')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
                                 text-white font-manrope font-semibold shadow-lg hover:shadow-xl
                                 transform hover:scale-105 transition-all duration-300">
                                     View Details
@@ -294,7 +294,7 @@ get_header();
                             <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark/80 via-transparent to-transparent 
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300 
                             flex items-end justify-center pb-8">
-                                <a href="<?php echo esc_url(site_url('/funded-way')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
+                                <a href="<?php echo esc_url(site_url('/projects/funded-way')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
                                 text-white font-manrope font-semibold shadow-lg hover:shadow-xl
                                 transform hover:scale-105 transition-all duration-300">
                                     View Details
@@ -353,7 +353,7 @@ get_header();
                             <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark/80 via-transparent to-transparent 
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300 
                             flex items-end justify-center pb-8">
-                                <a href="<?php echo esc_url(site_url('/ai-prop')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
+                                <a href="<?php echo esc_url(site_url('/projects/ai-prop')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
                                 text-white font-manrope font-semibold shadow-lg hover:shadow-xl
                                 transform hover:scale-105 transition-all duration-300">
                                     View Details
@@ -412,7 +412,7 @@ get_header();
                             <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark/80 via-transparent to-transparent 
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300 
                             flex items-end justify-center pb-8">
-                                <a href="<?php echo esc_url(site_url('/torus')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
+                                <a href="<?php echo esc_url(site_url('/projects/torus')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
                                 text-white font-manrope font-semibold shadow-lg hover:shadow-xl
                                 transform hover:scale-105 transition-all duration-300">
                                     View Details
@@ -469,7 +469,7 @@ get_header();
                             <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark/80 via-transparent to-transparent 
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300 
                             flex items-end justify-center pb-8">
-                                <a href="<?php echo esc_url(site_url('/institutional-funding')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
+                                <a href="<?php echo esc_url(site_url('/projects/institutional-funding')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
                                 text-white font-manrope font-semibold shadow-lg hover:shadow-xl
                                 transform hover:scale-105 transition-all duration-300">
                                     View Details
@@ -526,7 +526,7 @@ get_header();
 
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-cyber-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8">
-                                <a href="<?php echo esc_url(site_url('/backed-sports')); ?>"
+                                <a href="<?php echo esc_url(site_url('/projects/backed-sports')); ?>"
                                     class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue text-white font-manrope font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                                     View Details
                                 </a>
@@ -581,7 +581,7 @@ get_header();
                             <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark/80 via-transparent to-transparent 
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300 
                             flex items-end justify-center pb-8">
-                                <a href="<?php echo esc_url(site_url('/prop-funded')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
+                                <a href="<?php echo esc_url(site_url('/projects/prop-funded')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
                                 text-white font-manrope font-semibold shadow-lg hover:shadow-xl
                                 transform hover:scale-105 transition-all duration-300">
                                     View Details
@@ -612,6 +612,62 @@ get_header();
                             </p>
 
                             <a href="https://darkorchid-zebra-985147.hostingersite.com/" target="_blank" class="inline-flex items-center gap-2 font-manrope font-semibold
+                            text-cyber-blue dark:text-cyber-cyan hover:text-cyber-coral dark:hover:text-cyber-pink 
+                            transition-all duration-300 group/link">
+                                Visit Website
+                                <svg class="w-5 h-5 transform group-hover/link:translate-x-1 transition-transform duration-300"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blu Sky -->
+                    <article
+                        class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-500 hover:-translate-y-2 hover:drop-shadow-cyber-cyan hover:border-cyber-cyan dark:hover:border-cyber-cyan"
+                        data-categories="wordpress,custom" x-show="shouldShow('wordpress,custom')"
+                        x-transition:enter="transition ease-out duration-500"
+                        x-transition:enter-start="opacity-0 transform translate-y-8"
+                        x-transition:enter-end="opacity-100 transform translate-y-0">
+
+                        <div class="relative overflow-hidden">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blu-sky.png" alt="Blu Sky"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+
+                            <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark/80 via-transparent to-transparent 
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+                            flex items-end justify-center pb-8">
+                                <a href="<?php echo esc_url(site_url('/projects/blu-sky')); ?>" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyber-cyan to-cyber-blue 
+                                text-white font-manrope font-semibold shadow-lg hover:shadow-xl
+                                transform hover:scale-105 transition-all duration-300">
+                                    View Details
+                                </a>
+                            </div>
+
+                            <div class="absolute top-4 left-4 flex gap-2">
+                                <span
+                                    class="px-3 py-1 bg-cyber-cyan/90 text-white text-xs font-semibold rounded-full">WordPress</span>
+                                <span
+                                    class="px-3 py-1 bg-cyber-pink/90 text-white text-xs font-semibold rounded-full">Custom
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="font-oswald text-2xl font-bold text-cyber-blue dark:text-cyber-cyan mb-3 
+                            group-hover:text-cyber-cyan dark:group-hover:text-cyber-blue transition-colors duration-300">
+                                Blu Sky
+                            </h3>
+                            <p
+                                class="font-manrope text-text-light-muted dark:text-text-dark-muted mb-6 leading-relaxed">
+                                Blu Sky Plus empowers traders to prove their skills, complete profit challenges,
+                                and earn up to 70% of profits with funded accounts up to $200K.
+                            </p>
+
+                            <a href="https://darkcyan-chamois-734702.hostingersite.com/" target="_blank" class="inline-flex items-center gap-2 font-manrope font-semibold
                             text-cyber-blue dark:text-cyber-cyan hover:text-cyber-coral dark:hover:text-cyber-pink 
                             transition-all duration-300 group/link">
                                 Visit Website
