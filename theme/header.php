@@ -33,6 +33,11 @@ defined( 'ABSPATH' ) || exit;
     <meta name="application-name" content="Wilson Devops" />
     <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/site.webmanifest" />
     <meta name="google-site-verification" content="JfBfOEVgeyTxHCjGkZ9DbE0MfmYhGZTCq5TZJ13UeiM" />
+    <meta name="description"
+        content="WordPress Developer in Nairobi with 5+ years of experience building custom themes, plugins, and high-performance websites for businesses and brands.">
+    <meta name="keywords"
+        content="WordPress Developer, Custom Themes, Custom Plugins, Full-Scale Websites, Web Solutions, Nairobi, Kenya">
+    <meta name="author" content="Wilson Devops">
     <?php wp_head(); ?>
 </head>
 
