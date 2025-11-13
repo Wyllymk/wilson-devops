@@ -437,6 +437,12 @@ function wilson_devops_create_core_pages() {
 			'template' => 'page-templates/page-blu-sky.php',
 			'parent'   => 'projects',
 		),
+        array(
+			'title'    => 'Premia Bet',
+			'slug'     => 'premia-bet',
+			'template' => 'page-templates/page-premia-bet.php',
+			'parent'   => 'projects',
+		),
 	);
 
 	$created_pages = [];
