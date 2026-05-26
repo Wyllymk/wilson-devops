@@ -6,3 +6,72 @@
  *
  * https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities
  */
+
+.bg-grid-dots {
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Main gradient background */
+.bg-grad-main {
+  background: linear-gradient(135deg, #3533cd, #1f8cf9);
+  background-attachment: fixed; /* Optional: makes gradient cover entire scroll area */
+}
+
+/* Gradient text with fallback color */
+.bg-grad-text {
+  background: linear-gradient(90deg, #1f8cf9, #b59ef5, #3533cd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  
+  /* Fallback for browsers that don't support gradient text */
+  @supports not (background-clip: text) {
+    color: #1f8cf9;
+  }
+}
+
+ .tag {
+        display: inline-block;
+        border-radius: 9999px;
+        border: 1px solid rgba(0, 0, 0, 0.07);
+        background: rgba(0, 0, 0, 0.02);
+        padding: 2px 11px;
+        font-family: "Space Mono", monospace;
+        font-size: 10px;
+        color: #8099b8;
+    }
+
+    .dark .tag {
+        border-color: rgba(255, 255, 255, 0.07);
+        background: rgba(255, 255, 255, 0.02);
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .pfilt {
+        border-radius: 9999px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        background: rgba(0, 0, 0, 0.02);
+        padding: 0.375rem 1rem;
+        font-family: "Space Mono", monospace;
+        font-size: 11px;
+        color: #445577;
+        cursor: pointer;
+        transition: all 0.2s;
+        backdrop-filter: blur(8px);
+    }
+
+    .dark .pfilt {
+        border-color: rgba(255, 255, 255, 0.07);
+        background: rgba(255, 255, 255, 0.03);
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .pfilt:hover,
+    .pfilt.on {
+        background: #3533cd;
+        border-color: #3533cd;
+        color: #fff;
+    }
