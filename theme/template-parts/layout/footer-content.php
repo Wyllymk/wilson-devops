@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
                 class="group flex items-center gap-2.5 font-display text-[17px] font-semibold mb-3"
                 aria-label="<?php esc_attr_e( 'Wilson DevOps — Home', 'wilson-devops' ); ?>">
                 <span class="grid h-8 w-8 place-items-center rounded-lg group-hover:-rotate-6" aria-hidden="true">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo" class="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.avif" alt="logo" class="">
                 </span>
                 <span class="text-[#0b1120] dark:text-white">Wilson<span class="text-lilac"> </span>DevOps</span>
             </a>

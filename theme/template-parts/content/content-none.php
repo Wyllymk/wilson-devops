@@ -12,10 +12,10 @@ defined( 'ABSPATH' ) || exit;
 
 <section>
 
-    <header class="page-header">
+    <header class="page-header z-30">
         <?php if ( is_search() ) : ?>
 
-        <h1 class="page-title">
+        <h1 class="page-title z-40">
             <?php
 				printf(
 					/* translators: 1: search result title. 2: search term. */

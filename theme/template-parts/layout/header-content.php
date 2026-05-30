@@ -16,16 +16,16 @@ defined( 'ABSPATH' ) || exit;
 <div id="mob-wrap" class="fixed inset-0 z-[90] pointer-events-none" aria-hidden="true">
     <div id="mob-dim" class="absolute inset-0 bg-ink/60 backdrop-blur-sm opacity-0 transition-opacity duration-500"
         onclick="closeMob()"></div>
-    <div id="mob-ov1" class="absolute inset-y-0 right-0 w-full md:w-[420px] bg-violet z-30 translate-x-full"
-        style="transition:transform .38s cubic-bezier(.7,0,.3,1)"></div>
+    <div id="mob-ov1" class="absolute inset-y-0 right-0 w-full md:w-[420px] bg-violet z-40 translate-x-full"
+        style="transition:translate .38s cubic-bezier(.7,0,.3,1)"></div>
     <div id="mob-panel"
-        class="absolute inset-y-0 right-0 w-full md:w-[420px] bg-[#07080e] z-20 translate-x-full flex flex-col"
-        style="transition:transform .42s cubic-bezier(.7,0,.3,1)">
+        class="absolute inset-y-0 right-0 w-full md:w-[420px] bg-[#07080e] z-30 translate-x-full flex flex-col"
+        style="transition:translate .42s cubic-bezier(.7,0,.3,1)">
         <div class="flex items-center justify-between px-8 pt-8 pb-6 border-b border-white/[0.07]">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" onclick="closeMob()"
                 class="flex items-center gap-2.5 font-display text-[17px] font-semibold">
                 <span class="grid h-8 w-8 place-items-center rounded-lg group-hover:-rotate-6" aria-hidden="true">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo" class="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.avif" alt="logo" class="">
                 </span>
                 <span class="text-[#0b1120] dark:text-white">Wilson<span class="text-lilac"> </span>DevOps</span>
             </a>
@@ -40,7 +40,7 @@ defined( 'ABSPATH' ) || exit;
             aria-label="<?php esc_attr_e( 'Mobile Navigation', 'wilson-devops' ); ?>">
             <a href="#about" onclick="closeMob()"
                 class="mob-link group flex items-center gap-4 py-4 border-b border-white/[0.05] opacity-0 translate-x-8"
-                style="transition:opacity .4s,transform .4s"><span class="font-mono text-xs text-violet">01</span><span
+                style="transition:opacity .4s,translate .4s"><span class="font-mono text-xs text-violet">01</span><span
                     class="font-display text-3xl font-bold text-white group-hover:text-lilac transition-colors duration-200">About</span><svg
                     class="ml-auto w-5 h-5 text-white/20 group-hover:text-violet group-hover:translate-x-1 transition-all"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -48,7 +48,7 @@ defined( 'ABSPATH' ) || exit;
                 </svg></a>
             <a href="#ai" onclick="closeMob()"
                 class="mob-link group flex items-center gap-4 py-4 border-b border-white/[0.05] opacity-0 translate-x-8"
-                style="transition:opacity .4s,transform .4s"><span class="font-mono text-xs text-violet">02</span><span
+                style="transition:opacity .4s,translate .4s"><span class="font-mono text-xs text-violet">02</span><span
                     class="font-display text-3xl font-bold text-white group-hover:text-lilac transition-colors duration-200">AI
                     Services</span><svg
                     class="ml-auto w-5 h-5 text-white/20 group-hover:text-violet group-hover:translate-x-1 transition-all"
@@ -57,7 +57,7 @@ defined( 'ABSPATH' ) || exit;
                 </svg></a>
             <a href="#services" onclick="closeMob()"
                 class="mob-link group flex items-center gap-4 py-4 border-b border-white/[0.05] opacity-0 translate-x-8"
-                style="transition:opacity .4s,transform .4s"><span class="font-mono text-xs text-violet">03</span><span
+                style="transition:opacity .4s,translate .4s"><span class="font-mono text-xs text-violet">03</span><span
                     class="font-display text-3xl font-bold text-white group-hover:text-lilac transition-colors duration-200">Services</span><svg
                     class="ml-auto w-5 h-5 text-white/20 group-hover:text-violet group-hover:translate-x-1 transition-all"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -65,7 +65,7 @@ defined( 'ABSPATH' ) || exit;
                 </svg></a>
             <a href="#projects" onclick="closeMob()"
                 class="mob-link group flex items-center gap-4 py-4 border-b border-white/[0.05] opacity-0 translate-x-8"
-                style="transition:opacity .4s,transform .4s"><span class="font-mono text-xs text-violet">04</span><span
+                style="transition:opacity .4s,translate .4s"><span class="font-mono text-xs text-violet">04</span><span
                     class="font-display text-3xl font-bold text-white group-hover:text-lilac transition-colors duration-200">Projects</span><svg
                     class="ml-auto w-5 h-5 text-white/20 group-hover:text-violet group-hover:translate-x-1 transition-all"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -73,7 +73,7 @@ defined( 'ABSPATH' ) || exit;
                 </svg></a>
             <a href="#contact" onclick="closeMob()"
                 class="mob-link group flex items-center gap-4 py-4 opacity-0 translate-x-8"
-                style="transition:opacity .4s,transform .4s"><span class="font-mono text-xs text-violet">05</span><span
+                style="transition:opacity .4s,translate .4s"><span class="font-mono text-xs text-violet">05</span><span
                     class="font-display text-3xl font-bold text-white group-hover:text-lilac transition-colors duration-200">Contact</span><svg
                     class="ml-auto w-5 h-5 text-white/20 group-hover:text-violet group-hover:translate-x-1 transition-all"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -81,7 +81,7 @@ defined( 'ABSPATH' ) || exit;
                 </svg></a>
         </nav>
         <div id="mob-footer" class="px-8 pb-8 pt-6 border-t border-white/[0.07] opacity-0 translate-y-4"
-            style="transition:opacity .4s,transform .4s">
+            style="transition:opacity .4s,translate .4s">
             <a href="#contact" onclick="closeMob()"
                 class="w-full flex items-center justify-center gap-2 rounded-full bg-grad-main py-3.5 text-sm font-medium text-white shadow-glow mb-5">
                 <?php esc_html_e( 'Hire Me →', 'wilson-devops' ); ?>
@@ -128,7 +128,7 @@ defined( 'ABSPATH' ) || exit;
             class="group flex items-center gap-2.5 font-display font-semibold text-[17px] flex-shrink-0"
             aria-label="<?php esc_attr_e( 'Wilson DevOps — Home', 'wilson-devops' ); ?>">
             <span class="grid h-8 w-8 place-items-center rounded-lg group-hover:-rotate-6" aria-hidden="true">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo" class="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.avif" alt="logo" class="">
             </span>
             <span class="text-[#0b1120] dark:text-white">Wilson<span class="text-lilac"> </span>DevOps</span>
         </a>
@@ -168,7 +168,7 @@ defined( 'ABSPATH' ) || exit;
                         <path d="M8 21h8M12 17v4" />
                     </svg></span>
                 <span id="i-sun"
-                    class="t-ico absolute grid place-items-center opacity-0 scale-50 rotate-[40deg] transition-all duration-300"><svg
+                    class="t-ico absolute grid place-items-center opacity-0 rotate-[40deg] transition-all duration-300"><svg
                         width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         aria-hidden="true">
                         <circle cx="12" cy="12" r="4" />
@@ -176,7 +176,7 @@ defined( 'ABSPATH' ) || exit;
                             d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
                     </svg></span>
                 <span id="i-moon"
-                    class="t-ico absolute grid place-items-center opacity-0 scale-50 rotate-[40deg] transition-all duration-300"><svg
+                    class="t-ico absolute grid place-items-center opacity-0 rotate-[40deg] transition-all duration-300"><svg
                         width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         aria-hidden="true">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />

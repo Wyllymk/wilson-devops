@@ -180,6 +180,9 @@ if (btt) {
 /* ════════════════════════════════════════════
    MOBILE MENU — cinematic slide
 ════════════════════════════════════════════ */
+/* ════════════════════════════════════════════
+   MOBILE MENU — cinematic slide
+════════════════════════════════════════════ */
 const mobWrap = document.getElementById('mob-wrap');
 const mobDim = document.getElementById('mob-dim');
 const mobOv1 = document.getElementById('mob-ov1');
@@ -198,23 +201,23 @@ window.openMob = function () {
 
 	mobDim.style.opacity = '1';
 	setTimeout(() => {
-		mobOv1.style.transform = 'translateX(0)';
+		mobOv1.style.translate = '0 0';
 	}, 20);
 	setTimeout(() => {
-		mobPanel.style.transform = 'translateX(0)';
-		mobOv1.style.transform = 'translateX(-110%)';
+		mobPanel.style.translate = '0 0';
+		mobOv1.style.translate = '-110% 0';
 	}, 260);
 	setTimeout(() => {
 		mobLinks.forEach((link, i) => {
 			setTimeout(() => {
 				link.style.opacity = '1';
-				link.style.transform = 'translateX(0)';
+				link.style.translate = '0 0';
 			}, i * 60);
 		});
 	}, 520);
 	setTimeout(() => {
 		mobFoot.style.opacity = '1';
-		mobFoot.style.transform = 'translateY(0)';
+		mobFoot.style.translate = '0 0';
 	}, 640);
 
 	document.body.style.overflow = 'hidden';
@@ -225,24 +228,25 @@ window.closeMob = function () {
 
 	mobLinks.forEach((link) => {
 		link.style.opacity = '0';
-		link.style.transform = 'translateX(20px)';
+		link.style.translate = '20px 0';
 	});
 	mobFoot.style.opacity = '0';
-	mobFoot.style.transform = 'translateY(8px)';
+	mobFoot.style.translate = '0 8px';
 
 	setTimeout(() => {
-		mobPanel.style.transform = 'translateX(100%)';
+		mobPanel.style.translate = '100% 0';
 	}, 80);
 	setTimeout(() => {
-		mobOv1.style.transition = 'transform .3s cubic-bezier(.7,0,.3,1)';
-		mobOv1.style.transform = 'translateX(0)';
+		mobOv1.style.transition = 'translate .3s cubic-bezier(.7,0,.3,1)';
+		mobOv1.style.translate = '0 0';
 	}, 200);
 	setTimeout(() => {
-		mobOv1.style.transform = 'translateX(100%)';
+		mobOv1.style.translate = '100% 0';
 	}, 260);
 	setTimeout(() => {
-		mobOv1.style.transition = 'transform .38s cubic-bezier(.7,0,.3,1)';
+		mobOv1.style.transition = 'translate .38s cubic-bezier(.7,0,.3,1)';
 	}, 620);
+
 	setTimeout(() => {
 		mobDim.style.opacity = '0';
 	}, 340);

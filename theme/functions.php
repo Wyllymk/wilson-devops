@@ -117,6 +117,13 @@ if ( ! function_exists( 'wilson_devops_setup' ) ) :
 		// Enqueue editor styles.
 		add_editor_style( 'style-editor.css' );
 
+		add_theme_support( 'custom-logo', [
+			'width'       => 200,
+			'height'      => 60,
+			'flex-width'  => true,
+			'flex-height' => true,
+		] );
+
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 

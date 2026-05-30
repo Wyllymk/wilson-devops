@@ -153,7 +153,7 @@ function wd_output_schema_jsonld() {
                 'description' => 'Full Stack WordPress Engineer and AI Specialist based in Nairobi, Kenya. Expert in custom WordPress themes, WooCommerce revenue systems, AI-powered web applications, and performance engineering.',
                 'image'       => [
                     '@type' => 'ImageObject',
-                    'url'   => WD_URI . '/assets/images/logo.png',
+                    'url'   => WD_URI . '/assets/images/logo.avif',
                 ],
                 'address' => [
                     '@type'            => 'PostalAddress',
@@ -216,7 +216,7 @@ add_action( 'wp_head', 'wd_seo_meta', 2 );
 function wd_seo_meta() {
     $title       = 'Wilson DevOps — WordPress Architect & AI Specialist | Nairobi, Kenya';
     $description = 'I engineer high-performance WordPress systems, WooCommerce revenue machines, and AI-powered web applications. Based in Nairobi. Available globally.';
-    $image       = WD_URI . '/assets/images/logo.png';
+    $image       = WD_URI . '/assets/images/logo.avif';
     $url         = home_url( '/' );
     $twitter     = '@WilsonMbuthiaK';
 
@@ -308,7 +308,7 @@ require_once WD_DIR . '/inc/class-wd-walker-nav.php';
 ────────────────────────────────────────────── */
 add_action( 'wp_head', function () {
     if ( ! has_site_icon() ) {
-        echo '<link rel="icon" href="' . WD_URI . '/assets/images/favicon.svg" type="image/svg+xml" />' . "\n";
-        echo '<link rel="apple-touch-icon" href="' . WD_URI . '/assets/images/apple-touch-icon.png" />' . "\n";
+        echo '<link rel="icon" href="' . WD_URI . '/assets/favicon/favicon.svg" type="image/svg+xml" />' . "\n";
+        echo '<link rel="apple-touch-icon" href="' . WD_URI . '/assets/favicon/apple-touch-icon.png" />' . "\n";
     }
 }, 99 );

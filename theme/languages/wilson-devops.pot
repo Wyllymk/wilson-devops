@@ -1,0 +1,595 @@
+# Copyright (C) 2026 Wilson
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Wilson Devops 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wilson-devops\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-05-30T19:47:56+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: wilson-devops\n"
+
+#. Theme Name of the theme
+#: theme
+msgid "Wilson Devops"
+msgstr ""
+
+#. Theme URI of the theme
+#: theme
+msgid "https://wilsondevops.com"
+msgstr ""
+
+#. Description of the theme
+#: theme
+msgid "A modern WordPress portfolio theme powered by Tailwind CSS and Alpine.js. Perfect for showcasing your work with a clean and responsive design."
+msgstr ""
+
+#. Author of the theme
+#: theme
+msgid "Wilson"
+msgstr ""
+
+#. Author URI of the theme
+#: theme
+msgid "https://wilsondevops.com/"
+msgstr ""
+
+#. translators: 1: title.
+#: theme/comments.php:36
+#, php-format
+msgid "One comment on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: theme/comments.php:44
+#, php-format
+msgctxt "comments title"
+msgid "%1$s comment on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: theme/comments.php:74
+msgid "Comments are closed."
+msgstr ""
+
+#: theme/front-page.php:47
+msgid "Open for projects — Nairobi, Kenya 🇰🇪"
+msgstr ""
+
+#: theme/front-page.php:50
+msgid "Response < 24 hrs · UTC+3"
+msgstr ""
+
+#: theme/front-page.php:61
+msgid "Professional titles"
+msgstr ""
+
+#: theme/front-page.php:63
+msgid "WordPress Architect"
+msgstr ""
+
+#: theme/front-page.php:65
+msgid "AI Integrator"
+msgstr ""
+
+#: theme/front-page.php:67
+msgid "Full Stack Engineer"
+msgstr ""
+
+#: theme/front-page.php:70
+msgid "I don't build websites. I engineer digital systems that solve real business problems — custom WordPress, complex WooCommerce, and AI-powered applications built to perform and scale."
+msgstr ""
+
+#: theme/front-page.php:75
+msgid "See My Work"
+msgstr ""
+
+#: theme/front-page.php:83
+msgid "Start a Project"
+msgstr ""
+
+#: theme/front-page.php:88
+msgid "GitHub profile"
+msgstr ""
+
+#: theme/front-page.php:95
+msgid "LinkedIn profile"
+msgstr ""
+
+#: theme/front-page.php:102
+msgid "Twitter / X profile"
+msgstr ""
+
+#: theme/front-page.php:109
+msgid "WhatsApp contact"
+msgstr ""
+
+#: theme/front-page.php:121
+msgid "Engineering philosophy — code snippet"
+msgstr ""
+
+#: theme/functions.php:89
+msgid "Primary"
+msgstr ""
+
+#: theme/functions.php:90
+msgid "Footer Menu"
+msgstr ""
+
+#: theme/functions.php:170
+msgid "Footer"
+msgstr ""
+
+#: theme/functions.php:172
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+
+#: theme/header.php:49
+msgid "Skip to content"
+msgstr ""
+
+#: theme/inc/template-functions.php:42
+msgid "Category Archives: "
+msgstr ""
+
+#: theme/inc/template-functions.php:44
+msgid "Tag Archives: "
+msgstr ""
+
+#: theme/inc/template-functions.php:46
+msgid "Author Archives: "
+msgstr ""
+
+#: theme/inc/template-functions.php:48
+msgid "Yearly Archives: "
+msgstr ""
+
+#: theme/inc/template-functions.php:48
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: theme/inc/template-functions.php:50
+msgid "Monthly Archives: "
+msgstr ""
+
+#: theme/inc/template-functions.php:50
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: theme/inc/template-functions.php:52
+msgid "Daily Archives: "
+msgstr ""
+
+#. translators: %s: Post type singular name
+#. translators: %s: Taxonomy singular name
+#: theme/inc/template-functions.php:57
+#: theme/inc/template-functions.php:64
+#, php-format
+msgid "%s Archives"
+msgstr ""
+
+#: theme/inc/template-functions.php:68
+msgid "Archives:"
+msgstr ""
+
+#. translators: %s: Name of current post.
+#: theme/inc/template-functions.php:98
+#, php-format
+msgid "Continue reading %s"
+msgstr ""
+
+#: theme/inc/template-functions.php:132
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: theme/inc/template-functions.php:134
+msgid "Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved."
+msgstr ""
+
+#. translators: %s: Comment author link.
+#: theme/inc/template-functions.php:156
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#. translators: 1: Comment date, 2: Comment time.
+#: theme/inc/template-functions.php:171
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: theme/inc/template-functions.php:178
+msgid "Edit"
+msgstr ""
+
+#: theme/inc/template-tags.php:46
+msgid "Posted by"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: theme/inc/template-tags.php:60
+#, php-format
+msgid "Leave a comment<span class=\"sr-only\"> on %s</span>"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma.
+#: theme/inc/template-tags.php:82
+#: theme/inc/template-tags.php:93
+#: theme/inc/template-tags.php:143
+#: theme/inc/template-tags.php:154
+msgid ", "
+msgstr ""
+
+#: theme/inc/template-tags.php:87
+#: theme/inc/template-tags.php:148
+msgid "Posted in"
+msgstr ""
+
+#: theme/inc/template-tags.php:98
+#: theme/inc/template-tags.php:159
+msgid "Tags:"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: theme/inc/template-tags.php:114
+#: theme/inc/template-tags.php:175
+#: theme/template-parts/content/content-page.php:47
+#, php-format
+msgid "Edit <span class=\"sr-only\">%s</span>"
+msgstr ""
+
+#: theme/inc/template-tags.php:266
+msgid "Newer posts"
+msgstr ""
+
+#: theme/inc/template-tags.php:267
+msgid "Older posts"
+msgstr ""
+
+#: theme/search.php:25
+#: theme/template-parts/content/content-none.php:23
+msgid "Search results for:"
+msgstr ""
+
+#: theme/single.php:28
+msgid "Next Post"
+msgstr ""
+
+#: theme/single.php:29
+msgid "Next post:"
+msgstr ""
+
+#: theme/single.php:31
+msgid "Previous Post"
+msgstr ""
+
+#: theme/single.php:32
+msgid "Previous post:"
+msgstr ""
+
+#: theme/template-parts/content/content-excerpt.php:18
+#: theme/template-parts/content/content.php:18
+msgctxt "post"
+msgid "Featured"
+msgstr ""
+
+#: theme/template-parts/content/content-none.php:31
+msgid "Nothing Found"
+msgstr ""
+
+#: theme/template-parts/content/content-none.php:42
+msgid "Your site is set to show the most recent posts on your homepage, but you haven&rsquo;t published any posts."
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#: theme/template-parts/content/content-none.php:49
+msgid "Add or publish posts"
+msgstr ""
+
+#: theme/template-parts/content/content-none.php:59
+msgid "Your search generated no results. Please try a different search."
+msgstr ""
+
+#: theme/template-parts/content/content-none.php:68
+msgid "No content matched your request."
+msgstr ""
+
+#: theme/template-parts/content/content-page.php:33
+#: theme/template-parts/content/content-single.php:46
+#: theme/template-parts/content/content.php:36
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: theme/template-parts/content/content-single.php:33
+#, php-format
+msgid "Continue reading<span class=\"sr-only\"> \"%s\"</span>"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:21
+#: theme/template-parts/layout/header-content.php:129
+msgid "Wilson DevOps — Home"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:28
+msgid "Engineering high-performance web systems and AI-powered applications from Nairobi, Kenya."
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:32
+msgid "Footer Navigation"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:34
+msgid "Navigate"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:37
+msgid "About"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:40
+msgid "AI Services"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:43
+msgid "Services"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:46
+msgid "Projects"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:49
+msgid "Process"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:52
+msgid "Contact"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:59
+msgid "Connect"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:76
+msgid "All rights reserved."
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:78
+msgid "Built in Nairobi"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:84
+msgid "Back to top"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:97
+msgid "Chat on WhatsApp"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:99
+msgid "Usually replies in minutes"
+msgstr ""
+
+#: theme/template-parts/layout/footer-content.php:106
+msgid "Open WhatsApp chat with Wilson"
+msgstr ""
+
+#: theme/template-parts/layout/header-content.php:32
+msgid "Close menu"
+msgstr ""
+
+#: theme/template-parts/layout/header-content.php:40
+msgid "Mobile Navigation"
+msgstr ""
+
+#: theme/template-parts/layout/header-content.php:87
+#: theme/template-parts/layout/header-content.php:187
+msgid "Hire Me →"
+msgstr ""
+
+#: theme/template-parts/layout/header-content.php:125
+msgid "Primary Navigation"
+msgstr ""
+
+#: theme/template-parts/layout/header-content.php:162
+msgid "Toggle dark/light/system theme"
+msgstr ""
+
+#: theme/template-parts/layout/header-content.php:190
+msgid "Open mobile menu"
+msgstr ""
+
+#: theme/template-parts/section/section-about.php:12
+msgid "An engineer who"
+msgstr ""
+
+#: theme/template-parts/section/section-about.php:13
+msgid "thinks in systems"
+msgstr ""
+
+#: theme/template-parts/section/section-about.php:17
+msgid "I'm Wilson Mbuthia — a full stack WordPress engineer and AI specialist based in Nairobi, Kenya. I build digital systems that solve real business problems, not just websites that look good."
+msgstr ""
+
+#: theme/template-parts/section/section-about.php:20
+msgid "My clients include prop trading firms, African web agencies, golf clubs, schools, and automotive businesses — each needing a different solution. I've shipped checkout systems that moved $100K challenge purchases, AI scoring engines that reduced review time by 80%, and platforms that opened new markets."
+msgstr ""
+
+#: theme/template-parts/section/section-about.php:23
+msgid "I don't believe in one-size-fits-all stacks. I diagnose the problem, choose the right tools, and engineer for performance and scale from day one."
+msgstr ""
+
+#: theme/template-parts/section/section-ai.php:13
+msgid "AI that"
+msgstr ""
+
+#: theme/template-parts/section/section-ai.php:14
+msgid "ships"
+msgstr ""
+
+#: theme/template-parts/section/section-ai.php:18
+msgid "Not AI experiments — production integrations that replace manual work or create measurable new capability inside your existing WordPress stack."
+msgstr ""
+
+#: theme/template-parts/section/section-contact.php:16
+msgid "Let's build something"
+msgstr ""
+
+#: theme/template-parts/section/section-contact.php:18
+msgid "unforgettable."
+msgstr ""
+
+#: theme/template-parts/section/section-contact.php:21
+msgid "Available for freelance projects, retainers, and collaborations. Working with clients in Kenya, across Africa, and globally."
+msgstr ""
+
+#: theme/template-parts/section/section-contact.php:30
+msgid "Currently available"
+msgstr ""
+
+#: theme/template-parts/section/section-contact.php:32
+msgid "Nairobi, Kenya · UTC+3 · Reply < 24 hours"
+msgstr ""
+
+#: theme/template-parts/section/section-contact.php:43
+msgid "Nairobi, Kenya · Open to travel"
+msgstr ""
+
+#: theme/template-parts/section/section-contact.php:60
+msgid "Email"
+msgstr ""
+
+#: theme/template-parts/section/section-contact.php:63
+msgid "For project inquiries and scoping"
+msgstr ""
+
+#: theme/template-parts/section/section-contact.php:80
+msgid "WhatsApp"
+msgstr ""
+
+#: theme/template-parts/section/section-contact.php:83
+msgid "Quick chats. Fastest response."
+msgstr ""
+
+#: theme/template-parts/section/section-contact.php:105
+msgid "See the code behind the work"
+msgstr ""
+
+#: theme/template-parts/section/section-contact.php:126
+msgid "Professional networking and inquiries"
+msgstr ""
+
+#: theme/template-parts/section/section-contact.php:146
+msgid "X / Twitter"
+msgstr ""
+
+#: theme/template-parts/section/section-contact.php:149
+msgid "Tech thoughts and project updates"
+msgstr ""
+
+#: theme/template-parts/section/section-process.php:17
+msgid "How an engineer"
+msgstr ""
+
+#: theme/template-parts/section/section-process.php:18
+msgid "thinks"
+msgstr ""
+
+#: theme/template-parts/section/section-process.php:21
+msgid "Tools are secondary. Understanding the problem comes first."
+msgstr ""
+
+#: theme/template-parts/section/section-projects.php:144
+msgid "What I've"
+msgstr ""
+
+#: theme/template-parts/section/section-projects.php:146
+msgid "shipped"
+msgstr ""
+
+#: theme/template-parts/section/section-projects.php:149
+msgid "Real work for real clients. Click any card to see the live site."
+msgstr ""
+
+#: theme/template-parts/section/section-projects.php:153
+msgid "Filter projects"
+msgstr ""
+
+#: theme/template-parts/section/section-projects.php:155
+msgid "All"
+msgstr ""
+
+#: theme/template-parts/section/section-projects.php:157
+msgid "WordPress"
+msgstr ""
+
+#: theme/template-parts/section/section-projects.php:159
+msgid "WooCommerce"
+msgstr ""
+
+#: theme/template-parts/section/section-projects.php:161
+msgid "Custom Dev"
+msgstr ""
+
+#: theme/template-parts/section/section-projects.php:163
+msgid "Elementor"
+msgstr ""
+
+#: theme/template-parts/section/section-projects.php:171
+msgid "Project grid"
+msgstr ""
+
+#: theme/template-parts/section/section-projects.php:235
+msgid "View GitHub Profile"
+msgstr ""
+
+#: theme/template-parts/section/section-services.php:48
+msgid "What I"
+msgstr ""
+
+#: theme/template-parts/section/section-services.php:49
+msgid "build"
+msgstr ""
+
+#: theme/template-parts/section/section-services.php:52
+msgid "Every engagement starts with the problem, not the tool."
+msgstr ""
+
+#: theme/template-parts/section/section-services.php:61
+#, php-format
+msgid "Toggle %s service details"
+msgstr ""
+
+#: theme/theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr ""
+
+#: theme/theme.json
+msgctxt "Color name"
+msgid "Foreground"
+msgstr ""
+
+#: theme/theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme/theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: theme/theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr ""
