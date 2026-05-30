@@ -456,13 +456,27 @@ window.openModal = function (id) {
 			onclick="closeModal()"
 			aria-label="Close modal"
 			class="absolute top-3 right-3 h-8 w-8 grid place-items-center rounded-full bg-black/50 text-white/70 hover:text-white hover:rotate-90 transition-all duration-200 z-10"
-		>✕</button>
+		>
+			✕
+		</button>
 
-		<div class="text-[90px] opacity-[.22] select-none" aria-hidden="true">
-			${p.e}
-		</div>
+		${
+			p.img
+				? `
+					<img
+						src="${p.img}"
+						alt="${p.t}"
+						class="absolute inset-0 w-full h-full object-cover opacity-90"
+					/>
+					<div class="absolute inset-0 bg-black/25"></div>
+				`
+				: `
+					<div class="text-[90px] opacity-[.22] select-none">
+						📁
+					</div>
+				`
+		}
 	`;
-
 	// title
 	document.getElementById('modt').textContent = p.t;
 
