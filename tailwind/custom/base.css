@@ -6,10 +6,29 @@
  * This uses the background and foreground colors declared in the `theme.json`
  * file and is applied both to the front end and in the block editor.
  */
-head{
+head {
 	@apply scroll-smooth;
 }
 body {
 	@apply bg-background text-foreground font-sans;
 }
+button{
+	@apply cursor-pointer;
+}
 
+@utility bg-grad-main {
+	background: linear-gradient(135deg, #3533cd, #1f8cf9);
+}
+
+@utility bg-grad-text {
+	background: linear-gradient(90deg, #1f8cf9, #b59ef5, #3533cd);
+	background-clip: text;
+	color: transparent;
+}
+
+@utility bg-grid-dots {
+	background-image:
+		linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+	background-size: 20px 20px;
+}

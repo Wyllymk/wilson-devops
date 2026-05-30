@@ -9,6 +9,10 @@
 // Exit if accessed directly
 defined( 'ABSPATH' ) || exit;
 
+define( 'WD_VERSION', '1.0.0' );
+define( 'WD_DIR',     get_template_directory() );
+define( 'WD_URI',     get_template_directory_uri() );
+
 if ( ! defined( 'WILSON_DEVOPS_VERSION' ) ) {
 	/*
 	 * Set the theme’s version number.
@@ -119,15 +123,38 @@ if ( ! function_exists( 'wilson_devops_setup' ) ) :
 		// Remove support for block templates.
 		remove_theme_support( 'block-templates' );
 
-		remove_action('wp_head','wp_generator');
-		remove_action('wp_head','wlwmanifest_link');
-		remove_action('wp_head','rsd_link');
+		// Remove block patterns library (bandwidth waste for custom theme)
+    	remove_theme_support( 'core-block-patterns' );
+
+		// Remove emoji scripts & styles
+		remove_action( 'wp_head',             'print_emoji_detection_script', 7 );
+		remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+		remove_action( 'wp_print_styles',     'print_emoji_styles' );
+		remove_action( 'admin_print_styles',  'print_emoji_styles' );
+		remove_filter( 'the_content_feed',    'wp_staticize_emoji' );
+		remove_filter( 'comment_text_feed',   'wp_staticize_emoji' );
+		remove_filter( 'the_content',         'wp_staticize_emoji_for_email' );
+
+		// Remove oEmbed
+		remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
+		remove_action( 'wp_head', 'wp_oembed_add_host_js' );
+
+		// Remove RSD & WLW manifest links
+		remove_action( 'wp_head', 'rsd_link' );
+		remove_action( 'wp_head', 'wlwmanifest_link' );
+
+		// Remove adjacent post links (not needed for single-page portfolio)
+		remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head' );
+
+		// Remove WP generator tag (security hygiene)
+		remove_action( 'wp_head', 'wp_generator' );
+
+		// Remove shortlink
 		remove_action( 'wp_head', 'wp_shortlink_wp_head' );
 
-		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-		remove_action( 'wp_print_styles',  'print_emoji_styles' );
-		remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-		remove_action( 'admin_print_styles',  'print_emoji_styles' );
+		// Remove feed links (portfolio has no blog)
+		remove_action( 'wp_head', 'feed_links',       2 );
+		remove_action( 'wp_head', 'feed_links_extra',  3 );
 	}
 endif;
 add_action( 'after_setup_theme', 'wilson_devops_setup' );
@@ -162,6 +189,13 @@ function wilson_devops_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_localize_script( 'wilson-devops-script', 'WD', [
+        'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+        'nonce'   => wp_create_nonce( 'wd_nonce' ),
+        'homeUrl' => home_url( '/' ),
+        'isBot'   => wd_is_bot() ? 'true' : 'false',
+    ] );
 }
 add_action( 'wp_enqueue_scripts', 'wilson_devops_scripts' );
 

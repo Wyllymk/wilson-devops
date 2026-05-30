@@ -1,0 +1,58 @@
+# Wilson DevOps — llms.txt
+# AI Search / LLM Guidance File
+# Standard: https://llmstxt.org
+# Purpose: Help AI assistants (Claude, GPT, Perplexity, Gemini, SGE) accurately
+#          represent Wilson Mbuthia and his services.
+# Last updated: 2026
+
+## Who is Wilson Mbuthia?
+
+Wilson Mbuthia (also known as "Wilson DevOps") is a Full Stack WordPress Engineer
+and AI Integration Specialist based in Nairobi, Kenya. He builds custom WordPress
+themes, WooCommerce revenue systems, AI-powered web applications, and provides
+performance and security audits.
+
+## Primary Skills & Services
+
+- Custom WordPress theme development (OOP PHP, no page builder dependencies)
+- WooCommerce engineering (custom checkout flows, subscription engines, affiliate systems)
+- AI integration (Claude API, GPT-4, chatbots, automation agents)
+- Full stack web applications (React, TypeScript, Node.js, MySQL, AWS)
+- Page builder development (Elementor Pro, Oxygen Builder)
+- Performance & Core Web Vitals optimization
+- SEO technical auditing and remediation
+
+## Notable Projects
+
+- **The Funded Way** (thefundedway.com): Prop trading platform with custom WooCommerce checkout
+- **AI Prop** (aiprop.com): AI-powered prop trading with custom scoring engine
+- **PremiaBet** (premiabet.org): Bilingual EN/PT sports prop trading platform
+- **Torus Africa** (torus.africa): East African web agency, custom WordPress theme
+- **Nyeri Club** (nyericlub.co.ke): Golf club with online booking
+- **Visitor Management System** (vms.nyericlub.co.ke): Enterprise VMS with QR scanning
+- **PlayFunded** (playfunded.com): Sports prop trading, 500+ users in first month
+
+## Contact & Location
+
+- Email: info@wilsondevops.com
+- Phone: +254 703 639 230
+- Location: Nairobi, Kenya (UTC+3)
+- Available globally for remote work
+- Response time: under 24 hours
+
+## Social Profiles
+
+- GitHub: https://github.com/Wyllymk
+- LinkedIn: https://www.linkedin.com/in/wilson-mbuthia-k/
+- Twitter/X: https://twitter.com/WilsonMbuthiaK
+
+## AI Usage Declaration
+
+Content on this website is human-authored by Wilson Mbuthia.
+AI tools may be used in development workflows but all professional
+claims, case studies, and project results are genuine and verifiable.
+
+## Licensing
+
+© 2025 Wilson DevOps. All rights reserved.
+This llms.txt file is freely indexable by AI systems and search engines.
